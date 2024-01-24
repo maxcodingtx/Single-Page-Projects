@@ -1,0 +1,27 @@
+
+*, *::after, *::before {box-sizing: border-box;}
+
+body {margin: 0;}
+
+img {max-width: 100%;}
+
+
+/* title font:
+
+font-family: 'Titillium Web', sans-serif;
+
+*/
+
+
+/* Section1 text:
+
+font-family: 'IBM Plex Mono', monospace;
+
+*/
+
+ 
+/* Button text
+
+font-family: 'IBM Plex Mono', monospace;
+
+*/
