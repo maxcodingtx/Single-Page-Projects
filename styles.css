@@ -1,9 +1,10 @@
 
 *, *::after, *::before {box-sizing: border-box;}
 
-body {margin: 0;}
+body {margin: 0; padding: 0;}
 
 img {max-width: 100%;}
+
 
 
 /* title font:
@@ -25,3 +26,151 @@ font-family: 'IBM Plex Mono', monospace;
 font-family: 'IBM Plex Mono', monospace;
 
 */
+
+
+
+/* utility classes */
+
+.size--Increase:hover {
+    transform: scale(1.15);
+
+}
+
+
+.link:visited, link:active {
+    color: white;
+}
+
+
+.size--Decrease:active {
+    transform:scale(.98);
+}
+
+.dropDown--slow {
+    animation: dropDown 1.2s;
+}
+
+.fadeIn--normal {
+    animation: fadeIn 1s ease-out;
+}
+
+.fadeIn--slow {
+    animation: fadeIn 1.5s linear;
+}
+
+
+/* animations */
+
+@keyframes dropDown {
+
+    0% {transform: translateY(-4rem);}
+
+    100% {transform: translateY(0);}
+}
+
+@keyframes fadeIn {
+
+    0%{opacity: 0;}
+
+    100%{opacity: 1;}
+
+}
+
+
+/* beginning of section 1 */
+
+
+.section1 {
+    padding: 3rem;
+    background-image: url(Images/Section1/Flavora_img.jpg);
+    background-size: cover;
+    height: 70vh;
+}
+
+
+.section1__toptext {
+    color: white;
+    font-family: 'IBM Plex Mono', monospace;
+    display: flex;
+    justify-content: center;
+    gap: 15%;
+    font-size: 1.5rem;
+}
+
+
+.section1__title {
+    
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 4.5rem;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px white;
+
+}
+
+
+.section1__buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.section1__button {
+    font-size: 1.75rem;
+    margin: auto auto;
+    color: white;
+    border: 3px solid white;
+    background-color: transparent;
+}
+
+
+
+/* used media  queries to make background image responsive*/
+
+@media(max-width: 1200px) {
+
+    .section1 {
+        height: 100vh;
+        background-image: url(Images/Section1/Flavora_img1200w.jpg);
+    }
+}
+
+
+@media(max-width: 800px) {
+
+    .section1 {
+        background-image: url(Images/Section1/Flavora_img800w.jpg);
+    }
+
+
+}
+
+
+/* end of section 1 */
+
+
+/* start of section 2 */
+
+.section2 {
+    padding: 0 2rem;
+}
+
+.section2__text {
+    text-align: center;
+}
+
+.section2__header {
+    color: #CD7F32;
+    font-size: 3rem;
+    font-style: italic;
+
+}
+
+.section2__paragraph {
+    font-size: 1.25rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+
+}
