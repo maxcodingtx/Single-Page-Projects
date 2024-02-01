@@ -43,7 +43,7 @@ font-family: 'IBM Plex Mono', monospace;
 
 
 .size--Decrease:active {
-    transform:scale(.98);
+    transform:scale(1.05);
 }
 
 .dropDown--slow {
@@ -180,6 +180,14 @@ and to have section 1 take entire viewport height on smaller screens
 
 }
 
+
+@media(max-width: 900px) {
+    .section2 {
+        height: auto;
+    }
+}
+
+
 /* end of section 2 */
 
 
@@ -235,9 +243,15 @@ and to have section 1 take entire viewport height on smaller screens
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
 }
 
 
+/*
+ media queries to make info on
+ section 3 (row 1, column 2)
+ responsive
+*/
 
 @media(max-width: 1200px) {
 
@@ -265,13 +279,12 @@ and to have section 1 take entire viewport height on smaller screens
 
     }
 
+
 }
+
 
 @media(max-width: 900px) {
 
-    .section3 {
-        margin-top: 5rem;
-    }
 
     .section3__info__header {
         font-size: 1.75rem;
@@ -286,6 +299,39 @@ and to have section 1 take entire viewport height on smaller screens
     }
 
 
-    
 }
 
+
+
+/* end of section 3 */
+
+
+/* start of section 4 */
+
+.section4 {
+    padding: 2rem;
+    background: black;
+
+}
+
+.section4__header {
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px white;
+}
+
+.section4__icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5%;
+}
+
+.section4__icon {
+    margin: auto auto;
+    width: 75%;
+    border: .5rem solid white;
+    border-radius: 50%;
+}
+
+/* end of section 4 */
