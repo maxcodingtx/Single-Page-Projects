@@ -7,28 +7,6 @@ img {max-width: 100%;}
 
 
 
-/* title font:
-
-font-family: 'Titillium Web', sans-serif;
-
-*/
-
-
-/* Section1 text:
-
-font-family: 'IBM Plex Mono', monospace;
-
-*/
-
- 
-/* Button text
-
-font-family: 'IBM Plex Mono', monospace;
-
-*/
-
-
-
 /* utility classes */
 
 .size--Increase:hover {
@@ -46,17 +24,21 @@ font-family: 'IBM Plex Mono', monospace;
     transform:scale(1.05);
 }
 
+
 .dropDown--slow {
     animation: dropDown 1.2s;
 }
+
 
 .fadeIn--normal {
     animation: fadeIn 1s ease-out;
 }
 
+
 .fadeIn--slow {
     animation: fadeIn 1.5s linear;
 }
+
 
 
 /* animations */
@@ -68,6 +50,7 @@ font-family: 'IBM Plex Mono', monospace;
     100% {transform: translateY(0);}
 }
 
+
 @keyframes fadeIn {
 
     0%{opacity: 0;}
@@ -77,8 +60,8 @@ font-family: 'IBM Plex Mono', monospace;
 }
 
 
-/* beginning of section 1 */
 
+/* beginning of section 1 */
 
 .section1 {
     padding: 3rem;
@@ -126,11 +109,11 @@ font-family: 'IBM Plex Mono', monospace;
 }
 
 
-
 /*
 used media  queries to make background image responsive
 and to have section 1 take entire viewport height on smaller screens
 */
+
 
 @media(max-width: 1200px) {
 
@@ -191,6 +174,7 @@ and to have section 1 take entire viewport height on smaller screens
 /* end of section 2 */
 
 
+
 /* start of section 3 */
 
 .section3 {
@@ -216,7 +200,6 @@ and to have section 1 take entire viewport height on smaller screens
 .section3__info__header {
     font-size: 2.25rem;
 }
-
 
 
 .section3__info__normalText {
@@ -245,6 +228,7 @@ and to have section 1 take entire viewport height on smaller screens
     gap: 2rem;
 
 }
+
 
 
 /*
@@ -302,8 +286,8 @@ and to have section 1 take entire viewport height on smaller screens
 }
 
 
-
 /* end of section 3 */
+
 
 
 /* start of section 4 */
