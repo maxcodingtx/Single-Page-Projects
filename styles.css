@@ -53,6 +53,10 @@ img {max-width: 100%;}
 }
 
 
+.sectoin1__subheader{
+    text-decoration: underline;
+}
+
 .section1__footer {
     font-size: 2rem;
 }
