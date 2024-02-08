@@ -10,6 +10,11 @@ img {max-width: 100%;}
 /* utility classes */
 
 
+.sizeIncrease:hover {
+    scale: 1.2;
+}
+
+
 .fadeIn--normal {
     animation: fadeIn linear 1s;
 }
@@ -17,6 +22,11 @@ img {max-width: 100%;}
 .fadeIn--slow {
     animation: fadeIn ease-in 1.5s ;
 }
+
+.fadeIn--fast {
+    animation: fadeIn linear 800ms;
+}
+
 
 
 /* animations */
@@ -27,6 +37,7 @@ img {max-width: 100%;}
 
     100% {opacity: 1;}
 }
+
 
 
 
@@ -53,12 +64,31 @@ img {max-width: 100%;}
 }
 
 
-.sectoin1__subheader{
+.section1__subheader{
     text-decoration: underline;
 }
+
 
 .section1__footer {
     font-size: 2rem;
 }
 
 /* end of section 1 */
+
+
+/* beginning of section 2 */
+
+.section2__container {
+    padding: 3rem;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+
+.section2__header {
+    color: rgba(39, 160, 241, 0.979);
+
+}
+
+/* end of section 2 */
