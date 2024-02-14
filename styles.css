@@ -60,7 +60,6 @@ img {max-width: 100%;}
     font-family: 'Red Hat Display', sans-serif;
     font-size: 4rem;    
     text-align: center;
-
 }
 
 
@@ -78,17 +77,85 @@ img {max-width: 100%;}
 
 /* beginning of section 2 */
 
+    /* styling of each individual card */
 .section2__container {
     padding: 3rem;
     font-family: 'Red Hat Display', sans-serif;
     font-size: 1.5rem;
     text-align: center;
-
 }
 
 .section2__header {
     color: rgba(39, 160, 241, 0.979);
-
 }
 
 /* end of section 2 */
+
+
+/* start of section 3 */
+
+.card {
+    font-family: 'Red Hat Display', sans-serif;
+    border: 2px solid black;
+}
+
+
+.card__text {
+    padding: 1rem;
+}
+
+
+.card__title {
+    color: rgba(39, 160, 241, 0.979);
+    font-size: 2rem;
+}
+
+
+.card__line {
+    border: 2px dashed navy;
+}
+
+
+.card__info {
+    font-size: 1.5rem;
+}
+
+
+.card__button {
+    width: 100%;
+    color: white;
+    background-color: #1C84FF;
+    padding: 1rem;
+    font-size: 2rem;
+
+}
+
+
+.card__button:active {
+    background-color: #006AE8;
+}
+
+   
+/* setting grid structure */
+
+
+.section3__cards {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2rem;
+}
+
+/* media query makes button on bottom of each card on bigger screens */
+
+@media (min-width: 1000px) {
+
+    .card {
+        position: relative;
+    }
+
+    .card__button {
+        position: absolute;
+        bottom: 0;
+    }
+}
