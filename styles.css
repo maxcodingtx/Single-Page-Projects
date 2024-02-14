@@ -96,9 +96,14 @@ img {max-width: 100%;}
 
 .card {
     font-family: 'Red Hat Display', sans-serif;
-    border: 2px solid black;
+    border: 2px solid navy;
+    border-radius: 16px;
 }
 
+.card__image {
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
 
 .card__text {
     padding: 1rem;
@@ -122,11 +127,13 @@ img {max-width: 100%;}
 
 
 .card__button {
-    width: 100%;
     color: white;
     background-color: #1C84FF;
     padding: 1rem;
     font-size: 2rem;
+    width: 100%;
+    border: none;
+    border-radius: 0 0 12px 12px;
 
 }
 
@@ -138,18 +145,15 @@ img {max-width: 100%;}
    
 /* setting grid structure */
 
-
 .section3__cards {
-    
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-/* media query makes button on bottom of each card on bigger screens */
+/*  this media query puts button on bottom of each card on bigger screens */
 
-@media (min-width: 1000px) {
-
+@media (min-width: 632px) {
     .card {
         position: relative;
     }
@@ -159,3 +163,14 @@ img {max-width: 100%;}
         bottom: 0;
     }
 }
+
+/* this media query allows no more than 3 columns on larger screens */
+
+@media (min-width: 1296px) {
+    .section3__cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* end of section 3 */
