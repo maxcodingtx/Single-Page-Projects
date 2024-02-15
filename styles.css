@@ -94,6 +94,10 @@ img {max-width: 100%;}
 
 /* start of section 3 */
 
+.section3__container {
+    padding: .5rem;
+}
+
 .card {
     font-family: 'Red Hat Display', sans-serif;
     border: 2px solid navy;
@@ -174,3 +178,57 @@ img {max-width: 100%;}
 
 
 /* end of section 3 */
+
+
+/* beginning of section 4*/
+
+
+.section4__container {
+    font-family: 'Red Hat Display', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+
+.section4__icon {
+    width: 7%;
+}
+
+
+.section4__phone, .section4__mail {
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+}
+
+
+
+
+.section4__info {
+    color: #006AE8;
+    font-weight: 800;
+}
+
+
+.section4__list {
+    list-style-type: square;
+    list-style-position: inside;
+
+}
+
+
+
+
+@media (min-width: 1000px) {
+    .section4__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10%;
+    }
+
+    .section4__content1, .section4__content2 {
+        width: 45%;
+    }
+}
