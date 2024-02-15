@@ -77,7 +77,6 @@ img {max-width: 100%;}
 
 /* beginning of section 2 */
 
-    /* styling of each individual card */
 .section2__container {
     padding: 3rem;
     font-family: 'Red Hat Display', sans-serif;
@@ -98,6 +97,7 @@ img {max-width: 100%;}
     padding: .5rem;
 }
 
+/* styling of each card */
 .card {
     font-family: 'Red Hat Display', sans-serif;
     border: 2px solid navy;
