@@ -1,0 +1,30 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #000000;
+    opacity: 0.9;
+    background-image:  radial-gradient(#5d00ff 2px, transparent 2px), radial-gradient(#5d00ff 2px, #000000 2px);
+    background-size: 80px 80px;
+    background-position: 0 0,40px 40px;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-size: 2rem;
+}
+
+
