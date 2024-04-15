@@ -45,31 +45,31 @@ button:active {
 
 .section1__container {
     text-align: center;
-    padding: 1rem;
 }
 
 .section1__element__container {
+    display: flex;
+    
+    margin: auto auto;
     height: 250px;
     width: 250px;
     border: 3px solid var(--border-clr);
     border-radius: 1rem;
-    display: block;
-    margin: auto auto;
 }
 
 .section1__item {
     width: 50px;
-    border-radius: 16px;
-    border: 2px solid var(--border-clr);
 
+    border: 2px solid var(--border-clr);
+    border-radius: 1rem;
 }
 
 .section1__number {
-    border: 2px solid var(--border-clr);
-    background-color: var(--bg-clr);
+    margin: 1rem auto 1rem auto;
     width: 50%;
-    margin: auto;
-    margin-top: 1rem;
+    border: 2px solid var(--border-clr);
+
+    background-color: var(--bg-clr);
 }
 
 .section1__button__container{
@@ -78,10 +78,13 @@ button:active {
 }
 
 .section1__button {
-    border: 2px solid var(--border-clr);
-    background-color: var(--bg-clr);
-    margin-top: 5%;
     width: 25%;
+    border: 2px solid var(--border-clr);
+
+    background-color: var(--bg-clr);
+
     color: white;
 }
+
+/* end of section 1 styling, section 2 styling below */
 
