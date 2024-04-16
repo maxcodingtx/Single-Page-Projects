@@ -5,7 +5,7 @@
     - increase the number of elements inside element
     container if there are less than 3 items inside container
  */
-function numIncrease () {
+function numIncrease() {
     
     // converting HTML of 'numItem' into integer
     var num = document.getElementById('numItem').innerHTML;
@@ -36,7 +36,7 @@ function numIncrease () {
     - update the number if elements (-1)
     - delete an element inside container 
 */
-function numDecrease () {
+function numDecrease() {
 
     // converting HTML of 'numItem into integer
     var num = document.getElementById('numItem').innerHTML;
@@ -59,3 +59,71 @@ function numDecrease () {
     }
 
 }
+
+var flexDirection = [
+    'flex-direction-row',
+    'flex-direction-column',
+    'flex-direction-row-reverse',
+    'flex-direction-column-reverse'
+];
+
+
+function directionRow() {
+    const element = document.getElementById('divFlex');
+
+    for (const i of element.classList) {
+        for (const j of flexDirection) {
+            if (i == j) {
+                element.classList.remove(i)
+                element.classList.add('flex-direction-row')
+            } else {
+                element.classList.add('flex-direction-row')
+            };
+        };
+    };
+};
+
+function directionColumn() {
+    const element = document.getElementById('divFlex');
+    
+    for (const i of element.classList) {
+        for (const j of flexDirection) {
+            if (i == j) {
+                element.classList.remove(i)
+                element.classList.add('flex-direction-column')
+            } else {
+                element.classList.add('flex-direction-column')
+            };
+        };
+    };
+};
+
+function directionRowReverse() {
+    const element = document.getElementById('divFlex');
+    
+    for (const i of element.classList) {
+        for (const j of flexDirection) {
+            if (i == j) {
+                element.classList.remove(i)
+                element.classList.add('flex-direction-row-reverse')
+            } else {
+                element.classList.add('flex-direction-row-reverse')
+            };
+        };
+    };
+};
+
+function directionColumnReverse() {
+    const element = document.getElementById('divFlex');
+    
+    for (const i of element.classList) {
+        for (const j of flexDirection) {
+            if (i == j) {
+                element.classList.remove(i)
+                element.classList.add('flex-direction-column-reverse')
+            } else {
+                element.classList.add('flex-direction-column-reverse')
+            };
+        };
+    };
+};
