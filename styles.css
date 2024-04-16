@@ -88,13 +88,15 @@ button:active {
 
 /* end of section 1 styling, section 2 styling below */
 
-.section2__flex-direction {
+.section2__flex-direction,
+.section2__align-items {
     display: flex;
     gap: 2%;
     justify-content: center;
 }
 
-.section2__flex-direction > button {
+.section2__flex-direction > button,
+.section2__align-items > button {
     border: 2px solid var(--border-clr);
     width: 20%;
 
@@ -102,6 +104,8 @@ button:active {
 
     color: white;
 }
+
+/* flexbox properties below, starting with flex-direction */
 
 .flex-direction-row {
     flex-direction: row;
@@ -117,4 +121,22 @@ button:active {
 
 .flex-direction-column-reverse {
     flex-direction: column-reverse;
+}
+
+/* align-items properties below */
+
+.align-items-flex-start{
+    align-items: flex-start;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.align-items-flex-end{
+    align-items: flex-end;
+}
+
+.align-items-stretch{
+    align-items: stretch;
 }
