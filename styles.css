@@ -49,7 +49,7 @@ button:active {
 
 .section1__element__container {
     display: flex;
-    
+
     margin: auto auto;
     height: 250px;
     width: 250px;
@@ -72,7 +72,7 @@ button:active {
     background-color: var(--bg-clr);
 }
 
-.section1__button__container{
+.section1__button__container {
     display: flex;
     justify-content: space-evenly;
 }
@@ -88,3 +88,33 @@ button:active {
 
 /* end of section 1 styling, section 2 styling below */
 
+.section2__flex-direction {
+    display: flex;
+    gap: 2%;
+    justify-content: center;
+}
+
+.section2__flex-direction > button {
+    border: 2px solid var(--border-clr);
+    width: 20%;
+
+    background-color: var(--bg-clr);
+
+    color: white;
+}
+
+.flex-direction-row {
+    flex-direction: row;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex-direction-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-direction-column-reverse {
+    flex-direction: column-reverse;
+}
