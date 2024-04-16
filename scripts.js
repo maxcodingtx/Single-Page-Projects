@@ -67,7 +67,6 @@ var flexDirection = [
     'flex-direction-column-reverse'
 ];
 
-
 function directionRow() {
     const element = document.getElementById('divFlex');
 
@@ -127,3 +126,80 @@ function directionColumnReverse() {
         };
     };
 };
+
+
+var alignItems = [
+    'align-items-flex-start',
+    'align-items-center',
+    'align-items-flex-end',
+    'align-items-stretch'
+];
+
+function alignitemsStart() {
+    const element = document.getElementById('divFlex');
+    
+    for (const i of element.classList) {
+        for (const j of alignItems) {
+            if (i == j) {
+                element.classList.remove(i)
+                element.classList.add('align-items-flex-start')
+            } else {
+                element.classList.add('align-items-flex-start')
+            };
+        };
+    };
+};
+
+function alignitemsCenter() {
+    const element = document.getElementById('divFlex');
+    
+    for (const i of element.classList) {
+        for (const j of alignItems) {
+            if (i == j) {
+                element.classList.remove(i)
+                element.classList.add('align-items-center')
+            } else {
+                element.classList.add('align-items-center')
+            };
+        };
+    };
+};
+
+function alignitemsEnd() {
+    const element = document.getElementById('divFlex');
+    
+    for (const i of element.classList) {
+        for (const j of alignItems) {
+            if (i == j) {
+                element.classList.remove(i)
+                element.classList.add('align-items-flex-end')
+            } else {
+                element.classList.add('align-items-flex-end')
+            };
+        };
+    };
+};
+
+function alignitemsStretch() {
+    const element = document.getElementById('divFlex');
+    
+    for (const i of element.classList) {
+        for (const j of alignItems) {
+            if (i == j) {
+                element.classList.remove(i)
+                element.classList.add('align-items-stretch')
+            } else {
+                element.classList.add('align-items-stretch')
+            };
+        };
+    };
+};
+
+
+
+
+
+document.addEventListener('click', function() {
+    let element = document.getElementById('divFlex');
+    console.log(element.classList);
+})
