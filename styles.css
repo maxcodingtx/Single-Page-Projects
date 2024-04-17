@@ -50,6 +50,8 @@ button:active {
 .section1__element__container {
     display: flex;
 
+    overflow: auto;
+
     margin: auto auto;
     height: 250px;
     width: 250px;
@@ -89,14 +91,18 @@ button:active {
 /* end of section 1 styling, section 2 styling below */
 
 .section2__flex-direction,
-.section2__align-items {
+.section2__align-items,
+.section2__justify-content,
+.section2__align-content {
     display: flex;
     gap: 2%;
     justify-content: center;
 }
 
 .section2__flex-direction > button,
-.section2__align-items > button {
+.section2__align-items > button,
+.section2__justify-content > button,
+.section2__align-content > button {
     border: 2px solid var(--border-clr);
     width: 20%;
 
@@ -125,18 +131,76 @@ button:active {
 
 /* align-items properties below */
 
-.align-items-flex-start{
+.align-items-flex-start {
     align-items: flex-start;
 }
 
-.align-items-center{
+.align-items-center {
     align-items: center;
 }
 
-.align-items-flex-end{
+.align-items-flex-end {
     align-items: flex-end;
 }
 
-.align-items-stretch{
+.align-items-stretch {
     align-items: stretch;
+}
+
+/* justify content properties below */
+
+.justify-content-start {
+    justify-content: flex-start;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.justify-content-evenly {
+    justify-content: space-evenly;
+}
+
+/* align content properties below */
+
+.align-content-start {
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.align-content-center {
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.align-content-end {
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+.align-content-stretch {
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+.align-content-between {
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.align-content-around {
+    flex-wrap: wrap;
+    align-content: space-around;
 }
