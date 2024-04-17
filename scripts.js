@@ -16,7 +16,7 @@ function numIncrease() {
     - increase that number by 1
     - keep adding elements inside element container 
     */
-    if (num < 3) {
+    if (num < 12) {
         num += 1
         document.getElementById('numItem').innerHTML = num;
 
@@ -196,7 +196,204 @@ function alignitemsStretch() {
 };
 
 
+var justifyContent = [
+    'justify-content-start',
+    'justify-content-center',
+    'justify-content-end',
+    'justify-content-between',
+    'justify-content-around',
+    'justify-content-evenly'
+];
 
+
+function justifycontentStart() {
+    const element = document.getElementById('divFlex');
+    
+    for (const i of element.classList) {
+        for (const j of justifyContent) {
+            if (i == j) {
+                element.classList.remove(i)
+                element.classList.add('justify-content-start')
+            } else {
+                element.classList.add('justify-content-start')
+            };
+        };
+    };
+};
+
+function justifycontentCenter() {
+    const element = document.getElementById('divFlex');
+    
+    for (const i of element.classList) {
+        for (const j of justifyContent) {
+            if (i == j) {
+                element.classList.remove(i)
+                element.classList.add('justify-content-center')
+            } else {
+                element.classList.add('justify-content-center')
+            };
+        };
+    };
+};
+
+function justifycontentEnd() {
+    const element = document.getElementById('divFlex');
+    
+    for (const i of element.classList) {
+        for (const j of justifyContent) {
+            if (i == j) {
+                element.classList.remove(i)
+                element.classList.add('justify-content-end')
+            } else {
+                element.classList.add('justify-content-end')
+            };
+        };
+    };
+};
+
+function justifycontentBetween() {
+    const element = document.getElementById('divFlex');
+    
+    for (const i of element.classList) {
+        for (const j of justifyContent) {
+            if (i == j) {
+                element.classList.remove(i)
+                element.classList.add('justify-content-between')
+            } else {
+                element.classList.add('justify-content-between')
+            };
+        };
+    };
+};
+
+function justifycontentAround() {
+    const element = document.getElementById('divFlex');
+    
+    for (const i of element.classList) {
+        for (const j of justifyContent) {
+            if (i == j) {
+                element.classList.remove(i)
+                element.classList.add('justify-content-around')
+            } else {
+                element.classList.add('justify-content-around')
+            };
+        };
+    };
+};
+
+function justifycontentEvenly() {
+    const element = document.getElementById('divFlex');
+    
+    for (const i of element.classList) {
+        for (const j of justifyContent) {
+            if (i == j) {
+                element.classList.remove(i)
+                element.classList.add('justify-content-evenly')
+            } else {
+                element.classList.add('justify-content-evenly')
+            };
+        };
+    };
+};
+
+var alignContent = [
+    'align-content-start',
+    'align-content-center',
+    'align-content-end',
+    'align-content-stretch',
+    'align-content-between',
+    'align-content-around'
+];
+
+function aligncontentStart() {
+    const element = document.getElementById('divFlex');
+    
+    for (const i of element.classList) {
+        for (const j of alignContent) {
+            if (i == j) {
+                element.classList.remove(i)
+                element.classList.add('align-content-start')
+            } else {
+                element.classList.add('align-content-start')
+            };
+        };
+    };
+};
+
+function aligncontentCenter() {
+    const element = document.getElementById('divFlex');
+    
+    for (const i of element.classList) {
+        for (const j of alignContent) {
+            if (i == j) {
+                element.classList.remove(i)
+                element.classList.add('align-content-center')
+            } else {
+                element.classList.add('align-content-center')
+            };
+        };
+    };
+};
+
+function aligncontentEnd() {
+    const element = document.getElementById('divFlex');
+    
+    for (const i of element.classList) {
+        for (const j of alignContent) {
+            if (i == j) {
+                element.classList.remove(i)
+                element.classList.add('align-content-end')
+            } else {
+                element.classList.add('align-content-end')
+            };
+        };
+    };
+};
+
+function aligncontentStretch() {
+    const element = document.getElementById('divFlex');
+    
+    for (const i of element.classList) {
+        for (const j of alignContent) {
+            if (i == j) {
+                element.classList.remove(i)
+                element.classList.add('align-content-stretch')
+            } else {
+                element.classList.add('align-content-stretch')
+            };
+        };
+    };
+};
+
+function aligncontentBetween() {
+    const element = document.getElementById('divFlex');
+    
+    for (const i of element.classList) {
+        for (const j of alignContent) {
+            if (i == j) {
+                element.classList.remove(i)
+                element.classList.add('align-content-between')
+            } else {
+                element.classList.add('align-content-between')
+            };
+        };
+    };
+};
+
+function aligncontentAround() {
+    const element = document.getElementById('divFlex');
+    
+    for (const i of element.classList) {
+        for (const j of alignContent) {
+            if (i == j) {
+                element.classList.remove(i)
+                element.classList.add('align-content-around')
+            } else {
+                element.classList.add('align-content-around')
+            };
+        };
+    };
+};
 
 
 document.addEventListener('click', function() {
