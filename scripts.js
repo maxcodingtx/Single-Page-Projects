@@ -3,7 +3,7 @@
     on click:
     - update the number of elements (+1)
     - increase the number of elements inside element
-    container if there are less than 3 items inside container
+    container if there are less than 9 items inside container
  */
 function numIncrease() {
     
@@ -12,7 +12,7 @@ function numIncrease() {
     num *= 1 
 
     /* 
-    if number of elements is less than three:
+    if number of elements is less than 9:
     - increase that number by 1
     - keep adding elements inside element container 
     */
@@ -38,7 +38,7 @@ function numIncrease() {
 */
 function numDecrease() {
 
-    // converting HTML of 'numItem into integer
+    // converting HTML of 'numItem' into integer
     var num = document.getElementById('numItem').innerHTML;
     num *= 1
 
@@ -396,7 +396,15 @@ function aligncontentAround() {
 };
 
 
+// everytime user clicks on screen, the classlist for element container is updated
 document.addEventListener('click', function() {
     let element = document.getElementById('divFlex');
     console.log(element.classList);
 })
+
+// on click, every class will get removed, but container class will get re-added
+function clearClasses () {
+    var element = document.getElementById('divFlex')
+    element.removeAttribute('class')
+    element.classList.add('section1__element__container')
+}
