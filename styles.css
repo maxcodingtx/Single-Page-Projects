@@ -111,6 +111,15 @@ button:active {
     color: white;
 }
 
+.section2__clear {
+    border: 2px solid red;
+    background-color: var(--bg-clr);
+    color: white;
+    display: block;
+    padding: 2%;
+    margin: 16px auto 16px auto;
+}
+
 /* flexbox properties below, starting with flex-direction */
 
 .flex-direction-row {
