@@ -396,10 +396,33 @@ function aligncontentAround() {
 };
 
 
-// everytime user clicks on screen, the classlist for element container is updated
+// everytime user clicks on screen, the css properties list for element container is updated
+
 document.addEventListener('click', function() {
-    let element = document.getElementById('divFlex');
-    console.log(element.classList);
+    // converting 'numItem' to integer
+    var num = document.getElementById('numItem').innerHTML * 1;
+
+    // if theres more than one item inside element container, display css properties that are active
+    if (num > 0) {
+        let element = document.getElementById('divFlex');
+        let style = window.getComputedStyle(element);
+
+        document.getElementById('containerFlexDirection').textContent = 
+        ('flex-direction: ' + style.getPropertyValue('flex-direction'));
+
+        document.getElementById('containerAlignItems').textContent = 
+        ('flex-direction: ' + style.getPropertyValue('align-items')); 
+
+        document.getElementById('containerJustifyContent').textContent = 
+        ('flex-direction: ' + style.getPropertyValue('justify-content')) ;
+
+        document.getElementById('containerAlignContent').textContent = 
+        ('flex-direction: ' + style.getPropertyValue('align-content'));
+    //if there are no elements in container, show 'none' for classes actvie
+    } else {
+        document.getElementById('containerFlexDirection').textContent = 
+        'none';
+    }
 })
 
 // on click, every class will get removed, but container class will get re-added
@@ -408,3 +431,4 @@ function clearClasses () {
     element.removeAttribute('class')
     element.classList.add('section1__element__container')
 }
+
