@@ -1,9 +1,9 @@
 
 /* 
     on click:
-    - update the number of elements (+1)
+    - update the number in section 1 (+1)
     - increase the number of elements inside element
-    container if there are less than 9 items inside container
+    container only if there are less than 12 items inside container
  */
 function numIncrease() {
     
@@ -12,9 +12,9 @@ function numIncrease() {
     num *= 1 
 
     /* 
-    if number of elements is less than 9:
+    if number of elements is less than 12:
     - increase that number by 1
-    - keep adding elements inside element container 
+    - add an element inside element container 
     */
     if (num < 12) {
         num += 1
@@ -33,7 +33,7 @@ function numIncrease() {
 
 /* 
     on click:
-    - update the number if elements (-1)
+    - update the number in section 1 (-1)
     - delete an element inside container 
 */
 function numDecrease() {
@@ -44,7 +44,7 @@ function numDecrease() {
 
     /* 
     if number of elements is greater than 1: 
-    - update number of elements (-1)
+    - update number in section 1 (-1)
     - delete an element in container 
     */
     if (num > 1) {
@@ -60,12 +60,50 @@ function numDecrease() {
 
 }
 
+
+// everytime user clicks on screen, the css properties list for element container is updated
+
+document.addEventListener('click', function() {
+    // converting 'numItem' to integer
+    var num = document.getElementById('numItem').innerHTML * 1;
+
+    // if theres more than one item inside element container, display css properties that are active
+    if (num > 0) {
+        let element = document.getElementById('divFlex');
+        let style = window.getComputedStyle(element);
+
+        document.getElementById('containerFlexDirection').textContent = 
+        ('flex-direction: ' + style.getPropertyValue('flex-direction'));
+
+        document.getElementById('containerAlignItems').textContent = 
+        ('flex-direction: ' + style.getPropertyValue('align-items')); 
+
+        document.getElementById('containerJustifyContent').textContent = 
+        ('flex-direction: ' + style.getPropertyValue('justify-content')) ;
+
+        document.getElementById('containerAlignContent').textContent = 
+        ('flex-direction: ' + style.getPropertyValue('align-content'));
+    //if there are no elements in container, show 'none' for classes active
+    } else {
+        document.getElementById('containerFlexDirection').textContent = 
+        'none';
+    }
+})
+
 var flexDirection = [
     'flex-direction-row',
     'flex-direction-column',
     'flex-direction-row-reverse',
     'flex-direction-column-reverse'
 ];
+
+/* *THE FOLLOWING FUNCTIONS EXPLAINED*
+if container already has class from the same button row,
+remove it and add the class from the button clicked on
+
+else, add the class like normal
+*/
+
 
 function directionRow() {
     const element = document.getElementById('divFlex');
@@ -395,35 +433,6 @@ function aligncontentAround() {
     };
 };
 
-
-// everytime user clicks on screen, the css properties list for element container is updated
-
-document.addEventListener('click', function() {
-    // converting 'numItem' to integer
-    var num = document.getElementById('numItem').innerHTML * 1;
-
-    // if theres more than one item inside element container, display css properties that are active
-    if (num > 0) {
-        let element = document.getElementById('divFlex');
-        let style = window.getComputedStyle(element);
-
-        document.getElementById('containerFlexDirection').textContent = 
-        ('flex-direction: ' + style.getPropertyValue('flex-direction'));
-
-        document.getElementById('containerAlignItems').textContent = 
-        ('flex-direction: ' + style.getPropertyValue('align-items')); 
-
-        document.getElementById('containerJustifyContent').textContent = 
-        ('flex-direction: ' + style.getPropertyValue('justify-content')) ;
-
-        document.getElementById('containerAlignContent').textContent = 
-        ('flex-direction: ' + style.getPropertyValue('align-content'));
-    //if there are no elements in container, show 'none' for classes actvie
-    } else {
-        document.getElementById('containerFlexDirection').textContent = 
-        'none';
-    }
-})
 
 // on click, every class will get removed, but container class will get re-added
 function clearClasses () {
