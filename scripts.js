@@ -76,13 +76,13 @@ document.addEventListener('click', function() {
         ('flex-direction: ' + style.getPropertyValue('flex-direction'));
 
         document.getElementById('containerAlignItems').textContent = 
-        ('flex-direction: ' + style.getPropertyValue('align-items')); 
+        ('align-items: ' + style.getPropertyValue('align-items')); 
 
         document.getElementById('containerJustifyContent').textContent = 
-        ('flex-direction: ' + style.getPropertyValue('justify-content')) ;
+        ('justify-content: ' + style.getPropertyValue('justify-content')) ;
 
         document.getElementById('containerAlignContent').textContent = 
-        ('flex-direction: ' + style.getPropertyValue('align-content'));
+        ('align-content: ' + style.getPropertyValue('align-content'));
     //if there are no elements in container, show 'none' for classes active
     } else {
         document.getElementById('containerFlexDirection').textContent = 
