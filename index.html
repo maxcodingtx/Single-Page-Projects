@@ -34,124 +34,128 @@
     </section>
 
     <section id="section2">
-        <h2>Flex Direction</h2>
-        <div class="l-section2__buttons">
-            <button 
-            type="button" 
-            class="button-style1"
-            onclick="directionRow()">row</button>
-            
-            <button 
-            type="button" 
-            class="button-style1"
-            onclick="directionColumn()">column</button>
-            
+        <div class="section2__container l-section2">
+            <h2 class="l-section2-griditem1">Flex Direction</h2>
+            <div class="l-section2__buttons l-section2-griditem2">
+                <button 
+                type="button" 
+                class="button-style1"
+                onclick="directionRow()">row</button>
+                
+                <button 
+                type="button" 
+                class="button-style1"
+                onclick="directionColumn()">column</button>
+                
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="directionRowReverse()">row <br> reverse</button>
+                
+                
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="directionColumnReverse()">column <br> reverse</button>
+            </div>
+    
+            <h2 class="l-section2-griditem3">Align Items</h2>
+            <div class="l-section2__buttons l-section2-griditem4">
+                <button
+                type="button"
+                class="button-style1"
+                onclick="alignitemsStart()">flex <br> start</button>
+    
+                <button
+                type="button"
+                class="button-style1"
+                onclick="alignitemsCenter()">center</button>
+    
+                <button
+                type="button"
+                class="button-style1"
+                onclick="alignitemsEnd()">flex <br> end</button>
+    
+                <button
+                type="button"
+                class="button-style1"
+                onclick="alignitemsStretch()">stretch</button>
+            </div>
+    
+            <h2 class="l-section2-griditem5">Justify Content</h2>
+            <div class="l-section2__buttons l-section2-griditem6">
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="justifycontentStart()">flex <br> start</button>
+    
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="justifycontentCenter()">center</button>
+    
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="justifycontentEnd()">flex <br> end</button>
+    
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="justifycontentBetween()">space <br> between</button>
+    
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="justifycontentAround()">space <br> around</button>
+    
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="justifycontentEvenly()">space <br> evenly</button>
+            </div>
+    
+            <h2 class="l-section2-griditem7">Align Content</h2>
+            <div class="l-section2__buttons l-section2-griditem8">
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="aligncontentStart()">flex <br> start</button>
+    
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="aligncontentCenter()">center</button>
+    
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="aligncontentEnd()">flex <br> end</button>
+    
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="aligncontentStretch()">stretch</button>
+    
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="aligncontentBetween()">space <br> between</button>
+    
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="aligncontentAround()">space <br> around</button>
+            </div>
+    
             <button 
             type="button"
-            class="button-style1"
-            onclick="directionRowReverse()">row <br> reverse</button>
-            
-            
-            <button 
-            type="button"
-            class="button-style1"
-            onclick="directionColumnReverse()">column <br> reverse</button>
+            class="button-style2"
+            onclick="clearClasses()">
+                clear <br> classes </button>
+
         </div>
 
-        <h2>Align Items</h2>
-        <div class="l-section2__buttons">
-            <button
-            type="button"
-            class="button-style1"
-            onclick="alignitemsStart()">flex <br> start</button>
-
-            <button
-            type="button"
-            class="button-style1"
-            onclick="alignitemsCenter()">center</button>
-
-            <button
-            type="button"
-            class="button-style1"
-            onclick="alignitemsEnd()">flex <br> end</button>
-
-            <button
-            type="button"
-            class="button-style1"
-            onclick="alignitemsStretch()">stretch</button>
-        </div>
-
-        <h2>Justify Content</h2>
-        <div class="l-section2__buttons">
-            <button 
-            type="button"
-            class="button-style1"
-            onclick="justifycontentStart()">flex <br> start</button>
-
-            <button 
-            type="button"
-            class="button-style1"
-            onclick="justifycontentCenter()">center</button>
-
-            <button 
-            type="button"
-            class="button-style1"
-            onclick="justifycontentEnd()">flex <br> end</button>
-
-            <button 
-            type="button"
-            class="button-style1"
-            onclick="justifycontentBetween()">space <br> between</button>
-
-            <button 
-            type="button"
-            class="button-style1"
-            onclick="justifycontentAround()">space <br> around</button>
-
-            <button 
-            type="button"
-            class="button-style1"
-            onclick="justifycontentEvenly()">space <br> evenly</button>
-        </div>
-
-        <h2>Align Content</h2>
-        <div class="l-section2__buttons">
-            <button 
-            type="button"
-            class="button-style1"
-            onclick="aligncontentStart()">flex <br> start</button>
-
-            <button 
-            type="button"
-            class="button-style1"
-            onclick="aligncontentCenter()">center</button>
-
-            <button 
-            type="button"
-            class="button-style1"
-            onclick="aligncontentEnd()">flex <br> end</button>
-
-            <button 
-            type="button"
-            class="button-style1"
-            onclick="aligncontentStretch()">stretch</button>
-
-            <button 
-            type="button"
-            class="button-style1"
-            onclick="aligncontentBetween()">space <br> between</button>
-
-            <button 
-            type="button"
-            class="button-style1"
-            onclick="aligncontentAround()">space <br> around</button>
-        </div>
-
-        <button 
-        type="button"
-        class="button-style2"
-        onclick="clearClasses()">
-            clear <br> classes </button>
     </section>
 </body>
 </html>
