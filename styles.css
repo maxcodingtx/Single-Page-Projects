@@ -108,6 +108,11 @@ button:active {
         grid-row: 4;
     }
 
+    .l-section2-griditem6,
+    .l-section2-griditem8 {
+        flex-wrap: wrap;
+    }
+
     
 }
 
