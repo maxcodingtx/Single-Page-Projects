@@ -86,6 +86,31 @@ button:active {
     width: 20%;
 }
 
+@media (min-width: 1200px) {
+    .l-section2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .l-section2-griditem2 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .l-section2-griditem4 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .l-section2-griditem6 {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    
+}
+
 /* end of section 1 styling, section 2 styling below */
 
 .l-section2__buttons {
