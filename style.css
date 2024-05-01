@@ -27,12 +27,13 @@ header {
     --theme-clr-2: #0a66c2
 }
 
-/* section 1 styles below */
+/* section 1 ("time") styles below */
 
 .time__container {
     padding: 1.5rem;
-    border: 4px dotted var(--theme-clr-2);
+    border: 4px solid var(--theme-clr-2);
     border-radius: 12px;
+    margin-bottom: 2.5rem;
 
     text-align: center;
 
@@ -59,3 +60,20 @@ header {
 
     color: white;
 }
+
+/* section 2 styles ("click") below */
+
+.click__button {
+    padding: 6rem;
+    width: 100%;
+    border: 6px solid var(--theme-clr-1);
+    border-radius: 12px;
+
+    background-color: white;
+}
+
+.l-click__stats {
+    display: flex;
+    justify-content: space-evenly;
+}
+
