@@ -8,11 +8,54 @@
 
 body {
     margin: 0;
+
     font-family: "Roboto", sans-serif;
 }
 
 header {
     margin: 0;
+    
     text-align: center;
     font-size: 1.5rem;
+}
+
+:root {
+    --theme-clr-1: #e9e9ed
+}
+
+:root {
+    --theme-clr-2: #0a66c2
+}
+
+/* section 1 styles below */
+
+.time__container {
+    padding: 1.5rem;
+    border: 4px dotted var(--theme-clr-2);
+    border-radius: 12px;
+
+    text-align: center;
+
+    background-color: var(--theme-clr-1);
+}
+
+.l-section1__buttons {
+    display: flex;
+    flex-direction: column;
+    
+    width: 95%;
+    margin: 0 auto;
+}
+
+.time__button {
+    border: none;
+    padding: .75rem 0;
+
+    background-color: white;
+}
+
+.time__button:focus {
+    background-color: var(--theme-clr-2);
+
+    color: white;
 }
