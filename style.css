@@ -13,10 +13,11 @@ body {
 }
 
 header {
-    margin: 0;
+    margin-bottom: 1rem;
     
     text-align: center;
     font-size: 1.5rem;
+    color: var(--theme-clr-2);
 }
 
 :root {
@@ -33,7 +34,8 @@ header {
     padding: 1.5rem;
     border: 4px solid var(--theme-clr-2);
     border-radius: 12px;
-    margin-bottom: 2.5rem;
+    margin: 0 auto 1rem auto;
+    width: 80%;
 
     text-align: center;
 
