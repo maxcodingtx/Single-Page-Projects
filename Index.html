@@ -28,23 +28,27 @@
 
             <h1>Select Time</h1>
 
-            <div class="l-section1__buttons">
+            <ul class="l-time__selection" id="time__selection">
 
-                <button type="button" class="time__button" 
-                style="border-radius: 12px 12px 0 0;">1 second</button>
+                <li class="time__option" id="1" onclick="active(event)"
+                style="border-radius: 12px 12px 0 0;">1 second</li>
 
-                <button type="button" class="time__button">5 seconds</button>
+                <li class="time__option" id="5" onclick="active(event)"
+                >5 seconds</li>
     
-                <button type="button" class="time__button">15 seconds</button>
+                <li class="time__option" id="15" onclick="active(event)"
+                >15 seconds</li>
     
-                <button type="button" class="time__button">30 seconds</button>
+                <li class="time__option" id="30" onclick="active(event)"
+                >30 seconds</li>
     
-                <button type="button" class="time__button">45 seconds</button>
+                <li class="time__option" id="45" onclick="active(event)"
+                >45 seconds</li>
     
-                <button type="button" class="time__button"
-                style="border-radius: 0 0 12px 12px;">60 seconds</button>
+                <li class="time__option" id="60" onclick="active(event)"
+                style="border-radius: 0 0 12px 12px;">60 seconds</li>
 
-            </div>
+            </ul>
 
         </div>
 
@@ -57,7 +61,7 @@
             <button type="button"
              class="click__button"
              id="cps"
-             onclick="totalClicks()">Click Here <br> To Begin</button>
+             onclick="totalClicks();getCPS()">Click Here <br> To Begin</button>
 
             <div class="click__stats l-click__stats">
                 <p class="click__timer">Timer - </p>
