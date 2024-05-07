@@ -42,22 +42,25 @@ header {
     background-color: var(--theme-clr-1);
 }
 
-.l-section1__buttons {
+.l-time__selection {
     display: flex;
     flex-direction: column;
     
     width: 95%;
-    margin: 0 auto;
+    margin: 0 auto 0 auto;
+    padding: 0;
+
+    list-style-type: none;
 }
 
-.time__button {
+.time__option {
     border: none;
     padding: .75rem 0;
 
     background-color: white;
 }
 
-.time__button:focus {
+.is-active {
     background-color: var(--theme-clr-2);
 
     color: white;
