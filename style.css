@@ -80,5 +80,7 @@ header {
 .l-click__stats {
     display: flex;
     justify-content: space-evenly;
+
+    color: var(--theme-clr-2);
 }
 
