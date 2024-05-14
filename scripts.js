@@ -1,13 +1,5 @@
 
-var count = 0;
 
-// calculates total amount of times button has been clicked on
-function totalClicks() {
-    var totalClicks = document.getElementById('totalClicks')
-
-    count += 1;
-    totalClicks.innerHTML = count
-};
 
 // adds 'is-active' class when clicked on
 function active(event) {
@@ -22,3 +14,42 @@ function active(event) {
 
 }
 
+
+var numClicks = 0
+var start = 0
+
+function getCPS() {
+    numClicks += 1
+
+    var time = document.getElementsByClassName('is-active')[0].id;
+    time*=1 
+    
+    var timeLeft = time
+
+    var totalClicks = document.getElementById('totalClicks')
+    totalClicks.innerHTML = numClicks
+
+
+	if (!start) start = new Date/1000
+	var timePassed = new Date/1000 - start
+	var cps = numClicks / (timePassed)
+
+	if (timePassed >= time) {
+		alert('your cps was ' + cps.toFixed(2))
+        numClicks = start = cps = 0
+	}
+
+    if (numClicks === 1) {
+        var x = setInterval(() => {
+            timeLeft--;
+            document.getElementById('timeLeft').innerHTML = timeLeft
+
+            if (timeLeft == 0) {
+                clearInterval(x);
+                document.getElementById('timeLeft').innerHTML = 0;
+            }
+        }, 1000);
+
+    }
+
+};
