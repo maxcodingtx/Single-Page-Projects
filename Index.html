@@ -36,7 +36,7 @@
                 <li class="time__option" id="5" onclick="active(event)"
                 >5 seconds</li>
     
-                <li class="time__option" id="15" onclick="active(event)"
+                <li class="time__option is-active" id="15" onclick="active(event)"
                 >15 seconds</li>
     
                 <li class="time__option" id="30" onclick="active(event)"
@@ -61,11 +61,11 @@
             <button type="button"
              class="click__button"
              id="cps"
-             onclick="totalClicks();getCPS()">Click Here <br> To Begin</button>
+             onclick="getCPS()">Click Here <br> To Begin</button>
 
             <div class="click__stats l-click__stats">
-                <p class="click__timer">Timer - </p>
-                <p class="click__counter">Clicks - <span id="totalClicks"></span></p>
+                <p class="click__timer">Time Left : <span id="timeLeft"></span> </p>
+                <p class="click__counter">Clicks : <span id="totalClicks"></span></p>
             </div>
 
             <p id="CPS"></p>
