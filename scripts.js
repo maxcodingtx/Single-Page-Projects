@@ -41,14 +41,14 @@ function getCPS() {
 
     if (numClicks === 1) {
         var x = setInterval(() => {
-            timeLeft--;
-            document.getElementById('timeLeft').innerHTML = timeLeft
+            timeLeft-=.1;
+            document.getElementById('timeLeft').innerHTML = timeLeft.toFixed(2)
 
-            if (timeLeft == 0) {
+            if (timeLeft <= 0) {
                 clearInterval(x);
                 document.getElementById('timeLeft').innerHTML = 0;
             }
-        }, 1000);
+        }, 100);
 
     }
 
