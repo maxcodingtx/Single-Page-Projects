@@ -16,39 +16,35 @@ function active(event) {
 
 
 var numClicks = 0
-var start = 0
 
 function getCPS() {
     numClicks += 1
-
-    var time = document.getElementsByClassName('is-active')[0].id;
-    time*=1 
-    
-    var timeLeft = time
-
     var totalClicks = document.getElementById('totalClicks')
     totalClicks.innerHTML = numClicks
 
 
-	if (!start) start = new Date/1000
-	var timePassed = new Date/1000 - start
-	var cps = numClicks / (timePassed)
+    var timeSelected = document.getElementsByClassName('is-active')[0].id;
+    timeSelected*=1 
+    var time = timeSelected
 
-	if (timePassed >= time) {
-		alert('your cps was ' + cps.toFixed(2))
-        numClicks = start = cps = 0
-	}
+
 
     if (numClicks === 1) {
         var x = setInterval(() => {
-            timeLeft-=.1;
-            document.getElementById('timeLeft').innerHTML = timeLeft.toFixed(2)
+            let cps = (numClicks/time).toFixed(2)
+            timeSelected-=.01;
+            document.getElementById('timeLeft').innerHTML = timeSelected.toFixed(2)
 
-            if (timeLeft <= 0) {
+            if (timeSelected <= 0) {
+                alert('your cps was ' + cps)
+
+                numClicks = cps = 0
+
+
                 clearInterval(x);
                 document.getElementById('timeLeft').innerHTML = 0;
             }
-        }, 100);
+        }, 10);
 
     }
 
