@@ -31,7 +31,8 @@ function getCPS() {
     var time = timeSelected
 
 
-    // at the first click, start tracking clicks per seconds and time
+    /* at the first click, start an interval and track time.
+    when time is out, show clicks per second (cps) and reset stats */
     if (numClicks === 1) {
         var x = setInterval(() => {
             let cps = (numClicks/time).toFixed(2)
