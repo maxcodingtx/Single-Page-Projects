@@ -54,3 +54,33 @@ function getCPS() {
     }
 
 };
+
+function createRipple (event) {
+    const BUTTON = event.currentTarget;
+    // creating span element, where ripples take place
+    const CIRCLE = document.createElement('span')
+    // calculating diameter and radius of span element
+    const DIAMETER = Math.max(BUTTON.clientWidth, BUTTON.clientHeight);
+    const RADIUS = DIAMETER / 2;
+
+    //calculating width, left, top, of ripples
+    CIRCLE.style.width = CIRCLE.style.height = `${DIAMETER}px`;
+    CIRCLE.style.left = `${event.clientX - (BUTTON.offsetLeft + RADIUS)}px`;
+	CIRCLE.style.top = `${event.clientY - (BUTTON.offsetTop + RADIUS)}px`;
+    // adding 'ripple' class to span element
+	CIRCLE.classList.add('ripple'); 
+
+    const ripple = BUTTON.getElementsByClassName('ripple')[0];
+    // removing leftover ripple made by previous click, if any.
+    if (ripple) {
+        ripple.remove();
+    };
+
+    // adding span element as child to button
+    BUTTON.appendChild(CIRCLE);
+
+}
+
+// causing ripples when button is clicked
+var BUTTON = document.getElementById('cps')
+BUTTON.addEventListener('click', createRipple)
