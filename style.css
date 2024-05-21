@@ -69,12 +69,33 @@ header {
 /* section 2 styles ("click") below */
 
 .click__button {
+    position: relative;
+    overflow: hidden;
+
     padding: 6rem;
     width: 100%;
     border: 6px solid var(--theme-clr-1);
     border-radius: 12px;
 
     background-color: white;
+}
+
+span.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 500ms;
+    background-color: rgba(0, 204, 204, 0.7);
+}
+
+@keyframes ripple {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        transform: scale(1.5);
+        opacity: 0;
+    }
 }
 
 .l-click__stats {
