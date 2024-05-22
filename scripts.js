@@ -26,31 +26,20 @@ function getCPS() {
     // gettind id of element with 'is-active' class (active element)
     var timeSelected = document.getElementsByClassName('is-active')[0].id;
     timeSelected*=1 
-    /*since 'timeSelected' will be getting decreased in interval, another variable is
-    used to keep track of original value of timeSelected*/
-    var time = timeSelected
 
-
-    /* at the first click, start an interval and track time.
-    when time is out, show clicks per second (cps) and reset stats */
+    // on first click, create setTimout function
     if (numClicks === 1) {
-        var x = setInterval(() => {
-            let cps = (numClicks/time).toFixed(2)
-            // timeSelected is decreased by .01 every 10 milliseconds
-            timeSelected-=.01;
-            // 'timeLeft' element keeps track of time left
-            document.getElementById('timeLeft').innerHTML = timeSelected.toFixed(2)
 
-            // if theres no time left, show clicks per second and reset stats
-            if (timeSelected <= 0) {
-                alert('your cps was ' + cps)
-                numClicks = cps = 0
+        // once the time selected has passed, show clicks per second
+        setTimeout(() => {
+            // calculating clicks per second and showing only two decimal points
+            let cps = (numClicks/timeSelected).toFixed(2)
 
-                clearInterval(x);
-                document.getElementById('timeLeft').innerHTML = 0;
-            }
-        }, 10);
+            alert('Your cps rate was ' + cps)
+            // reseting total number of clicks
+            numClicks = 0;
 
+        }, 1000*timeSelected);
     }
 
 };
@@ -70,10 +59,10 @@ function createRipple (event) {
     // adding 'ripple' class to span element
 	CIRCLE.classList.add('ripple'); 
 
-    const ripple = BUTTON.getElementsByClassName('ripple')[0];
+    const RIPPLE = BUTTON.getElementsByClassName('ripple')[0];
     // removing leftover ripple made by previous click, if any.
-    if (ripple) {
-        ripple.remove();
+    if (RIPPLE) {
+        RIPPLE.remove();
     };
 
     // adding span element as child to button
