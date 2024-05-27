@@ -44,6 +44,81 @@ function getCPS() {
 
 };
 
+function timer () {
+    var timeSelected = document.getElementsByClassName('is-active')[0].id
+    timeSelected *= 1
+
+    if (numClicks === 1) {
+        switch (timeSelected) {
+            case 1:
+                var x = setInterval(() => {
+                    timeSelected -= .1
+                    document.getElementById('timeLeft').innerHTML = timeSelected.toFixed(2)
+                    
+                    if (timeSelected <= 0) {
+                        clearInterval(x)
+                        document.getElementById('timeLeft').innerHTML = 0
+                    }
+                }, 90);
+
+            case 5:
+                var x = setInterval(() => {
+                    timeSelected -= .1
+                    document.getElementById('timeLeft').innerHTML = timeSelected.toFixed(2)
+                    
+                    if (timeSelected <= 0) {
+                        clearInterval(x)
+                        document.getElementById('timeLeft').innerHTML = 0
+                    }
+                }, 92);
+
+            case 15:
+                var x = setInterval(() => {
+                    timeSelected -= .1
+                    document.getElementById('timeLeft').innerHTML = timeSelected.toFixed(2)
+                    
+                    if (timeSelected <= 0) {
+                        clearInterval(x)
+                        document.getElementById('timeLeft').innerHTML = 0
+                    }
+                }, 92);
+
+            case 30:
+                var x = setInterval(() => {
+                    timeSelected -= 1
+                    document.getElementById('timeLeft').innerHTML = timeSelected.toFixed()
+                    
+                    if (timeSelected <= 0) {
+                        clearInterval(x)
+                        document.getElementById('timeLeft').innerHTML = 0
+                    }
+                }, 1000);
+            
+            case 45:
+                var x = setInterval(() => {
+                    timeSelected -= 1
+                    document.getElementById('timeLeft').innerHTML = timeSelected.toFixed()
+                    
+                    if (timeSelected <= 0) {
+                        clearInterval(x)
+                        document.getElementById('timeLeft').innerHTML = 0
+                    }
+                }, 1000);
+
+            case 60:
+                var x = setInterval(() => {
+                    timeSelected -= 1
+                    document.getElementById('timeLeft').innerHTML = timeSelected.toFixed()
+                    
+                    if (timeSelected <= 0) {
+                        clearInterval(x)
+                        document.getElementById('timeLeft').innerHTML = 0
+                    }
+                }, 1000);
+        }
+    }
+}
+
 function createRipple (event) {
     const BUTTON = event.currentTarget;
     // creating span element, where ripples take place
