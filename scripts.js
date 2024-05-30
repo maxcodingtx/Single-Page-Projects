@@ -64,6 +64,7 @@ function timer () {
                         document.getElementById('timeLeft').innerHTML = 0
                     }
                 }, 90);
+                break;
 
             case 5:
                 var x = setInterval(() => {
@@ -75,6 +76,7 @@ function timer () {
                         document.getElementById('timeLeft').innerHTML = 0
                     }
                 }, 92);
+                break;
 
             case 15:
                 var x = setInterval(() => {
@@ -86,6 +88,7 @@ function timer () {
                         document.getElementById('timeLeft').innerHTML = 0
                     }
                 }, 92);
+                break;
 
             case 30:
                 var x = setInterval(() => {
@@ -97,6 +100,7 @@ function timer () {
                         document.getElementById('timeLeft').innerHTML = 0
                     }
                 }, 1000);
+                break;
             
             case 45:
                 var x = setInterval(() => {
@@ -108,6 +112,7 @@ function timer () {
                         document.getElementById('timeLeft').innerHTML = 0
                     }
                 }, 1000);
+                break;
 
             case 60:
                 var x = setInterval(() => {
@@ -119,6 +124,7 @@ function timer () {
                         document.getElementById('timeLeft').innerHTML = 0
                     }
                 }, 1000);
+                break;
         }
     }
 }
