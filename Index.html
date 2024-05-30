@@ -22,13 +22,13 @@
         </p>
     </header>
 
-    <section class="time">
+    <section id="time">
 
         <div class="time__container">
 
             <h1>Select Time</h1>
 
-            <ul class="l-time__selection" id="time__selection">
+            <ul class="l-time__selection">
 
                 <li class="time__option" id="1" onclick="active(event)"
                 style="border-radius: 12px 12px 0 0;">1 second</li>
@@ -54,21 +54,16 @@
 
     </section>
 
-    <section class="click">
+    <section id="click">
         
-        <div class="click__container">
+        <button type="button"
+            class="click__button"
+            id="cps"
+            onclick="getCPS() ; timer()">Click Here <br> To Begin</button>
 
-            <button type="button"
-             class="click__button"
-             id="cps"
-             onclick="getCPS() ; timer()">Click Here <br> To Begin</button>
-
-            <div class="click__stats l-click__stats">
-
-                <p class="click__counter">Time Left : <span id="timeLeft"></span></p>
-                <p class="click__counter">Clicks : <span id="totalClicks"></span></p>
-            </div>
-
+        <div class="l-click__stats">
+            <p>Time Left : <span id="timeLeft"></span></p>
+            <p>Clicks : <span id="totalClicks"></span></p>
         </div>
 
     </section>
