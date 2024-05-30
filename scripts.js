@@ -44,10 +44,14 @@ function getCPS() {
 
 };
 
+// when button is clicked, countdown timer will start
 function timer () {
     var timeSelected = document.getElementsByClassName('is-active')[0].id
     timeSelected *= 1
 
+    /* on the first click, countdown timer will start, 
+    due to drift different timers have different delays.
+    once interval is <= 0, it will be cleared and displayed as '0'*/
     if (numClicks === 1) {
         switch (timeSelected) {
             case 1:
