@@ -1,0 +1,43 @@
+
+*,
+*::before,
+*::after {box-sizing: border-box;}
+
+body {
+    margin: 0;
+    /* add fonts */
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: white;
+}
+
+/* header styles begin here */
+
+#header {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#header >* {
+    margin: 0;
+}
+
+
+#header h1 {
+    padding: 4rem;
+}
+
+
+#header nav {
+    padding: 2rem;
+}
+
+#header nav a {
+    text-decoration: none;
+    margin: 0 5%;
+}
