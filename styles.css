@@ -5,7 +5,7 @@
 
 body {
     margin: 0;
-    /* add fonts */
+    font-family: "SUSE", sans-serif;
 }
 
 a:visited {
@@ -27,17 +27,16 @@ a:hover {
     margin: 0;
 }
 
-
 #header h1 {
-    padding: 4rem;
+    padding: 6rem;
 }
-
 
 #header nav {
-    padding: 2rem;
+    padding: 1.5rem;
 }
-
-#header nav a {
+.nav__link {
     text-decoration: none;
     margin: 0 5%;
 }
+
+/* header styles end here */
