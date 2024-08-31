@@ -31,12 +31,23 @@ a:hover {
     padding: 6rem;
 }
 
-#header nav {
-    padding: 1.5rem;
+.l-nav {
+    display: flex;
+    justify-content: center;
 }
-.nav__link {
-    text-decoration: none;
-    margin: 0 5%;
+
+.nav-button {
+    margin: 0 2%;
+    padding: 2rem 3rem;
+    border: none;
+
+    font-size: 2rem;
 }
+
+.nav-button:hover {
+    color: white;
+}
+
+
 
 /* header styles end here */
