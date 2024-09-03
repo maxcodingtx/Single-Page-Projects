@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="themes.css">
+    <script src="scripts.js"></script>
     
     <!-- font lined below -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,18 +20,28 @@
         <h1>NAME GOES HERE</h1>
 
         <nav class="l-nav">
-            <button class="nav-button" onclick="openTab()">Home</button>
-            <button class="nav-button" onclick="openTab()">About</button>
-            <button class="nav-button" onclick="openTab()">Contact</button>
+            <button class="nav__button" onclick="openTab(event, 'Home')">Home</button>
+            <button class="nav__button" onclick="openTab(event, 'About')">About</button>
+            <button class="nav__button" onclick="openTab(event, 'Contact')">Contact</button>
         </nav>
 
     </header>
+    
 
-    <div id="Home" class="tab-content"></div>
+    <div id="Home" class="tab__content">
+        <h1>home</h1>
+        <p>home content</p>
+    </div>
 
-    <div id="About" class="tab-content"></div>
+    <div id="About" class="tab__content">
+        <h1>about</h1>
+        <p>about content</p>
+    </div>
 
-    <div id="Contact" class="tab-content"></div>
+    <div id="Contact" class="tab__content">
+        <h1>contact</h1>
+        <p>contact content</p>
+    </div>
     
 </body>
 </html>
