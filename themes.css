@@ -7,10 +7,10 @@ body {
     background-color: #53a8b6;
 }
 
-#header nav {
+nav, .tabLink {
     background-color: #79c2d0;
 }
 
-#header nav button {
-    background-color: #79c2d0;
+.tabLink.active {
+    background-color: #53a8b6;
 }
