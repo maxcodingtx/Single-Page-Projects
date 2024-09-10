@@ -39,6 +39,9 @@ nav .tabLink {
     font-size: 24px;
 }
 
+/* header styles end here */
+/* main content styles below */
+
 .tabContent {
     display: none;
     margin: 32px auto;
@@ -51,6 +54,12 @@ nav .tabLink {
     font-size: 24px;
 }
 
+/* main content styles end here */
+/* footer style below */
 
-
-/* header styles end here */
+footer {
+    margin: 0 6px;
+    position: absolute;
+    bottom: 0;
+}
+/* styles end here */
