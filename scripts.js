@@ -5,7 +5,7 @@ window.onload = () => {
 }
 
 // function which displays tab when clicked on
-function openTab(evt, cityName) {
+function openTab(evt, tabName) {
 
     // setting tabContent divs to not be displayed (display: none)
     var tabContent = document.getElementsByClassName("tabContent");
@@ -20,7 +20,7 @@ function openTab(evt, cityName) {
     }
 
     //show current tab and add 'active' class to button that currently selected
-    document.getElementById(cityName).style.display = "block"
+    document.getElementById(tabName).style.display = "block"
     evt.currentTarget.className += " active"
 }
 
