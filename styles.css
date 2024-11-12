@@ -63,7 +63,7 @@ img {max-width: 100%;}
 
 /* beginning of section 1 */
 
-.section1 {
+.hero {
     padding: 3rem;
     background-image: url(Images/Section1/Flavora_img.jpg);
     background-size: cover;
@@ -71,7 +71,7 @@ img {max-width: 100%;}
 }
 
 
-.section1__toptext {
+.hero__links {
     color: white;
     font-family: 'IBM Plex Mono', monospace;
     display: flex;
@@ -81,26 +81,26 @@ img {max-width: 100%;}
 }
 
 
-.section1__title {
+.hero h1 {
     
     font-family: 'Titillium Web', sans-serif;
     font-size: 4.5rem;
     color: white;
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
     text-shadow: 1px 1px 1px white;
 
 }
 
 
-.section1__buttons{
+.hero__button__container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
 
-.section1__button {
+.hero__button__container button {
     font-size: 1.75rem;
     margin: auto auto;
     color: white;
