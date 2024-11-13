@@ -136,38 +136,40 @@ and to have section 1 take entire viewport height on smaller screens
 }
 
 
-/* end of section 1 */
+/* 
+end of hero section
+about section below
+*/
 
 
-/* start of section 2 */
-
-.section2 {
+.about {
     height: 30vh;
 }
 
 
-.section2__text {
+.about >* {
     text-align: center;
 }
 
 
-.section2__header {
+.about h1 {
     color: #CD7F32;
     font-size: 3rem;
     font-style: italic;
-
 }
 
 
-.section2__paragraph {
+.about p {
+    width: 80%;
+    margin: auto;
+
     font-size: 1.25rem;
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 500;
-
 }
 
 
-@media(max-width: 900px) {
+@media(max-width: 800px) {
     .section2 {
         height: auto;
     }
