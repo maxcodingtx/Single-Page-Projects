@@ -170,33 +170,33 @@ about section below
 
 
 @media(max-width: 800px) {
-    .section2 {
+    .about {
         height: auto;
+        margin-bottom: 24px;
     }
 }
 
 
-/* end of section 2 */
+/* 
+end of 'about' section
+'gallery section below
+*/
 
 
-
-/* start of section 3 */
-
-.section3 {
+.gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    margin-top: 2rem;
 }
 
 
-.section3__image2 {
+.gallery__image2 {
     grid-row: 2;
     grid-column: 2;
 }
 
 
-.section3__info {
+.gallery__info {
     text-align: center;
     margin: auto auto;
 }
@@ -217,7 +217,7 @@ about section below
 }
 
 
-.section3__featured__header {
+.gallery__featured__header {
     text-align: center;
     font-size: 5rem;
     color: #CD7F32;
@@ -227,7 +227,7 @@ about section below
 }
 
 
-.section3__featured__logos {
+.gallery__featured__logos {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -244,22 +244,22 @@ about section below
 
 @media(max-width: 1200px) {
 
-    .section3__info {
+    .gallery__info {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, .5fr);
     }
 
-    .section3__info__part1 {
+    .gallery__info__hours {
         grid-column: 1;
         grid-row: span 2;
     }
 
-    .section3__info__part2 {
+    .gallery__info__phone {
         grid-column: 2;
     }
 
-    .section3__info__part3 {
+    .gallery__info__location {
         grid-column: 2;
     }
 
