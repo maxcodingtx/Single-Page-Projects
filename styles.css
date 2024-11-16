@@ -136,7 +136,7 @@ about section below
 
 
 .about {
-    height: 30vh;
+    margin-bottom: 36px;
 }
 
 
@@ -146,8 +146,7 @@ about section below
 
 
 .about h1 {
-    color: #CD7F32;
-    font-size: 3rem;
+    color: var(--clr1);
     font-style: italic;
 }
 
@@ -155,18 +154,6 @@ about section below
 .about p {
     width: 80%;
     margin: auto;
-
-    font-size: 1.25rem;
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: 500;
-}
-
-
-@media(max-width: 800px) {
-    .about {
-        height: auto;
-        margin-bottom: 24px;
-    }
 }
 
 
