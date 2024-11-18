@@ -65,12 +65,19 @@ beginning of hero section
 */
 
 .hero {
-    height: 70vh;
+    height: 100vh;
 
     padding-top: 24px;
 
     background-image: url(Images/Section1/Flavora_img.jpg);
     background-size: cover;
+}
+
+
+@media (max-width: 700px) {
+    .hero {
+        height: 70vh;
+    }
 }
 
 
@@ -190,6 +197,7 @@ end of 'about' section
     text-shadow: 1px 1px 1px var(--clr1);
     font-style: italic;
 }
+
 
 @media (min-width: 700px) {
     .gallery__hours, .gallery__extra{
