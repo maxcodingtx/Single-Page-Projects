@@ -166,7 +166,6 @@ end of 'about' section
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
 }
 
 
@@ -176,111 +175,31 @@ end of 'about' section
 }
 
 
-.gallery__info {
+.gallery__hours, .gallery__extra {
     text-align: center;
     margin: auto auto;
+    width: 80%;
 }
 
+.gallery__hours h1, .gallery__extra h1 {
+    margin: auto auto;
+    width: 80%;
 
-.section3__info__header {
-    font-size: 2.25rem;
-}
-
-
-.section3__info__normalText {
-    font-size: 1.5rem;
-}
-
-
-.section3__featured {
-    margin: auto;
-}
-
-
-.gallery__featured__header {
+    color: var(--clr1);
     text-align: center;
-    font-size: 5rem;
-    color: #CD7F32;
-    text-shadow: 1px 1px 1px #CD7F32;
+    text-shadow: 1px 1px 1px var(--clr1);
     font-style: italic;
-
 }
 
-
-.gallery__featured__logos {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-
+@media (min-width: 700px) {
+    .gallery__hours, .gallery__extra{
+        font-size: 24px;
+    }
 }
-
-
-
-/*
- media queries to make info on
- section 3 (row 1, column 2)
- responsive
-*/
-
-@media(max-width: 1200px) {
-
-    .gallery__info {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, .5fr);
-    }
-
-    .gallery__info__hours {
-        grid-column: 1;
-        grid-row: span 2;
-    }
-
-    .gallery__info__phone {
-        grid-column: 2;
-    }
-
-    .gallery__info__location {
-        grid-column: 2;
-    }
-
-    /* theme style */
-    .section3__featured__header{
-        font-size: 3rem;
-
-    }
-
-
-}
-
-
-@media(max-width: 900px) {
-
-    /* theme style */
-    .section3__info__header {
-        font-size: 1.75rem;
-    }
-
-    /* theme style */
-    .section3__info__normalText {
-        font-size: 1rem;
-    }
-
-    .section3__featured__logos {
-        width: 50%;
-        margin: auto auto;
-    }
-
-
-}
-
-
-/* end of section 3 */
-
 
 
 /* start of section 4 */
 
-/* change to footer */
 footer {
     padding: 2rem;
     background: black;
