@@ -69,14 +69,22 @@ beginning of hero section
 
     padding-top: 24px;
 
-    background-image: url(Images/Section1/Flavora_img.jpg);
+    background-image: url(Images/Hero-Banner/Banner-Default.jpg);
     background-size: cover;
+    background-position: center;
 }
 
+@media (max-width:1200px) {
+    .hero{
+        background-image: url(Images/Hero-Banner/Banner-1200w.jpg);
+    }
+}
 
 @media (max-width: 700px) {
     .hero {
         height: 70vh;
+
+        background-image: url(Images/Hero-Banner/Banner-800w.jpg);
     }
 }
 
