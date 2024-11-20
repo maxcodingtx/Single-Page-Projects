@@ -186,7 +186,24 @@ end of 'about' section
     text-align: center;
     margin: auto auto;
     width: 80%;
+
+    font-size: 44px;
 }
+
+
+@media (max-width: 1200px) {
+    .gallery__hours, .gallery__extra{
+        font-size: 24px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .gallery__hours, .gallery__extra{
+        font-size: 12px;
+    }
+}
+
 
 .gallery__hours h1, .gallery__extra h1 {
     margin: auto auto;
@@ -196,13 +213,6 @@ end of 'about' section
     text-align: center;
     text-shadow: 1px 1px 1px var(--clr1);
     font-style: italic;
-}
-
-
-@media (min-width: 700px) {
-    .gallery__hours, .gallery__extra{
-        font-size: 24px;
-    }
 }
 
 
