@@ -230,21 +230,25 @@ footer below
 */
 
 footer {
-    background-color: black;
-    color: white;
     padding-left: 15px;
+
+    background-color: black;
+
+    color: white;
 }
 
 
 .footer__nav {
     display: flex;
     flex-direction: column;
+
     margin-top: 24px;
 }
 
 .footer__nav >*, .footer__nav >*:visited {
-    color: white;
     margin: 2px 0;
+
+    color: white;
 }
 
 
