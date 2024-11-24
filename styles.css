@@ -251,4 +251,42 @@ footer {
     color: white;
 }
 
+footer hr{
+    margin: 4px 0;
+    width: 50%;
 
+    color: white;
+}
+
+.footer__icon-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 250px;
+}
+
+.footer__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 24px;
+
+    background-image: url(Images/Footer-Sprite/icon-sprite.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.footer__icon1 {
+    background-position: 0 0;
+}
+
+.footer__icon2 {
+    background-position: -64px 0;
+}
+.footer__icon3 {
+    background-position: -128px 0;
+}
+
+.footer__icon4 {
+    background-position: -192px 0;
+}
