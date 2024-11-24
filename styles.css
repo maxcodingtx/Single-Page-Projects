@@ -231,6 +231,7 @@ footer below
 
 footer {
     padding-left: 15px;
+    padding-bottom: 15px;
 
     background-color: black;
 
@@ -246,14 +247,14 @@ footer {
 }
 
 .footer__nav >*, .footer__nav >*:visited {
-    margin: 2px 0;
+    margin: 4px 0;
 
     color: white;
 }
 
 footer hr{
     margin: 4px 0;
-    width: 50%;
+    width: 400px;
 
     color: white;
 }
@@ -264,6 +265,13 @@ footer hr{
     gap: 24px;
     max-width: 250px;
 }
+
+
+.footer__icon-container a {
+    width: 70px;
+    border-radius: 24px;
+}
+
 
 .footer__icon {
     width: 64px;
