@@ -195,21 +195,7 @@ end of 'about' section
     margin: auto auto;
     width: 80%;
 
-    font-size: 44px;
-}
-
-
-@media (max-width: 1200px) {
-    .gallery__hours, .gallery__extra{
-        font-size: 24px;
-    }
-}
-
-
-@media (max-width: 600px) {
-    .gallery__hours, .gallery__extra{
-        font-size: 12px;
-    }
+    font-size: 3vw;
 }
 
 
@@ -230,6 +216,7 @@ footer below
 */
 
 footer {
+    margin-top: -16px;
     padding-left: 15px;
     padding-bottom: 15px;
 
