@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Flavora</title>
+
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="themes.css">
 
     <!-- font1 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,196 +28,139 @@
 <body>
 
 
-    <!-- Section 1 will be what the user will see
-        when entering the website. This is where
-        user will be introduced to the restaurant
-    -->
 
-    <section id="section1">
+    <section class="hero">
 
-        <div class="section1">
-
-            <div class="section1__toptext">
-                <a href="" class="section1__link size--Increase link dropDown--slow">Home</a>
-                <a href="" class="section1__link size--Increase link dropDown--slow">Menu</a>
-                <a href="" class="section1__link size--Increase link dropDown--slow">Contact</a>
-            </div>
+        <nav class="hero__nav font-IBM font-size-2">
+            <a href="" class="size--Increase dropDown--slow">Home</a>
+            <a href="" class="size--Increase dropDown--slow">Menu</a>
+            <a href="" class="size--Increase dropDown--slow">Contact</a>
+        </nav>
 
 
-            <div class="section1__title fadeIn--normal">
-                <p>
-                    Flavora
-                </p>
-            </div>
+        <h1 class="fadeIn--normal font-Titillium font-size-4">
+            Flavora
+        </h1>
 
+        <nav class="hero__button__container">
+            <button class="size--Increase size--Decrease fadeIn--slow font-IBM font-size-2">
+                Book a table
+            </button>
 
-            <div class="section1__buttons">
-                <button class="section1__button size--Increase size--Decrease fadeIn--slow">
-                    Book a table
-                </button>
-
-                <button class="section1__button size--Increase size--Decrease fadeIn--slow">
-                    Online Order
-                </button>
-
-            </div>
-    
-
-        </div>
-
-    </section>
-
-
-    <!-- 
-        section 2 will feature a "about us" styled paragraph
-
-        on bigger screen sizes it will be visible as soon as user
-        enters the website
-     -->
-
-
-    <section id="section2">
-
-        <div class="section2">
-            <div class="section2__text">
-
-                <h1 class="section2__header fadeIn--slow">About us</h1>
-
-                <p class="section2__paragraph fadeIn--slow">
-                    Flavora offers flavor through out traditional
-                    italian dishes and drinks along with wonderful
-                    scenery from above.
-                    <br>
-                    We stick true to our italian roots by offering
-                    house-made pasta, antipasti, salads, pizzas & more.
-                    <br>
-                    Join us and enjoy traditional italian food for good.
-                </p>
-            </div>
-            
-        </div>
+            <button class="size--Increase size--Decrease fadeIn--slow font-IBM font-size-2">
+                Online Order
+            </button>
+        </nav>
 
 
     </section>
 
 
-    <!-- 
-        section 3 will feature:
-        2 images
-        1 section showing our open hours, phone, and location
-        1 sectoin showing what/where our restaurant was featured on
-    -->
+    <section class="about">
+        <h1 class="fadeIn--slow font-size-4">About us</h1>
+
+        <p class="fadeIn--slow font-IBM font-size-2">
+            Flavora offers flavor through out traditional
+            italian dishes and drinks along with wonderful
+            scenery from above.
+            <br> <br>
+            We stick true to our italian roots by offering
+            house-made pasta, antipasti, salads, pizzas & more.
+            <br> <br>
+            Join us and enjoy traditional italian food for good.
+        </p>
+    </section>
 
 
-    <section id="section3">
-
-        <div class="section3">
-
-            
-            <img src="Images\Section3\image1.jpeg"
-             alt=""
-             srcset="Images\Section3\image1_800w.jpeg 800w"
-              class="section3__image1">
-              
-
-            <img src="Images\Section3\image2.jpg"
-             alt="" 
-             srcset="Images\Section3\image2_800w.jpg 800w"
-             class="section3__image2">
-        
-
-            <div class="section3__info">
-                <div class="section3__info__part1">
-                    <h1 class="section3__info__header section3__info__header1">
-                        Hours
-                    </h1>
-
-                    <p class="section3__info__hours section3__info__normalText">
-                        Monday 8AM - 10PM
-                        <br>
-                        Tuesday 8AM - 10PM
-                        <br>
-                        Wednesday 8AM - 10PM
-                        <br>
-                        Thursday 8AM - 10PM
-                        <br>
-                        Friday 8AM - 10PM
-                        <br>
-                        Saturday 6AM - 12PM
-                        <br>
-                        Sunday 6AM - 12PM
-                    </p>
-                </div>
-                
-                <div class="section3__info__part2">
-
-                    <h1 class="section3__info__header section3__info__header2">Phone</h1>
-
-                    <p class="section3__info__phone section3__info__normalText">
-                        999-888-7777
-                    </p>
-
-                </div>
-
-                <div class="section__info__part3">
-    
-
-                    <h1 class="section3__info__header">Location</h1>
-
-                    <p class="section3__info__location section3__info__normalText">
-                        1900 Georgia AVE, Floor 30
-                    </p>
-                </div>
-
-
-            </div>
-
-
-            <div class="section3__featured">
-                <h1 class="section3__featured__header section3__info__header3">Featured on</h1>
-
-                <div class="section3__featured__logos">
-
-                    <img src="Logos\Section3\The_New_York_Times_logo.png" alt="" >
-                    
-                    <img src="Logos\Section3\forbes_logo.png" alt="">
-                </div>
-
-            </div>
+    <section class="gallery">
+        <img 
+        src="Images/Gallery-Images/Gallery-Image1-Default.jpeg" 
+        alt="Food-Image1"
+        srcset="
+        Images/Gallery-Images/Gallery-Image1-800w.jpeg 800w,
+        Images/Gallery-Images/Gallery-Image1-Default.jpeg 1500w,
+        "
+        loading="lazy">
             
 
+        <img src="Images/Gallery-Images/Gallery-Image2-Default.jpg"
+            alt="Food Image 2" 
+            srcset="
+            Images/Gallery-Images/Gallery-Image2-800w.jpg 800w,
+            Images/Gallery-Images/Gallery-Image2-Default.jpg 1500w,
+            "
+            class="gallery__image2"
+            loading="lazy">
+
+        <div class="gallery__hours">
+            <h1>Hours</h1>
+            <p>
+                Monday 8AM - 10PM
+                <br>
+                Tuesday 8AM - 10PM
+                <br>
+                Wednesday 8AM - 10PM
+                <br>
+                Thursday 8AM - 10PM
+                <br>
+                Friday 8AM - 10PM
+                <br>
+                Saturday 6AM - 12PM
+                <br>
+                Sunday 6AM - 12PM
+            </p>
         </div>
 
-        
 
+        <div class="gallery__extra">
+            <h1>Phone</h1>
+            <p>999-888-7777</p>
+
+            <h1>Location</h1>
+            <p>1900 Georgia AVE, Floor 30</p>
+        </div>
     </section>
 
-    <!-- 
-        section 4 will feature:
-        our social medias (Instagram, Facebook, TikTok, Twitter)
-        1 icon for each, using grid structure
-     -->
 
-    <section id="section4">
+    <footer>
+        <p>
+            <span class="font-Titillium font-size-4">
+                Flavora
+            </span>
+            <br>
+            1900 Georgia AVE, Floor 30
+        </p>
 
-        <div class="section4">
+        <nav class="footer__nav font-IBM font-size-2">
+            <a href="Index.html">Back to top</a>
+            <a href="">Menu</a>
+            <a href="">Contact</a>
+        </nav>
 
-            <h1 class="section4__header">
-                Our Socials
-            </h1>
+        <hr>
 
-            <div class="section4__icons">
-                <img src="Logos\Section4\instagram_logo.webp" alt="" class="section4__icon size--Increase size--Decrease">
-                <img src="Logos\Section4\tiktok_icon.png" alt="" class="section4__icon size--Increase size--Decrease">
-                <img src="Logos\Section4\twitter_icon.png" alt="" class="section4__icon size--Increase size--Decrease">
-                <img src="Logos\Section4\youtube_icon.png" alt="" class="section4__icon size--Increase size--Decrease">
-            </div>
+        <p class="footer__nav font-IBM font-size-2">
+            Flavora socials ↓
+        </p>
 
+        <div class="footer__icon-container">
+
+            <a href="twitter-link">
+                <div class="footer__icon footer__icon1 size--Increase"></div>
+            </a>
+            <a href="instagram-link">
+                <div class="footer__icon footer__icon2 size--Increase"></div>
+            </a>
+            <a href="tiktok-link">
+                <div class="footer__icon footer__icon3 size--Increase"></div>
+            </a>
+            <a href="youtube-link">
+                <div class="footer__icon footer__icon4 size--Increase"></div>
+            </a>
         </div>
 
+    </footer>
 
-    </section>
 
-    
 </body>
 </html>
