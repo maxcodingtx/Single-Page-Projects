@@ -1,0 +1,25 @@
+
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+.margin-auto {
+    display: block;
+    margin: auto auto;
+}
+
+body {
+    background-color: #f6f6f8;
+    margin: 0;
+}
+
+/* main styles below */
+
+main img {
+    max-width: 100%;
+    border-bottom: 2px solid red;
+}
+
+
+
+
