@@ -4,8 +4,8 @@ calculateTotal()
 // changes image based on what color user decides
 function displayPhone(color) {
     if (color == 'black') {
-        document.getElementById('phone-image').src="img/iphone-16-plus-black-default.jpg"
-    } else {document.getElementById('phone-image').src="img/iphone-16-plus-white-default.jpg"}
+        document.getElementById('phone-image').src="img/iphone-16-plus-black.jpg"
+    } else {document.getElementById('phone-image').src="img/iphone-16-plus-white.jpg"}
 }
 
 
