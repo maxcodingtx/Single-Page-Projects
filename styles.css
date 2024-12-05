@@ -39,9 +39,14 @@ ul >* {
     list-style-type: square;
 }
 
-/* main styles below */
+
 
 main img {
     max-width: 100%;
     border-bottom: 2px solid red;
+}
+
+.is-active {
+    color: white;
+    background-color: black;
 }
