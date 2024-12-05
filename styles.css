@@ -9,8 +9,34 @@
 }
 
 body {
-    background-color: #f6f6f8;
     margin: 0;
+
+    background-color: #f6f6f8;
+}
+
+div{
+    margin-left: 8px;
+    margin-top: 24px;
+    font-size: 3vw;
+}
+
+button {
+    padding: 8px 12px;
+    border: 2px solid black;
+    border-radius: 4px;
+    
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2vw;
+
+    background-color: white;
+}
+button:hover {
+    background-color: #d8d8d8;
+}
+
+ul >* {
+    margin-left: -8px;
+    list-style-type: square;
 }
 
 /* main styles below */
@@ -19,7 +45,3 @@ main img {
     max-width: 100%;
     border-bottom: 2px solid red;
 }
-
-
-
-
