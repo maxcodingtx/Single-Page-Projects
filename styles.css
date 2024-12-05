@@ -3,6 +3,12 @@
     box-sizing: border-box;
 }
 
+/* used for JS  */
+.is-active {
+    color: white;
+    background-color: black;
+}
+
 .margin-auto {
     display: block;
     margin: auto auto;
@@ -14,10 +20,14 @@ body {
     background-color: #f6f6f8;
 }
 
+img {
+    max-width: 50%;
+}
+
 div{
     margin-left: 8px;
     margin-top: 24px;
-    font-size: 3vw;
+    font-size: 2vw;
 }
 
 button {
@@ -39,14 +49,11 @@ ul >* {
     list-style-type: square;
 }
 
-
-
-main img {
-    max-width: 100%;
-    border-bottom: 2px solid red;
+table {
+    width: 40%;
+    border-collapse: collapse;
 }
 
-.is-active {
-    color: white;
-    background-color: black;
+td {
+    border-bottom: 1px solid;
 }
