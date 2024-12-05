@@ -25,9 +25,10 @@
 <body>
     <main>
 
-        <img src="img/iphone-16-plus-black-default.jpg" 
+        <img src="img/iphone-16-plus-black.jpg" 
         alt="Iphone16 plus black"
         class="margin-auto"
+        id = 'phone-image'
         >
 
         <div class="product__info theme-montserrat">
@@ -46,22 +47,22 @@
         <div class="product__color">
             <h2 class="theme-montserrat">Color</h2>
 
-            <button id="color-black">Black</button>
-            <button id="color-white">White</button>
+            <button onclick="displayPhone('black')">Black</button>
+            <button onclick="displayPhone('white')">White</button>
         </div>
 
 
         <div class="product__storage">
             <h2 class="theme-montserrat">Storage</h2>
-            <button id="storage-128">
+            <button id="storage-price" onclick="getStoragePrice(100)">
                 128-GB
             </button>
 
-            <button id="storage-256">
+            <button id="storage-price" onclick="getStoragePrice(200)">
                 256-GB
             </button>
 
-            <button id="storage-512">
+            <button id="storage-price" onclick="getStoragePrice(300)">
                 512-GB
             </button>
         </div>
@@ -69,12 +70,12 @@
 
         <div class="product__delivery">
             <h2 class="theme-montserrat">Delivery</h2>
-            <button>
+            <button onclick="getDeliveryPrice(0)">
                 Sunday, December 8
                 <br>
                 Free Delivery
             </button>
-            <button>
+            <button onclick="getDeliveryPrice(12)">
                 Friday, December 6
                 <br>
                 $12 Delivery Fee
@@ -104,10 +105,10 @@
         </div>
 
         <div class="total theme-montserrat">
-            <h2>Total - </h2>
+            <h2 id="totalPrice">Total - </h2>
         </div>
 
     </main>
-    
+    <script src="js/script.js"></script>
 </body>
 </html>
