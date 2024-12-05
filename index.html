@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="themes.css">
     <link
     href="img/favicon-white.png"
     rel="icon"
@@ -16,6 +17,10 @@
     rel="icon"
     media="(prefers-color-scheme: light)"
 />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
@@ -25,8 +30,8 @@
         class="margin-auto"
         >
 
-        <div class="product__info">
-            <h1>Customize your iPhone 16 Plus</h1>
+        <div class="product__info theme-montserrat">
+            <h1>Order the iPhone 16 Plus</h1>
             <p>The new iPhone 16 Plus includes:</p>
             <ul>
                 <li>Apple Intelligence</li>
@@ -39,7 +44,7 @@
         
 
         <div class="product__color">
-            <p>Color</p>
+            <h2 class="theme-montserrat">Color</h2>
 
             <button id="color-black">Black</button>
             <button id="color-white">White</button>
@@ -47,7 +52,7 @@
 
 
         <div class="product__storage">
-            <p>Storage</p>
+            <h2 class="theme-montserrat">Storage</h2>
             <button id="storage-128">
                 128-GB
             </button>
@@ -63,7 +68,7 @@
 
 
         <div class="product__delivery">
-            <p>Delivery</p>
+            <h2 class="theme-montserrat">Delivery</h2>
             <button>
                 Sunday, December 8
                 <br>
@@ -76,7 +81,7 @@
             </button>
         </div>
 
-        <div class="product__table">
+        <div class="product__table theme-montserrat">
             <h1>Total Price</h1>
             <table>
                 <tbody>
@@ -91,15 +96,15 @@
                     </tr>
                     <tr>
                         <!-- price will change according to what user selected -->
-                        <td>Delivery Charge</td>
+                        <td>Delivery Fee</td>
                         <td id="deliveryPrice">$0</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <div class="total">
-            <p></p>
+        <div class="total theme-montserrat">
+            <h2>Total - </h2>
         </div>
 
     </main>
