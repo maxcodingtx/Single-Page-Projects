@@ -3,17 +3,6 @@
     box-sizing: border-box;
 }
 
-/* used for JS  */
-.is-active {
-    color: white;
-    background-color: black;
-}
-
-.margin-auto {
-    display: block;
-    margin: auto auto;
-}
-
 body {
     margin: 0;
 
@@ -22,6 +11,12 @@ body {
 
 img {
     max-width: 50%;
+    display: block;
+    margin: auto auto
+}
+
+.theme-montserrat{
+    font-family: "Montserrat", sans-serif;
 }
 
 div{
