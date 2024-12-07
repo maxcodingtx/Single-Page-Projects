@@ -24,3 +24,50 @@ header h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: clamp(2rem, 4vw, 5vw);
 }
+
+main div {
+}
+
+.l-player__card-container {
+    display: flex;
+    overflow: scroll;
+}
+
+.player__card {
+    margin: 0 20px;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+
+.player__card img {
+    width: 256px;
+    
+}
+
+.info-player__card {
+    /* placeholder font, will be changed later. */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 18px;
+}
+
+.info-player__card-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.info-player__card-number {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.info-player__card-country {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.info-player__card-country img {
+    width: 30px;
+    height: 20px;
+}
