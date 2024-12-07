@@ -25,9 +25,6 @@ header h1 {
     font-size: clamp(2rem, 4vw, 5vw);
 }
 
-main div {
-}
-
 .l-player__card-container {
     display: flex;
     overflow: scroll;
@@ -37,11 +34,12 @@ main div {
     margin: 0 20px;
     border: 2px solid black;
     border-radius: 12px;
+    background: rgb(128,128,128);
+    background: linear-gradient(135deg, rgba(128,128,128,1) 0%, rgba(255,255,255,1) 100%); 
 }
 
 .player__card img {
     width: 256px;
-    
 }
 
 .info-player__card {
