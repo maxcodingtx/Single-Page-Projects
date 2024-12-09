@@ -43,6 +43,8 @@ main div h1 {
     display: flex;
 
     overflow: auto;
+
+    mask: linear-gradient(90deg,#0000,#000 10% 80%,#0000);
 }
 
 .player__card {
