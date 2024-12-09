@@ -26,6 +26,19 @@ header h1 {
     font-size: clamp(2rem, 4vw, 5vw);
 }
 
+.goalkeeper-container,
+.defender-container,
+.midfielder-container,
+.forward-container {
+    margin-bottom: 50px;
+}
+
+main div h1 {
+    margin-left: 18px;
+    
+    font-size: 3rem;
+}
+
 .l-player__card-container {
     display: flex;
 
