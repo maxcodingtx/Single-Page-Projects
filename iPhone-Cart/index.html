@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+    href="img/favicon-white.png"
+    rel="icon"
+    media="(prefers-color-scheme: dark)"
+/>
+
+    <link
+    href="img/favicon-black.png"
+    rel="icon"
+    media="(prefers-color-scheme: light)"
+/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+
+
+        <div class="l-product">
+
+            <img src="img/iphone-16-plus-black.jpg" 
+            alt="Iphone16 plus black"
+            id = 'phone-image'
+            >
+    
+            <div class="product__info theme-montserrat">
+                <h1>Order the iPhone 16 Plus</h1>
+                <p>The new iPhone 16 Plus includes:</p>
+                <ul>
+                    <li>Apple Intelligence</li>
+                    <li>6.7-inch display</li>
+                    <li>8GB RAM</li>
+                    <li>6-core CPU</li>
+                    <li>5-core GPU </li>
+                </ul>
+            </div>   
+
+        </div>
+        
+
+        <div class="product__color">
+            <h2 class="theme-montserrat">Color</h2>
+
+            <button onclick="displayPhone('black')">Black</button>
+            <button onclick="displayPhone('white')">White</button>
+        </div>
+
+
+        <div class="product__storage">
+            <h2 class="theme-montserrat">Storage</h2>
+            <button id="storage-price" onclick="getStoragePrice(100)">
+                128-GB
+            </button>
+
+            <button id="storage-price" onclick="getStoragePrice(200)">
+                256-GB
+            </button>
+
+            <button id="storage-price" onclick="getStoragePrice(300)">
+                512-GB
+            </button>
+        </div>
+
+
+        <div class="product__delivery">
+            <h2 class="theme-montserrat">Delivery</h2>
+            <button onclick="getDeliveryPrice(0)">
+                December 8
+                <br>
+                Free Delivery
+            </button>
+            <button onclick="getDeliveryPrice(12)">
+                December 6
+                <br>
+                $12 Delivery Fee
+            </button>
+        </div>
+
+        <div class="product__table theme-montserrat">
+            <h1>Total Price</h1>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Default Price</td>
+                        <td>$899</td>
+                    </tr>
+                    <tr>
+                        <!-- price will change according to what user selected -->
+                        <td>Storage Price</td>
+                        <td id="storagePrice">$0</td>
+                    </tr>
+                    <tr>
+                        <!-- price will change according to what user selected -->
+                        <td>Delivery Fee</td>
+                        <td id="deliveryPrice">$0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="total theme-montserrat">
+            <h2 id="totalPrice">Total - </h2>
+        </div>
+
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
