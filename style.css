@@ -50,11 +50,26 @@ main div h1 {
     
     scroll-behavior: smooth;
 
-    mask: linear-gradient(90deg,#0000,#000 10% 80%,#0000);
+    mask: linear-gradient(90deg,#0000,#000 10% 90%,#0000);
 }
 
 .l-player__card-heading {
     display: flex;
+    gap: 3%;
+    align-items: center;
+}
+
+.l-player__card-heading button{
+    height: 75px;
+    width: 75px;
+    font-size: 2rem;
+}
+
+@media (min-width:1200px) {
+    .l-player__card-heading button {
+        display: none;
+    }
+    
 }
 
 .player__card {
