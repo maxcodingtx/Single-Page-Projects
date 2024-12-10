@@ -40,11 +40,14 @@ main div h1 {
 }
 
 .l-player__card-container {
-    padding-bottom: 20px;
-
     display: flex;
 
     overflow: auto;
+}
+
+.player__card-container {
+    padding-bottom: 20px;
+    
     scroll-behavior: smooth;
 
     mask: linear-gradient(90deg,#0000,#000 10% 80%,#0000);
