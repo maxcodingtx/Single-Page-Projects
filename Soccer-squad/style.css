@@ -1,0 +1,111 @@
+
+*,*::before,::after {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+
+    background-color: black;
+
+    color: white;
+}
+
+header img {
+    width: 15%;
+}
+
+header h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: clamp(2rem, 4vw, 5vw);
+}
+
+.margin-container{
+    margin-bottom: 50px;
+}
+
+main div h1 {
+    margin-left: 18px;
+    
+    font-size: 3rem;
+}
+
+.l-player__card-container {
+    display: flex;
+
+    overflow: auto;
+}
+
+.player__card-container {
+    padding-bottom: 20px;
+    
+    scroll-behavior: smooth;
+
+    mask: linear-gradient(90deg,#0000,#000 10% 90%,#0000);
+}
+
+.l-player__card-heading {
+    display: flex;
+    gap: 3%;
+    align-items: center;
+}
+
+.l-player__card-heading button{
+    height: 75px;
+    width: 75px;
+    font-size: 2rem;
+}
+
+@media (min-width:1200px) {
+    .l-player__card-heading button {
+        display: none;
+    }
+    
+}
+
+.player__card {
+    margin: 0 20px;
+    border: 2px solid black;
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, rgba(128,128,128,1) 0%, rgba(255,255,255,1) 100%); 
+}
+
+.player__card img {
+    width: 256px;
+}
+
+.info-player__card {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 18px;
+}
+
+.info-player__card-name {
+    margin-bottom: 0;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.info-player__card-number {
+    margin: 0;
+
+    font-size: 1.25rem;
+}
+
+.info-player__card-country {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.info-player__card-country img {
+    width: 30px;
+    height: 20px;
+}
