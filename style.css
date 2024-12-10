@@ -26,10 +26,7 @@ header h1 {
     font-size: clamp(2rem, 4vw, 5vw);
 }
 
-.goalkeeper-container,
-.defender-container,
-.midfielder-container,
-.forward-container {
+.margin-container{
     margin-bottom: 50px;
 }
 
