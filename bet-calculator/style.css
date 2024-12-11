@@ -74,4 +74,14 @@ header {
     display: flex;
     justify-content: center;
     gap: 20%;
+
+    text-align: center;
+}
+
+.result-winnings,.result-payout {
+    width: 125px;
+}
+
+#winnings, #payout {
+    border-bottom: 2px solid #ccc;
 }
