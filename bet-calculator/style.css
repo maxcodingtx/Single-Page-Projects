@@ -40,6 +40,13 @@ header {
     width: 200px;
 }
 
+.input__money__slider {
+    appearance: none;
+
+    background: #ccc;
+    height: 5px;
+}
+
 .l-input__odds {
     display: grid;
     grid-template-columns: repeat(2, 150px);
