@@ -13,6 +13,7 @@ body {
 hr {
     border: 0;
     border-bottom: 3px solid #ccc;
+    margin: 20px 0 40px;
 }
 
 header, main{
@@ -28,9 +29,12 @@ header {
 }
 
 .l-input__money {
+    margin: auto auto;
+    
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: center;
 
     width: 200px;
 }
