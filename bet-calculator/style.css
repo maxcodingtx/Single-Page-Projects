@@ -40,7 +40,7 @@ header {
     width: 200px;
 }
 
-.input__money__slider {
+.input__money-slider {
     appearance: none;
 
     background: #ccc;
@@ -52,6 +52,22 @@ header {
     grid-template-columns: repeat(2, 150px);
     gap: 20px;
     justify-content: center;
+}
+
+.input__odds-title {
+    margin: 0 0 10px;
+
+    font-weight: 800;
+}
+
+.input-input__odds {
+    width: 125px;
+
+    padding: 6px;
+    border: 2px solid #ccc;
+
+    font-size: 16px;
+    text-align: left;
 }
 
 .l-result {
