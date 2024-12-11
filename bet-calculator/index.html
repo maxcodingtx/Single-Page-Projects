@@ -18,16 +18,31 @@
 
     <main>
         <div class="l-inputs">
-            <div class="bet-input__money l-input__money">
-                <input type="text" name="inputMoney" id="inputMoney">
+            <div class="input__money l-input__money">
+                <input type="text" name="inputMoney" id="inputMoney" placeholder="$">
                 <input type="range" name="moneyRange" id="moneyRange">
             </div>
             <hr>
-            <div class="bet-input__odds">
-                <input type="text" name="inputOdds" id="inputOdds" placeholder="ODDS">
-                <input type="text" name="inputOddsDecimal" id="inputOddsDecimal" placeholder="decimal">
-                <input type="text" name="inputOddsFraction" id="inputOddsFraction" placeholder="fraction">
-                <input type="text" name="inputOddsPercent" id="inputOddsPercent" placeholder="percent">
+            <div class="input__odds l-input__odds">
+                <div>
+                    <p>American Odds</p>
+                    <input type="text" name="inputOdds" id="inputOdds" placeholder="ODDS">
+                </div>
+
+                <div>
+                    <p>Decimal Odds</p>
+                    <input type="text" name="inputOddsDecimal" id="inputOddsDecimal" placeholder="decimal">
+                </div>
+
+                <div>
+                    <p>Fraction Odds</p>
+                    <input type="text" name="inputOddsFraction" id="inputOddsFraction" placeholder="fraction">
+                </div>
+
+                <div>
+                    <p>Percent Odds</p>
+                    <input type="text" name="inputOddsPercent" id="inputOddsPercent" placeholder="percent">
+                </div>
             </div>
         </div>
         <hr>
