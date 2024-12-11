@@ -10,6 +10,11 @@ body {
     background-color: #ccc;
 }
 
+hr {
+    border: 0;
+    border-bottom: 3px solid #ccc;
+}
+
 header, main{
     background-color: white;
     margin: 25px auto -10px;
@@ -20,4 +25,25 @@ header, main{
 header {
     background-color: white;
     text-align: center;
+}
+
+.l-input__money {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 200px;
+}
+
+.l-input__odds {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    gap: 20px;
+    justify-content: center;
+}
+
+.l-result {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
 }
