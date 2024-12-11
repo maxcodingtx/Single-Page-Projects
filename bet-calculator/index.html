@@ -9,9 +9,36 @@
 <body>
 
     <header>
+        <h1>Bet Calculator</h1>
+        <p>
+            This calculator allows you to input your stake
+            and odds to find out your potential winnings
+        </p>
     </header>
 
     <main>
+        <div class="l-inputs">
+            <div class="bet-input__money l-input__money">
+                <input type="text" name="inputMoney" id="inputMoney">
+                <input type="range" name="moneyRange" id="moneyRange">
+            </div>
+
+            <input type="text" name="inputOdds" id="inputOdds" placeholder="ODDS">
+            <input type="text" name="inputOddsDecimal" id="inputOddsDecimal" placeholder="decimal">
+            <input type="text" name="inputOddsFraction" id="inputOddsFraction" placeholder="fraction">
+            <input type="text" name="inputOddsPercent" id="inputOddsPercent" placeholder="percent">
+        </div>
+
+        <div class="l-result">
+            <div class="result-win">
+                <p>Winnings</p>
+                <p>$-</p>
+            </div>
+            <div class="result-payout">
+                <p>Total Payout</p>
+                <p>$-</p>
+            </div>
+        </div>
     </main>
     
 </body>
