@@ -7,6 +7,17 @@
 
 body {
     margin: 0;
-    color: #ccc;
+    background-color: #ccc;
 }
 
+header, main{
+    background-color: white;
+    margin: 25px auto -10px;
+    width: 80%;
+    padding: 12px;
+}
+
+header {
+    background-color: white;
+    text-align: center;
+}
