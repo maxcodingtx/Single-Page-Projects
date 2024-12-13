@@ -54,3 +54,11 @@ americanOdds.addEventListener('input', function() {
         } else {decimalOdds.value = ((oddsInteger/100) + 1)}
     }
 })
+
+decimalOdds.addEventListener('input', function () {
+    if (decimalOdds.value > 1 && decimalOdds.value < 2) {
+        americanOdds.value = -100/(decimalOdds.value-1)
+    } else if (decimalOdds.value > 2) {
+        americanOdds.value = (decimalOdds.value -1 )*100
+    }
+})
