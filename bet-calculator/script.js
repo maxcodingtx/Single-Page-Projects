@@ -44,3 +44,8 @@ const rangeSlider = document.getElementById('moneyRange')
 rangeSlider.oninput = () => {
     document.getElementById('inputMoney').value = rangeSlider.value
 }
+
+const stake = document.getElementById('inputMoney')
+stake.addEventListener('input', function () {
+    rangeSlider.value = stake.value
+})
