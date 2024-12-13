@@ -1,13 +1,7 @@
 
-// {
-//     // use when null/undef
-//     return;
-
-//     // use to detect falsy values
-//     if (key == null) {
-//         return;
-//     } else {}
-// }
+window.onload = () => {
+    stake.value = rangeSlider.value
+}
 
 const numericInputs = document.querySelectorAll("[inputmode='numeric']"); //apply to all inputs
 numericInputs.forEach((input) => {
@@ -48,4 +42,15 @@ rangeSlider.oninput = () => {
 const stake = document.getElementById('inputMoney')
 stake.addEventListener('input', function () {
     rangeSlider.value = stake.value
+})
+
+const americanOdds = document.getElementById('americanOdds')
+const decimalOdds = document.getElementById('decimalOdds')
+americanOdds.addEventListener('input', function() {
+    let oddsInteger = Math.abs(americanOdds.value)
+    if (americanOdds.value.length >= 4) {
+        if(americanOdds.value[0] == '-') {
+            decimalOdds.value = ((100/oddsInteger) + 1) 
+        } else {decimalOdds.value = ((oddsInteger/100) + 1)}
+    }
 })
