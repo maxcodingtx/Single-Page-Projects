@@ -34,6 +34,14 @@ function checkInput(el) {
 });
 }
 
+const winnings = document.getElementById('winnings')
+const payout = document.getElementById('payout')
+
+addEventListener('input', function() {
+    payout.innerHTML = (stake.value * decimalOdds.value).toFixed(2)
+    winnings.innerHTML = ((stake.value * decimalOdds.value)- stake.value).toFixed(2)
+})
+
 const rangeSlider = document.getElementById('moneyRange')
 rangeSlider.oninput = () => {
     document.getElementById('inputMoney').value = rangeSlider.value
@@ -46,6 +54,8 @@ stake.addEventListener('input', function () {
 
 const americanOdds = document.getElementById('americanOdds')
 const decimalOdds = document.getElementById('decimalOdds')
+// listener for all inputs, each input updates the winnings and payout
+
 americanOdds.addEventListener('input', function() {
     let oddsInteger = Math.abs(americanOdds.value)
     if (americanOdds.value.length >= 4) {
