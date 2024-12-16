@@ -37,38 +37,51 @@ function checkInput(el) {
 const winnings = document.getElementById('winnings')
 const payout = document.getElementById('payout')
 
+// calculating winnings and payout on user input
 addEventListener('input', function() {
     payout.innerHTML = (stake.value * decimalOdds.value).toFixed(2)
     winnings.innerHTML = ((stake.value * decimalOdds.value)- stake.value).toFixed(2)
 })
 
 const rangeSlider = document.getElementById('moneyRange')
+// setting stake value equal to slider value when slider value changes
 rangeSlider.oninput = () => {
-    document.getElementById('inputMoney').value = rangeSlider.value
+    stake.value = rangeSlider.value
 }
 
 const stake = document.getElementById('inputMoney')
-stake.addEventListener('input', function () {
+// setting slider value when stake value changes
+stake.oninput =  () => {
     rangeSlider.value = stake.value
-})
+}
 
 const americanOdds = document.getElementById('americanOdds')
 const decimalOdds = document.getElementById('decimalOdds')
 // listener for all inputs, each input updates the winnings and payout
 
+// calculating decimal odds from american odds
 americanOdds.addEventListener('input', function() {
     let oddsInteger = Math.abs(americanOdds.value)
+    // calculating is only done when american odds input is valid
     if (americanOdds.value.length >= 4) {
         if(americanOdds.value[0] == '-') {
+            // formula to calculate decimal odds with negative american odds
             decimalOdds.value = ((100/oddsInteger) + 1) 
-        } else {decimalOdds.value = ((oddsInteger/100) + 1)}
+        } else {
+            // formula to calculate decimal odds with positive american odds
+            decimalOdds.value = ((oddsInteger/100) + 1)
+        }
     }
 })
 
+// calculating american odds from decimal odds 
 decimalOdds.addEventListener('input', function () {
+    // using appropriate formula for when decimal odds are between 1.00 and 2.00
     if (decimalOdds.value > 1 && decimalOdds.value < 2) {
         americanOdds.value = -100/(decimalOdds.value-1)
-    } else if (decimalOdds.value > 2) {
+    }
+    // using appropriate formula for when decimal odds are more than 2.00
+    else if (decimalOdds.value > 2) {
         americanOdds.value = (decimalOdds.value -1 )*100
     }
 })
