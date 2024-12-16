@@ -1,9 +1,20 @@
 
+const numericInputs = document.querySelectorAll("[inputmode='numeric']");
+
+const stake = document.getElementById('inputMoney')
+const rangeSlider = document.getElementById('moneyRange')
+
+const americanOdds = document.getElementById('americanOdds')
+const decimalOdds = document.getElementById('decimalOdds')
+
+const winnings = document.getElementById('winnings')
+const payout = document.getElementById('payout')
+
+// setting default stake value
 window.onload = () => {
     stake.value = rangeSlider.value
 }
 
-const numericInputs = document.querySelectorAll("[inputmode='numeric']"); //apply to all inputs
 numericInputs.forEach((input) => {
     checkInput(input);
 });
@@ -34,8 +45,7 @@ function checkInput(el) {
 });
 }
 
-const winnings = document.getElementById('winnings')
-const payout = document.getElementById('payout')
+
 
 // calculating winnings and payout on user input
 addEventListener('input', function() {
@@ -43,20 +53,19 @@ addEventListener('input', function() {
     winnings.innerHTML = ((stake.value * decimalOdds.value)- stake.value).toFixed(2)
 })
 
-const rangeSlider = document.getElementById('moneyRange')
+
 // setting stake value equal to slider value when slider value changes
 rangeSlider.oninput = () => {
     stake.value = rangeSlider.value
 }
 
-const stake = document.getElementById('inputMoney')
+
 // setting slider value when stake value changes
 stake.oninput =  () => {
     rangeSlider.value = stake.value
 }
 
-const americanOdds = document.getElementById('americanOdds')
-const decimalOdds = document.getElementById('decimalOdds')
+
 // listener for all inputs, each input updates the winnings and payout
 
 // calculating decimal odds from american odds
