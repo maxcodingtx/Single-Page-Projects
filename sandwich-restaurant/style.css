@@ -1,3 +1,5 @@
+@import url(theme.css);
+
 
 *,*::before,*::after {
     box-sizing: border-box;
@@ -5,4 +7,45 @@
 
 body {
     margin: 0;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+header {
+    background-color: var(--tan);
+}
+
+.l-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-img {
+    width: 150px;
+}
+
+.header-nav {
+    width: 200px;
+}
+
+.header-nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+.header-nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.header-nav ul li a:hover {
+    text-decoration: underline;
+    color: var(--red);
 }
