@@ -5,3 +5,7 @@
     --yellow: #f9b248;
     --tan: #e8d5b7;
 }
+
+.text--red {
+    color: var(--red);
+}
