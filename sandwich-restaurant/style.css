@@ -88,3 +88,37 @@ header {
 .intro__img {
     width: 35vw;
 }
+
+
+.info-section {
+    padding: 2rem 0 2rem;
+
+    background: linear-gradient(180deg, var(--red)0%, var(--yellow) 100%); 
+}
+
+.info-header{
+    text-align: center;
+    font-size: 3rem;
+}
+
+@media (min-width: 1200px) {
+    .l-info-cards {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .info__card {
+        width: 30%;
+
+        border: 4px solid var(--tan);
+        border-radius: 16px;
+
+        background: linear-gradient(180deg, var(--red)0%, var(--yellow) 100%); 
+
+        text-align: center;
+    }
+}
+
+.info__card {
+    font-size: 1.5rem;
+}
