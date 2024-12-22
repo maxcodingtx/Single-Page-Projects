@@ -122,3 +122,59 @@ header {
 .info__card {
     font-size: 1.5rem;
 }
+
+
+.menu-section {
+    padding: 1rem 0 1rem;
+    
+    background: rgb(249,178,72);
+    background: linear-gradient(180deg, rgba(249,178,72,1) 0%, rgba(232,213,183,1) 100%); 
+}
+
+.menu__header {
+    text-align: center;
+}
+
+.menu__header h1{
+    font-size: 3rem;
+}
+
+.menu__header p {
+    font-size: 1.5rem;
+}
+
+@media (min-width: 1000px) {
+    .l-menu-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu__card-border {
+        display: none;
+    }
+}
+
+.menu__card {
+    margin: 25px auto;
+    padding: 25px 0;
+
+    width: 80%;
+
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.menu__card-border {
+    border: 3px solid var(--red);
+}
+
+.menu__card img {
+    max-width: 80%;
+
+    border-radius: 16px;
+    margin: auto auto;
+}
+
+.menu__card a {
+    color: var(--red);
+}
