@@ -178,3 +178,49 @@ header {
 .menu__card a {
     color: var(--red);
 }
+
+
+.location-section {
+    background: linear-gradient(180deg, var(--tan) 0%, rgba(255,255,255,1) 100%);
+    padding: 1rem 0;
+}
+
+.location__header {
+    margin-bottom: 50px;
+
+    text-align: center;
+}
+
+.location__header h1{
+    font-size: 3rem;
+}
+
+.location__header p {
+    font-size: 1.5rem;
+}
+
+.location__map {
+    position: relative;
+    height: 41vw;
+}
+
+.location__map >* {
+    position: absolute;
+}
+
+.location__map img {
+    width: 80%;
+}
+
+.location__map button {
+    padding: 3% 5%;
+    border: 4px solid var(--yellow);
+
+    left: 65%;
+    top: 55%;
+
+    background: white;
+
+    font-size: 1rem;
+    color: var(--yellow);
+}
