@@ -224,3 +224,48 @@ header {
     font-size: 1rem;
     color: var(--yellow);
 }
+
+
+footer {
+    margin-top: 50px;
+    padding: 2rem 0;
+}
+
+.footer__header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    margin-bottom: 24px;
+}
+
+.footer__header img {
+    width: 150px;
+}
+
+.footer__header p {
+    text-align: right;
+}
+
+.footer__social__logo {
+    height: 64px;
+    width: 64px;
+    border-radius: 24%;
+
+    background-image: url(img/footer-sprite.jpg);
+    background-size: cover;
+}
+
+.footer__social__stat {
+    width: 75px;
+
+    word-break: keep-all;
+}
+
+.footer__social__logo2 {
+    background-position-y: 50%;
+}
+
+.footer__social__logo3 {
+    background-position-y: 100%;
+}
