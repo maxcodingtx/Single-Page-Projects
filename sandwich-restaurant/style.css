@@ -256,6 +256,18 @@ footer {
     background-size: cover;
 }
 
+@media (min-width: 800px) {
+    .l-footer__social {
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer__social {
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px 5px;
+        padding: 2rem 0;
+        border-radius: 8px;
+    }
+}
+
 .footer__social__stat {
     width: 75px;
 
