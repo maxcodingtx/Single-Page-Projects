@@ -13,3 +13,11 @@
 .text--yellow {
     color: var(--yellow);
 }
+
+.fontsize--1 {
+    font-size: 1.5rem;
+}
+
+.fontsize--2 {
+    font-size: 3rem;
+}
