@@ -1,5 +1,6 @@
 @import url(theme.css);
 
+/*Base Styles start here*/
 
 *,*::before,*::after {
     box-sizing: border-box;
@@ -18,6 +19,11 @@ button {
     width: 90%;
     margin: auto;
 }
+
+/* 
+Base styles end here.
+Header styles start here.
+*/
 
 header {
     background-color: var(--tan);
@@ -54,6 +60,11 @@ header {
     text-decoration: underline;
     color: var(--red);
 }
+
+/* 
+Header styles end here.
+Intro section styles start here.
+*/
 
 .l-intro {
     display: flex;
@@ -118,6 +129,10 @@ header {
     }
 }
 
+/* 
+Intro section styles end here.
+Menu section styles start here.
+*/
 
 .menu-section {
     padding: 1rem 0 1rem;
@@ -129,8 +144,6 @@ header {
 .menu__header {
     text-align: center;
 }
-
-
 
 @media (min-width: 1000px) {
     .l-menu-cards {
@@ -167,6 +180,10 @@ header {
     color: var(--red);
 }
 
+/* 
+Menu styles end here.
+Location section styles start here.
+*/
 
 .location-section {
     background: linear-gradient(180deg, var(--tan) 0%, rgba(255,255,255,1) 100%);
@@ -205,6 +222,10 @@ header {
     color: var(--yellow);
 }
 
+/* 
+Location styles end here.
+Footer styles start here.
+*/
 
 footer {
     margin-top: 50px;
