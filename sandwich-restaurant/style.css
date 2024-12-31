@@ -96,9 +96,8 @@ header {
     background: linear-gradient(180deg, var(--red)0%, var(--yellow) 100%); 
 }
 
-.info-header{
+.info__header{
     text-align: center;
-    font-size: 3rem;
 }
 
 @media (min-width: 1200px) {
@@ -119,10 +118,6 @@ header {
     }
 }
 
-.info__card {
-    font-size: 1.5rem;
-}
-
 
 .menu-section {
     padding: 1rem 0 1rem;
@@ -135,13 +130,7 @@ header {
     text-align: center;
 }
 
-.menu__header h1{
-    font-size: 3rem;
-}
 
-.menu__header p {
-    font-size: 1.5rem;
-}
 
 @media (min-width: 1000px) {
     .l-menu-cards {
@@ -161,7 +150,6 @@ header {
     width: 80%;
 
     text-align: center;
-    font-size: 1.5rem;
 }
 
 .menu__card-border {
@@ -189,14 +177,6 @@ header {
     margin-bottom: 50px;
 
     text-align: center;
-}
-
-.location__header h1{
-    font-size: 3rem;
-}
-
-.location__header p {
-    font-size: 1.5rem;
 }
 
 .location__map {
