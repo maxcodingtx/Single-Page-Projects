@@ -51,12 +51,12 @@ header {
     list-style-type: none;
 }
 
-.header-nav ul li a {
+.nav__link {
     text-decoration: none;
     color: black;
 }
 
-.header-nav ul li a:hover {
+.nav__link:hover {
     text-decoration: underline;
     color: var(--red);
 }
