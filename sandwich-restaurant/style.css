@@ -261,6 +261,10 @@ footer {
     background-size: cover;
 }
 
+.footer__social__logo:hover{
+    transform: scale(1.08);
+}
+
 @media (min-width: 800px) {
     .l-footer__social {
         display: flex;
