@@ -1,4 +1,4 @@
-
+/* base styles */
 *,*::after,*::before{
     box-sizing:border-box
 }
@@ -7,3 +7,52 @@ body{
     margin: 0;
     font-family: "Inter", sans-serif;
 }
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* header styles start here */
+
+header {
+    padding: 6rem 0;
+
+    background-image: url(/lesserafim-discography/img/header-default.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    color: white;
+}
+
+.header__heading {
+    width: 60%;
+
+    text-shadow: #000000 2px 6px 8px ;
+}
+
+@media (min-width: 600px) {
+    header {
+        background-image: url(/lesserafim-discography/img/header-600MQ.jpg);
+    }
+    
+    .header__heading h1{
+        font-size: 3rem;
+    }
+    .header__heading p{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    header {
+        background-image: url(/lesserafim-discography/img/header-1200MQ.jpg);
+    }
+
+    .header__heading{
+        max-width: 600px;
+        font-size: larger;
+    }
+}
+
