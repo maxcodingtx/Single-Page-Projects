@@ -56,3 +56,26 @@ header {
     }
 }
 
+/* 
+header styles end here 
+main styles start here
+*/
+
+.l-discography__tracklist-header {
+    margin-bottom: 0px;
+    
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.discography__tracklist-list {
+    margin-top: 0px;
+
+    display: none;
+}
+
+.discography__tracklist-list.is-visible {
+    display: block;
+}
+
