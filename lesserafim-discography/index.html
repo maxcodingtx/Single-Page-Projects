@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discography</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/themes.css">
 
     <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="favicons/favicon.svg" />
@@ -19,7 +20,6 @@
 </head>
 <body>
 
-
     <header>
         <div class="container l-header">
             <div class="header__heading">
@@ -31,6 +31,72 @@
             </div>
         </div>
     </header>
+
+    <main>
+        <div class="container">
+            <section class="discography">
+                <h2>Albums</h2>
+                <hr>
+                <div class="discography__album l-discography__album">
+                    <img src="img/album-unforgiven.png" alt="Album 1" 
+                    class="box-shadow-theme">
+                    <h3>Unforgiven</h3>
+                    <p>Released: May 1, 2023</p>
+
+                    <div class="discography__tracklist">
+                        <div class="l-discography__tracklist-header">
+                            <h4>Tracklist</h4>
+                            <button class="button" id="button" data-track="1">Show</button>
+                        </div>
+
+                        <ol class="discography__tracklist-list" id="trackList1">
+                            <li class="discography__track" id="unforgiven__track1">
+                                The World Is My Oyster
+                            </li>
+                            <li class="discography__track" id="unforgiven__track2">
+                                Fearless
+                            </li>
+                            <li class="discography__track" id="unforgiven__track3">
+                                Blue Flame
+                            </li>
+                            <li class="discography__track" id="unforgiven__track4">
+                                The Hydra
+                            </li>
+                            <li class="discography__track" id="unforgiven__track5">
+                                Antifragile
+                            </li>
+                            <li class="discography__track" id="unforgiven__track6">
+                                Impurities
+                            </li>
+                            <li class="discography__track" id="unforgiven__track7">
+                                Burn the Bridge
+                            </li>
+                            <li class="discography__track" id="unforgiven__track8">
+                                Unforgiven
+                            </li>
+                            <li class="discography__track" id="unforgiven__track9">
+                                No-Return
+                            </li>
+                            <li class="discography__track" id="unforgiven__track10">
+                                Eve, Psyche & the Bluebeard's Wife
+                            </li>
+                            <li class="discography__track" id="unforgiven__track11">
+                                Fearnot
+                            </li>
+                            <li class="discography__track" id="unforgiven__track12">
+                                Flash Foward
+                            </li>
+                            <li class="discography__track" id="unforgiven__track13">
+                                Fire in the Belly
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="/lesserafim-discography/scripts.js"></script>
     
 </body>
 </html>
