@@ -62,17 +62,17 @@ main styles start here
 */
 
 .l-discography__tracklist-header {
-    margin-bottom: 0px;
-    
     display: flex;
     gap: 1rem;
     align-items: center;
+
+    margin-bottom: 0px;
 }
 
 .discography__tracklist-list {
-    margin-top: 0px;
-
     display: none;
+    
+    margin-top: 0px;
 }
 
 .discography__tracklist-list.is-visible {
