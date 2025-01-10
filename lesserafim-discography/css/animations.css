@@ -17,3 +17,22 @@
     }
 }
 
+.discography__tracklist-button::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    transition: width 0.5s;
+    z-index: -1;
+}
+
+.discography__tracklist-button:hover::after{
+    width: 100%;
+}
+
+.discography__tracklist-button:hover{
+    color: white;
+}
