@@ -70,6 +70,14 @@ main styles start here
     margin-bottom: 0px;
 }
 
+.discography__tracklist-button {
+    background-color: transparent;
+    border: 2px solid black;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    position: relative;
+}
+
 .discography__tracklist-list {
     display: none;
     
