@@ -76,7 +76,7 @@ main styles start here
     padding: 0.5rem 1rem;
     border-radius: 5px;
     position: relative;
-}
+} /* Hover animation in animations file*/
 
 .discography__tracklist-list {
     display: none;
