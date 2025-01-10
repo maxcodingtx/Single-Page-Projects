@@ -1,3 +1,4 @@
+@import url(animations.css);
 /* base styles */
 *,*::after,*::before{
     box-sizing:border-box
@@ -77,5 +78,8 @@ main styles start here
 
 .discography__tracklist-list.is-visible {
     display: block;
+    
+    -webkit-animation: fadeIn 600ms ease-in-out;
+    -ms-animation: fadeIn 600ms ease-in-out;
 }
 
