@@ -87,6 +87,13 @@ main styles start here
 .ep__image--2 {
     background-position-x: 33.3%;
 }
+.ep__image--3 {
+    background-position-x: 66.7%;
+}
+.ep__image--4 {
+    background-position-x: 100%;
+}
+
 
 .discography__tracklist-list {
     display: none;
