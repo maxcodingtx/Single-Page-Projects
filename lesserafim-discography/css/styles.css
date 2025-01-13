@@ -84,6 +84,9 @@ main styles start here
 
     background-image: url(/lesserafim-discography/img/ep-sprite.png);
 }
+.ep__image--2 {
+    background-position-x: 33.3%;
+}
 
 .discography__tracklist-list {
     display: none;
