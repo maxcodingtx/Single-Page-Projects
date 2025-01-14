@@ -1,7 +1,8 @@
 @import url(animations.css);
 /* base styles */
 *,*::after,*::before{
-    box-sizing:border-box
+    box-sizing:border-box;
+    /* outline: 2px solid lime; */
 }
 
 body{
@@ -108,3 +109,6 @@ main styles start here
     -ms-animation: fadeIn 600ms ease-in-out;
 }
 
+.singles-list {
+    margin-top: -1rem;
+}
