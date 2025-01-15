@@ -79,6 +79,10 @@ main styles start here
     position: relative;
 } /* Hover animation in animations file*/
 
+.discography__ep {
+    margin-bottom: 50px;
+}
+
 .ep__image {
     width: 316px;
     height: 316px;
