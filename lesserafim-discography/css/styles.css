@@ -63,6 +63,10 @@ header styles end here
 main styles start here
 */
 
+.discography {
+    margin-bottom: 200px;
+}
+
 .l-discography__tracklist-header {
     display: flex;
     gap: 1rem;
@@ -115,4 +119,41 @@ main styles start here
 
 .singles-list {
     margin-top: -1rem;
+}
+
+/* 
+discography styles end here 
+aside styles start here
+*/
+
+.artist {
+    margin: 25px 0;
+}
+
+.l-artist {
+    display: flex;
+    align-items: center;
+    gap: 10%;
+}
+.artist__image {
+    border-radius: 50%;
+
+    background-image: url(/lesserafim-discography/img/aside-sprite.png);
+    background-size: cover;
+    width: 175px;
+    height: 175px;
+}
+.artist__image--2 {
+    background-position-y: 50%;
+}
+.artist__image--3 {
+    background-position-y: 100%;
+}
+
+.artist__link {
+    color: black;
+}
+.artist__link:hover {
+    transform: scale(1.2);
+    color: red;
 }
