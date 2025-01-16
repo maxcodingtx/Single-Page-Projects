@@ -34,30 +34,6 @@ header {
     text-shadow: #000000 2px 6px 8px ;
 }
 
-@media (min-width: 600px) {
-    header {
-        background-image: url(/lesserafim-discography/img/header-600MQ.jpg);
-    }
-    
-    .header__heading h1{
-        font-size: 3rem;
-    }
-    .header__heading p{
-        font-size: 1.5rem;
-    }
-}
-
-@media (min-width: 1200px) {
-    header {
-        background-image: url(/lesserafim-discography/img/header-1200MQ.jpg);
-    }
-
-    .header__heading{
-        max-width: 600px;
-        font-size: larger;
-    }
-}
-
 /* 
 header styles end here 
 main styles start here
@@ -154,6 +130,5 @@ aside styles start here
     color: black;
 }
 .artist__link:hover {
-    transform: scale(1.2);
     color: red;
 }
