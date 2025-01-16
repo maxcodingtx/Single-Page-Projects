@@ -1,0 +1,50 @@
+
+/* designing header for larger screens */
+@media (min-width: 600px){
+    header {
+        background-image: url(/lesserafim-discography/img/header-600MQ.jpg);
+    }
+    
+    .header__heading h1{
+        font-size: 3rem;
+    }
+    .header__heading p{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    header {
+        background-image: url(/lesserafim-discography/img/header-1200MQ.jpg);
+    }
+
+    .header__heading{
+        max-width: 600px;
+        font-size: larger;
+    }
+}
+
+/* media query for layout of main on desktops */
+@media (min-width:1000px) {
+    .l-main {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .artist-container {
+        width: 400px;
+    }
+
+    .artist__link {
+        font-size: 1.5rem;
+    }
+}
+
+/* for artists image size on tablets */
+@media (min-width:600px) and (max-width:1000px) {
+    .artist__image {
+        width: 316px;
+        height: 316px;
+    }
+} 
+
