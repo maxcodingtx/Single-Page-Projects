@@ -1,0 +1,119 @@
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    margin-bottom: 1rem;
+    
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--theme-clr-2);
+}
+
+:root {
+    --theme-clr-1: #e9e9ed
+}
+
+:root {
+    --theme-clr-2: #0a66c2
+}
+
+/* section 1 ("time") styles below */
+
+.time__container {
+    padding: 1.5rem;
+    border: 4px solid var(--theme-clr-2);
+    border-radius: 12px;
+    margin: 0 auto 1rem auto;
+    width: 80%;
+
+    text-align: center;
+
+    background-color: var(--theme-clr-1);
+}
+
+.l-time__selection {
+    display: flex;
+    flex-direction: column;
+    
+    width: 95%;
+    margin: 0 auto 0 auto;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+.time__option {
+    border: none;
+    padding: .75rem 0;
+
+    background-color: white;
+}
+
+.is-active {
+    background-color: var(--theme-clr-2);
+
+    color: white;
+}
+
+/* section 2 styles ("click") below */
+
+.click__button {
+    position: relative;
+    overflow: hidden;
+
+    display: block;
+    margin: auto;
+
+    padding: 6rem;
+    width: 100%;
+    border: 6px solid var(--theme-clr-1);
+    border-radius: 12px;
+
+    background-color: white;
+}
+
+@media (min-width: 800px) {
+    .click__button {
+        width: 80%;
+        
+    }
+}
+
+span.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 500ms;
+    background-color: var(--theme-clr-2);
+}
+
+@keyframes ripple {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.l-click__stats {
+    display: flex;
+    justify-content: space-evenly;
+
+    color: var(--theme-clr-2);
+
+    font-size: 1.5rem;
+}
+
