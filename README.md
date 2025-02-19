@@ -5,3 +5,5 @@
 [bet-calculator](https://maxcodingtx-bet-calculator.netlify.app/)
 
 [sandwich-restaurant](https://maxcoding-sandwich-resaurant.netlify.app/)
+
+[lesserafim-discography](https://maxcodintx-lesserafim-discography.netlify.app/)
