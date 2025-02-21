@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="section1">
+        <div class="section1__container">
+            <h1>Flexbox Guide</h1>
+
+            <div id="divFlex" class="section1__element__container">
+            </div>
+
+            <p class="section1__number" id="numItem">0</p>
+
+            <div class="section1__buttons">
+                <button type="button" class="section1__button button-style1" onclick="numDecrease()">-</button>
+                <button type="button" class="section1__button button-style1" onclick="numIncrease()">+</button>
+            </div>
+
+            <h1>Active Styles</h1>
+            <p id="containerFlexDirection"></p>
+            <p id="containerAlignItems"></p>
+            <p id="containerJustifyContent"></p>
+            <p id="containerAlignContent"></p>
+        </div>
+    </section>
+
+    <section id="section2">
+        <div class="section2__container l-section2">
+            <h2>Flex Direction</h2>
+            <div class="l-section2__buttons l-section2-griditem2">
+                <button 
+                type="button" 
+                class="button-style1"
+                onclick="directionRow()">row</button>
+                
+                <button 
+                type="button" 
+                class="button-style1"
+                onclick="directionColumn()">column</button>
+                
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="directionRowReverse()">row <br> reverse</button>
+                
+                
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="directionColumnReverse()">column <br> reverse</button>
+            </div>
+    
+            <h2>Align Items</h2>
+            <div class="l-section2__buttons l-section2-griditem4">
+                <button
+                type="button"
+                class="button-style1"
+                onclick="alignitemsStart()">flex <br> start</button>
+    
+                <button
+                type="button"
+                class="button-style1"
+                onclick="alignitemsCenter()">center</button>
+    
+                <button
+                type="button"
+                class="button-style1"
+                onclick="alignitemsEnd()">flex <br> end</button>
+    
+                <button
+                type="button"
+                class="button-style1"
+                onclick="alignitemsStretch()">stretch</button>
+            </div>
+    
+            <h2>Justify Content</h2>
+            <div class="l-section2__buttons l-section2-griditem6">
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="justifycontentStart()">flex <br> start</button>
+    
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="justifycontentCenter()">center</button>
+    
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="justifycontentEnd()">flex <br> end</button>
+    
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="justifycontentBetween()">space <br> between</button>
+    
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="justifycontentAround()">space <br> around</button>
+    
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="justifycontentEvenly()">space <br> evenly</button>
+            </div>
+    
+            <h2>Align Content</h2>
+            <div class="l-section2__buttons l-section2-griditem8">
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="aligncontentStart()">flex <br> start</button>
+    
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="aligncontentCenter()">center</button>
+    
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="aligncontentEnd()">flex <br> end</button>
+    
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="aligncontentStretch()">stretch</button>
+    
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="aligncontentBetween()">space <br> between</button>
+    
+                <button 
+                type="button"
+                class="button-style1"
+                onclick="aligncontentAround()">space <br> around</button>
+            </div>
+
+        </div>
+
+        <button 
+        type="button"
+        class="button-style2"
+        onclick="clearClasses()">
+            clear <br> css </button>
+
+    </section>
+</body>
+</html>

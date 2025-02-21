@@ -1,0 +1,225 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    background-color: #000000;
+    opacity: 0.9;
+    background-image:  radial-gradient(#5d00ff 2px, transparent 2px), radial-gradient(#5d00ff 2px, #000000 2px);
+    background-size: 80px 80px;
+    background-position: 0 0,40px 40px;
+
+    font-family: "Open Sans", sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+:root {
+    --border-clr: #5d00ff;
+}
+:root {
+    --bg-clr: #171717;
+}
+
+h1, h2, h3, p {
+    color: white;
+    text-align: center;
+}
+
+button {
+    border: 2px solid;
+    border-radius: 16px;
+
+    background-color: var(--bg-clr);
+
+    color: white;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* section 1 styles below */
+
+
+.section1__element__container {
+    display: flex;
+
+    overflow: auto;
+
+    margin: auto auto;
+    height: 250px;
+    width: 250px;
+    border: 2px solid var(--border-clr);
+    border-radius: 1rem;
+}
+
+.section1__item {
+    width: 50px;
+
+    border: 2px solid var(--border-clr);
+    border-radius: 1rem;
+}
+
+.section1__number {
+    margin: 1rem auto 1rem auto;
+    width: 50%;
+    border: 2px solid var(--border-clr);
+
+    background-color: var(--bg-clr);
+}
+
+.section1__buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button-style1 {
+    border-color: var(--border-clr);
+    width: 20%;
+}
+
+
+/* end of section 1 styling, section 2 styling below */
+
+.l-section2__buttons {
+    display: flex;
+    gap: 2%;
+    justify-content: center;
+}
+
+.button-style2 {
+    border-color: red;
+    display: block;
+    padding: 1rem;
+    margin: 16px auto 16px auto;
+}
+
+@media (min-width: 1200px) {
+    .l-section2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .l-section2-griditem2 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .l-section2-griditem4 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .l-section2-griditem6 {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .l-section2-griditem6,
+    .l-section2-griditem8 {
+        flex-wrap: wrap;
+    }
+}
+
+/* flexbox properties below, starting with flex-direction */
+
+.flex-direction-row {
+    flex-direction: row;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex-direction-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-direction-column-reverse {
+    flex-direction: column-reverse;
+}
+
+/* align-items properties below */
+
+.align-items-flex-start {
+    align-items: flex-start;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-flex-end {
+    align-items: flex-end;
+}
+
+.align-items-stretch {
+    align-items: stretch;
+}
+
+/* justify content properties below */
+
+.justify-content-start {
+    justify-content: flex-start;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.justify-content-evenly {
+    justify-content: space-evenly;
+}
+
+/* align content properties below */
+
+.align-content-start {
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.align-content-center {
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.align-content-end {
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+.align-content-stretch {
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+.align-content-between {
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.align-content-around {
+    flex-wrap: wrap;
+    align-content: space-around;
+}
