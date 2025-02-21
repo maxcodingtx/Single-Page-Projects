@@ -1,0 +1,25 @@
+
+/* color of the background surrounding the tab contents*/
+body {
+    background-color: #ecf0f1;
+}
+
+/* color surrounding the main header ('NAME GOES HERE') */
+#header h1 {
+    background-color: #53a8b6;
+}
+
+/* color of the tab bar and each single tab when not selected */
+nav, .tabLink {
+    background-color: #79c2d0;
+}
+
+/* color of tab when selected */
+.tabLink.active {
+    background-color: #53a9b6a1;
+}
+
+/* color of the container holding the tab content */
+.tabContent {
+    background-color: #fff;
+}

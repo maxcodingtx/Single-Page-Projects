@@ -1,0 +1,65 @@
+
+*,
+*::before,
+*::after {box-sizing: border-box;}
+
+body {
+    margin: 0;
+    font-family: "SUSE", sans-serif;
+}
+
+/* fading animation */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* header styles begin here */
+
+#header {
+    font-size: 32px;
+    text-align: center;
+}
+
+#header >* {
+    margin: 0;
+}
+
+#header h1 {
+    padding: 6rem;
+}
+
+nav {
+    overflow: hidden;
+}
+
+nav .tabLink {
+    border: none;
+    padding: 24px 32px;
+    font-size: 24px;
+}
+
+/* header styles end here */
+/* main content styles below */
+
+.tabContent {
+    display: none;
+    margin: 32px auto;
+    padding: 32px;
+    width: 80%;
+    animation: fadeIn 1s;
+}
+
+.tabContent p {
+    font-size: 24px;
+}
+
+/* main content styles end here */
+/* footer style below */
+
+footer {
+    margin: 0 6px;
+    position: absolute;
+    bottom: 0;
+}
+/* styles end here */

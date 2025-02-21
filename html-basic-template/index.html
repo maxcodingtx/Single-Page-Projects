@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="themes.css">
+    <script src="scripts.js"></script>
+    
+    <!-- font lined below -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header">
+
+        <!-- main header of website -->
+        <h1>NAME GOES HERE</h1>
+
+        <nav class="l-nav">
+            <!-- Tabs which display the main content of website -->
+            <!-- if you want to change the tab names appropriately, read the README file -->
+            <button class="tabLink" id="homeLink" onclick="openTab(event, 'Home')">Home</button>
+            <button class="tabLink" onclick="openTab(event, 'About')">About</button>
+            <button class="tabLink" onclick="openTab(event, 'Contact')">Contact</button>
+        </nav>
+
+    </header>
+    
+    <!-- Below are the containers to the main content of website -->
+    <!-- 
+    You may edit the text within the 'h1' and 'p' tags
+    If you want to change anything else, refer to the README
+    -->
+    <main>
+        <div id="Home" class="tabContent">
+            <h1>Home</h1>
+            <hr>
+            <p>HOME CONTENT GOES HERE</p>
+        </div>
+
+        <div id="About" class="tabContent">
+            <h1>About</h1>
+            <hr>
+            <p>HOME CONTENT GOES HERE</p>
+        </div>
+
+        <div id="Contact" class="tabContent">
+            <h1>Contact</h1>
+            <hr>
+            <p>HOME CONTENT GOES HERE</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Template made by Maxcodingtx@gmail.com</p>
+    </footer>
+    
+</body>
+</html>
