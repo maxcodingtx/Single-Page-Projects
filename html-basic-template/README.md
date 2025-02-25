@@ -17,10 +17,10 @@ simple-html-template/
 ├── themes.css        # CSS file dealing with theme colors  
 └── scripts.js        # The main JavaScript file  
 
-index.html: This file contains the basic HTML structure, including one header, main, and footer sections.
-styles.css: This file contains simple CSS styles that define the layout and appearance of the HTML elements.
-Themes.css: This file contains the theme colors for the HTML sections.
-script.js: This file is intended for adding basic JavaScript functionality.
+index.html: This file contains the basic HTML structure, including one header, main, and footer sections.  
+styles.css: This file contains simple CSS styles that define the layout and appearance of the HTML elements.  
+Themes.css: This file contains the theme colors for the HTML sections.  
+script.js: This file is intended for adding basic JavaScript functionality.  
 
 
 	
