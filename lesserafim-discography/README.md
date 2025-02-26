@@ -1,4 +1,4 @@
-#Lesserafim Discography
+# Lesserafim Discography
 
 Lesserafim is my favorite kpop girl group, I decided to make a website dedicated to them mainly focusing on their discography.
 The live demo of this website can be found [here](https://maxcodintx-lesserafim-discography.netlify.app/)
