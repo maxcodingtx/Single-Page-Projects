@@ -28,6 +28,15 @@
           <option>Student 3</option>
         </select>
       </div>
+      <div class="">
+        <div id="xmlDataPlaceholderFXP">
+          <h1 id="student1FXP">Student 1 goes here</h1>
+          <h1 id="student2FXP">Student 2 goes here</h1>
+          <h1 id="student3FXP">Student 3 goes here</h1>
+        </div>
+        <!-- fast-xml-parser button -->
+        <button id="xmlButtonFXP">Get XML Data via Fast-XML-Parser</button>
+      </div>
     </div>
   </body>
 
@@ -36,5 +45,14 @@
   <script
     type="module"
     src="./fetching-scripts/ky/kyEventListeners.js"
+  ></script>
+
+  <script
+    type="module"
+    src="./fetching-scripts/fast-xml-parser/fetchViaFXP.js"
+  ></script>
+  <script
+    defer
+    src="./fetching-scripts/fast-xml-parser/fxpEventListeners.js"
   ></script>
 </html>
