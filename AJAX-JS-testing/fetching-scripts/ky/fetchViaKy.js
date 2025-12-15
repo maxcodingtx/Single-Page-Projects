@@ -7,7 +7,6 @@ window.fetchTextViaKy = async function (url) {
   try {
     const response = await ky.get(url);
     const textData = await response.text();
-    console.log(textData);
     return textData;
   } catch (error) {
     console.error("Error fetching the text file:", error);
@@ -25,7 +24,6 @@ window.fetchXmlViaKy = async function (url) {
     const xmlText = await response.text();
     const parser = new DOMParser();
     const xmlDoc = parser.parseFromString(xmlText, "application/xml");
-    console.log(xmlDoc);
     return xmlDoc;
   } catch (error) {
     console.error("Error fetching the XML file:", error);
