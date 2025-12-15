@@ -1,65 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bet Calculator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h1>Bet Calculator</h1>
-        <p>
-            This calculator allows you to input your stake
-            and odds to find out your potential winnings
-        </p>
+      <h1>Bet Calculator</h1>
+      <p>
+        This calculator allows you to input your stake and odds to find out your
+        potential winnings
+      </p>
     </header>
 
     <main>
-        <div class="l-inputs">
-            <div class="input__money l-input__money">
-                <h2>Stake</h2>
-                <input type="text" 
-                name="inputMoney" id="inputMoney" 
-                inputmode="numeric" pattern="^\d*(\.\d{0,2})?$">
+      <div class="l-inputs">
+        <div class="input__money l-input__money">
+          <h2>Stake</h2>
+          <form id="stakeForm">
+            <input
+              type="text"
+              name="stakeInteger"
+              id="stakeInteger"
+              inputmode="numeric"
+              pattern="^\d*(\.\d{0,2})?$"
+            />
+            <div id="stakeIntegerErrors"></div>
 
-                <input
-                type="range" name="moneyRange" id="moneyRange"
-                min="1" max="500" value="20" class="input__money-slider">
-            </div>
-            <hr>
-            <div class="input__odds l-input__odds">
-                <div>
-                    <p class="input__odds-title">American Odds</p>
-                    <input
-                    type="text" name="inputOdds" 
-                    id="americanOdds" placeholder="american"
-                    class="input-input__odds" inputmode="numeric" pattern="[+\-]\d*$">
-                </div>
+            <input
+              type="range"
+              name="stakeIntegerRange"
+              id="stakeIntegerRange"
+              min="1"
+              max="500"
+              value="20"
+              class="input__money-slider"
+            />
 
-                <div>
-                    <p class="input__odds-title">Decimal Odds</p>
-                    <input 
-                    type="text" name="inputOddsDecimal"
-                    id="decimalOdds" placeholder="decimal"
-                    class="input-input__odds" inputmode="numeric" pattern="^\d*(\.\d{0,10})?$">
-                </div>
-            </div>
+            <p class="input__odds-title">American Odds</p>
+            <input
+              type="text"
+              name="inputOdds"
+              id="americanOdds"
+              placeholder="american"
+              class="input-input__odds"
+            />
+            <div id="americanOddsErrors"></div>
+
+            <p class="input__odds-title">Decimal Odds</p>
+            <input
+              type="text"
+              name="inputOddsDecimal"
+              id="decimalOdds"
+              placeholder="decimal"
+              class="input-input__odds"
+              inputmode="numeric"
+            />
+            <div id="decimalOddsErrors"></div>
+            <button type="submit" id="calculateButton">Calculate</button>
+          </form>
         </div>
-        <hr>
-        <div class="l-result">
-            <div class="result-winnings">
-                <p>Winnings</p>
-                <p id="winnings"></p>
-            </div>
-            <div class="result-payout">
-                <p>Total Payout</p>
-                <p id="payout"></p>
-            </div>
+      </div>
+      <hr />
+      <div class="l-result">
+        <div class="result-winnings">
+          <p>Winnings</p>
+          <p id="winnings"></p>
         </div>
+        <div class="result-payout">
+          <p>Total Payout</p>
+          <p id="payout"></p>
+        </div>
+      </div>
     </main>
-    
-    <script src="script.js"></script>
-</body>
+
+    <script type="module" src="./scripts/validation/stakeForm.js"></script>
+    <script src="./scripts/stakeRange.js"></script>
+    <script src="./scripts/calculateEarnings.js"></script>
+  </body>
 </html>
