@@ -5,15 +5,21 @@ const [txtButtonKy, xmlButtonKy] = [
   document.getElementById("xmlButtonKy"),
 ];
 
+let fetchTextViaKyCount = 0;
+
 txtButtonKy.addEventListener("click", () => {
   const txtUrl = "ajax_info.txt";
+  fetchTextViaKyCount++;
   window.fetchTextViaKy(txtUrl).then((textData) => {
     const txtPlaceholder = document.getElementById("txtPlaceholder");
-    txtPlaceholder.textContent = textData;
+    txtPlaceholder.textContent =
+      textData + ` (via Ky ${fetchTextViaKyCount} times)`;
   });
 });
 
+let fetchXmlViaKyCount = 0;
 xmlButtonKy.addEventListener("click", () => {
+  fetchXmlViaKyCount++;
   const studentSelectionElement = document.getElementById("studentSelection");
   const selectedStudent = studentSelectionElement.value;
   const studentID = selectedStudent[selectedStudent.length - 1];
@@ -35,6 +41,7 @@ xmlButtonKy.addEventListener("click", () => {
 
     xmlName.textContent = studentName;
     xmlScoreHeader.textContent = "Scores:";
-    xmlScores.textContent = scores.join(", ");
+    xmlScores.textContent =
+      scores.join(", ") + ` (via Ky ${fetchXmlViaKyCount} times)`;
   });
 });
