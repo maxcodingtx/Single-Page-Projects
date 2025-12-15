@@ -1,8 +1,11 @@
 const xmlDataPlaceholder = document.getElementById("xmlDataPlaceholderFXP");
 const xmlButtonFxp = document.getElementById("xmlButtonFXP");
 
+let XMLDataParseCount = 0;
+
 async function loadXMLDataFxp() {
   try {
+    XMLDataParseCount++;
     const data = await window.FXP.fetchXmlAsJson("student_info.xml");
     const studentsNode = data?.studentsList?.student;
     const students = Array.isArray(studentsNode)
@@ -14,6 +17,12 @@ async function loadXMLDataFxp() {
       const last = s.lastName ?? "";
       const sc = s.scores ?? {};
       const exams = [sc.exam1, sc.exam2, sc.exam3].filter(Boolean).join(", ");
+
+      // to show the number of times the XML has been parsed
+      if (students.length - 1 === students.indexOf(s)) {
+        return `${first} ${last} — ${exams} (via FXP ${XMLDataParseCount} times)`;
+      }
+
       return `${first} ${last} — ${exams}`;
     });
 
