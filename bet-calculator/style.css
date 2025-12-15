@@ -1,87 +1,109 @@
-
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    background-color: #ccc;
+  margin: 0;
+  background-color: #ccc;
 }
 
 hr {
-    border: 0;
-    border-bottom: 3px solid #ccc;
-    margin: 20px 0 40px;
+  border: 0;
+  border-bottom: 3px solid #ccc;
+  margin: 20px 0 40px;
 }
 
-header, main{
-    background-color: white;
-    margin: 25px auto -10px;
-    width: 80%;
-    padding: 12px;
-    border-radius: 16px;
+header,
+main {
+  background-color: white;
+  margin: 25px auto -10px;
+  width: 80%;
+  padding: 12px;
+  border-radius: 16px;
 }
 
 header {
-    background-color: white;
-    text-align: center;
+  background-color: white;
+  text-align: center;
 }
 
 .l-input__money {
-    margin: auto auto;
+  margin: auto auto;
 
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 
-    width: 200px;
+  width: 200px;
 }
 
 .input__money-slider {
-    appearance: none;
+  appearance: none;
 
-    background: #ccc;
-    height: 5px;
+  background: #ccc;
+  height: 5px;
 }
 
 .l-input__odds {
-    display: grid;
-    grid-template-columns: repeat(2, 150px);
-    gap: 20px;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  gap: 20px;
+  justify-content: center;
 }
 
 .input__odds-title {
-    margin: 0 0 10px;
+  margin: 0 0 10px;
 
-    font-weight: 800;
+  font-weight: 800;
 }
 
 .input-input__odds {
-    width: 125px;
+  width: 125px;
 
-    padding: 6px;
-    border: 2px solid #ccc;
+  padding: 6px;
+  border: 2px solid #ccc;
 
-    font-size: 16px;
-    text-align: left;
+  font-size: 16px;
+  text-align: left;
 }
 
 .l-result {
-    display: flex;
-    justify-content: center;
-    gap: 20%;
+  display: flex;
+  justify-content: center;
+  gap: 20%;
 
-    text-align: center;
+  text-align: center;
 }
 
-.result-winnings,.result-payout {
-    width: 125px;
+.result-winnings,
+.result-payout {
+  width: 125px;
 }
 
-#winnings, #payout {
-    border-bottom: 2px solid #ccc;
+#winnings,
+#payout {
+  border-bottom: 2px solid #ccc;
+}
+
+/* error styles */
+
+.just-validate-error-label {
+  color: #d32f2f;
+  font-size: 1.5ch;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-top: 4px;
+  border: 2px solid red;
+}
+
+.is-invalid {
+  border-color: #d32f2f;
+}
+
+.is-valid {
+  border-color: #2e7d32;
 }
