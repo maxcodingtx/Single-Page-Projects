@@ -6,7 +6,7 @@ let XMLDataParseCount = 0;
 async function loadXMLDataFxp() {
   try {
     XMLDataParseCount++;
-    const data = await window.FXP.fetchXmlAsJson("student_info.xml");
+    const data = await window.FXP.fetchXmlAsJson("./data/student_info.xml");
     const studentsNode = data?.studentsList?.student;
     const students = Array.isArray(studentsNode)
       ? studentsNode

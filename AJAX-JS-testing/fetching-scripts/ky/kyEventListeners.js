@@ -8,7 +8,7 @@ const [txtButtonKy, xmlButtonKy] = [
 let fetchTextViaKyCount = 0;
 
 txtButtonKy.addEventListener("click", () => {
-  const txtUrl = "ajax_info.txt";
+  const txtUrl = "./data/ajax_info.txt";
   fetchTextViaKyCount++;
   window.fetchTextViaKy(txtUrl).then((textData) => {
     const txtPlaceholder = document.getElementById("txtPlaceholder");
@@ -24,7 +24,7 @@ xmlButtonKy.addEventListener("click", () => {
   const selectedStudent = studentSelectionElement.value;
   const studentID = selectedStudent[selectedStudent.length - 1];
 
-  window.fetchXmlViaKy("student_info.xml").then((xmlDoc) => {
+  window.fetchXmlViaKy("./data/student_info.xml").then((xmlDoc) => {
     const xmlName = document.getElementById("xmlName");
     const xmlScoreHeader = document.getElementById("xmlScoreHeader");
     const xmlScores = document.getElementById("xmlScores");
