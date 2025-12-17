@@ -1,0 +1,22 @@
+.just-validate-error-label {
+  display: block;
+
+  margin-top: 0.25rem;
+
+  color: #dc2626;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.is-invalid {
+  border-color: #dc2626;
+
+  box-shadow: 0 0 0 3px rgb(220 38 38 / 0.1);
+}
+
+.is-valid {
+  border-color: #16a34a;
+
+  box-shadow: 0 0 0 3px rgb(22 163 74 / 0.1);
+}
