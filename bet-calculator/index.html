@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bet Calculator</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/main-styles.css" />
+    <link rel="stylesheet" href="./css/error-styles.css" />
   </head>
   <body>
     <header>
@@ -17,52 +18,57 @@
 
     <main>
       <div class="l-inputs">
-        <div class="input__money l-input__money">
+        <div class="input__values l-input__values">
           <h2>Stake</h2>
           <form id="stakeForm">
-            <input
-              type="text"
-              name="stakeInteger"
-              id="stakeInteger"
-              inputmode="numeric"
-              pattern="^\d*(\.\d{0,2})?$"
-            />
-            <div id="stakeIntegerErrors"></div>
+            <div class="input__values-stake">
+              <input
+                type="number"
+                step=".01"
+                name="stakeInteger"
+                id="stakeInteger"
+                inputmode="numeric"
+              />
+              <div id="stakeIntegerErrors"></div>
 
-            <input
-              type="range"
-              name="stakeIntegerRange"
-              id="stakeIntegerRange"
-              min="1"
-              max="500"
-              value="20"
-              class="input__money-slider"
-            />
+              <input
+                type="range"
+                name="stakeIntegerRange"
+                id="stakeIntegerRange"
+                min="1"
+                max="500"
+                value="20"
+                class="input__values-slider"
+              />
+            </div>
 
-            <p class="input__odds-title">American Odds</p>
-            <input
-              type="text"
-              name="inputOdds"
-              id="americanOdds"
-              placeholder="american"
-              class="input-input__odds"
-            />
-            <div id="americanOddsErrors"></div>
+            <div class="input__odds l-input__odds">
+              <p class="input__odds-title">American Odds</p>
+              <input
+                name="inputOdds"
+                id="americanOdds"
+                placeholder="american"
+                class="input__odds-input"
+              />
+              <div id="americanOddsErrors"></div>
 
-            <p class="input__odds-title">Decimal Odds</p>
-            <input
-              type="text"
-              name="inputOddsDecimal"
-              id="decimalOdds"
-              placeholder="decimal"
-              class="input-input__odds"
-              inputmode="numeric"
-            />
-            <div id="decimalOddsErrors"></div>
+              <p class="input__odds-title">Decimal Odds</p>
+              <input
+                type="number"
+                step=".01"
+                name="inputOddsDecimal"
+                id="decimalOdds"
+                placeholder="decimal"
+                class="input__odds-input"
+                inputmode="numeric"
+              />
+              <div id="decimalOddsErrors"></div>
+            </div>
             <button type="submit" id="calculateButton">Calculate</button>
           </form>
         </div>
       </div>
+
       <hr />
       <div class="l-result">
         <div class="result-winnings">
@@ -78,6 +84,10 @@
 
     <script type="module" src="./scripts/validation/stakeForm.js"></script>
     <script src="./scripts/stakeRange.js"></script>
-    <script src="./scripts/calculateEarnings.js"></script>
+    <script
+      type="module"
+      src="./scripts/earnings/calculateEarnings.js"
+    ></script>
+    <script src="./scripts/earnings/validateEarnings.js"></script>
   </body>
 </html>
