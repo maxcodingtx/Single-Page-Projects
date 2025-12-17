@@ -1,5 +1,10 @@
-window.validateEarnings = function (earnings, payout) {
-  if (isNaN(earnings) || isNaN(payout)) {
+window.validateEarnings = function (winnings, payout) {
+  if (
+    isNaN(winnings) ||
+    isNaN(payout) ||
+    winnings.isNegative() ||
+    payout.isNegative()
+  ) {
     return false;
   }
   return true;
