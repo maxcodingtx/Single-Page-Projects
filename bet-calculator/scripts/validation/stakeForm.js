@@ -41,7 +41,8 @@ stakeFormValidator.addField(
     {
       rule: "minLength",
       value: 4,
-      errorMessage: "American odds must be at least 4 characters long",
+      errorMessage:
+        "American odds must be at least 4 characters long (erase if using Decimal odds)",
     },
   ],
   {
@@ -61,7 +62,8 @@ stakeFormValidator.addField(
     {
       rule: "minNumber",
       value: 1.01,
-      errorMessage: "Decimal odds must be at least 1.01",
+      errorMessage:
+        "Decimal odds must be at least 1.01 (erase if using American odds)",
     },
     {
       rule: "customRegexp",
