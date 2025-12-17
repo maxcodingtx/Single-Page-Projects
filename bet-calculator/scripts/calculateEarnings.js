@@ -35,9 +35,7 @@ function calculateEarnings(
       if (isPositiveAmericanOdds) {
         const odds = parseFloat(americanOdds);
         const earnings = (stakeAmount / 100) * odds;
-        const totalPayout = winnings + stakeAmount;
-        console.log("earnings", earnings);
-        console.log("winnings", winnings);
+        const totalPayout = earnings + stakeAmount;
         winningsElement.textContent = `$${earnings.toFixed(2)}`;
         totalPayoutElement.textContent = `$${totalPayout.toFixed(2)}`;
       }
@@ -47,16 +45,15 @@ function calculateEarnings(
         const earnings = (100 / odds) * stakeAmount;
         const totalPayout = earnings + stakeAmount;
         console.log("earnings", earnings);
-        console.log("winnings", winnings);
         winningsElement.textContent = `$${earnings.toFixed(2)}`;
         totalPayoutElement.textContent = `$${totalPayout.toFixed(2)}`;
       }
+      break;
     case "decimal":
       const odds = parseFloat(decimalOdds);
       const earnings = stakeAmount * odds - stakeAmount;
       const totalPayout = earnings + stakeAmount;
       console.log("earnings", earnings);
-      console.log("winnings", winnings);
       winningsElement.textContent = `$${earnings.toFixed(2)}`;
       totalPayoutElement.textContent = `$${totalPayout.toFixed(2)}`;
       break;
