@@ -36,6 +36,14 @@ function calculateEarnings(
         const odds = parseFloat(americanOdds);
         const earnings = (stakeAmount / 100) * odds;
         const totalPayout = earnings + stakeAmount;
+
+        const isValid = window.validateEarnings(earnings, totalPayout);
+        if (!isValid) {
+          winningsElement.textContent = "$0.00";
+          totalPayoutElement.textContent = "$0.00";
+          return;
+        }
+
         winningsElement.textContent = `$${earnings.toFixed(2)}`;
         totalPayoutElement.textContent = `$${totalPayout.toFixed(2)}`;
       }
@@ -44,7 +52,14 @@ function calculateEarnings(
         const odds = Math.abs(parseFloat(americanOdds));
         const earnings = (100 / odds) * stakeAmount;
         const totalPayout = earnings + stakeAmount;
-        console.log("earnings", earnings);
+
+        const isValid = window.validateEarnings(earnings, totalPayout);
+        if (!isValid) {
+          winningsElement.textContent = "$0.00";
+          totalPayoutElement.textContent = "$0.00";
+          return;
+        }
+
         winningsElement.textContent = `$${earnings.toFixed(2)}`;
         totalPayoutElement.textContent = `$${totalPayout.toFixed(2)}`;
       }
@@ -53,7 +68,13 @@ function calculateEarnings(
       const odds = parseFloat(decimalOdds);
       const earnings = stakeAmount * odds - stakeAmount;
       const totalPayout = earnings + stakeAmount;
-      console.log("earnings", earnings);
+
+      const isValid = window.validateEarnings(earnings, totalPayout);
+      if (!isValid) {
+        winningsElement.textContent = "$0.00";
+        totalPayoutElement.textContent = "$0.00";
+        return;
+      }
       winningsElement.textContent = `$${earnings.toFixed(2)}`;
       totalPayoutElement.textContent = `$${totalPayout.toFixed(2)}`;
       break;
