@@ -1,72 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CPS-Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="scripts.js" defer></script>
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
 
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <h1>CPS Test</h1>
-        <p>
-            Find out
-            <br>
-            ↓ how fast you can click/tap ↓
-        </p>
+      <h1>CPS Test</h1>
+      <p>
+        Find out
+        <br />
+        ↓ how fast you can click/tap ↓
+      </p>
     </header>
 
     <section id="time">
+      <div class="time__container">
+        <h1>Select Time</h1>
 
-        <div class="time__container">
+        <ul class="l-time__selection">
+          <li class="time__option" id="1" style="border-radius: 12px 12px 0 0">
+            1 second
+          </li>
 
-            <h1>Select Time</h1>
+          <li class="time__option" id="5">5 seconds</li>
 
-            <ul class="l-time__selection">
+          <li class="time__option is-active" id="15">15 seconds</li>
 
-                <li class="time__option" id="1" onclick="active(event)"
-                style="border-radius: 12px 12px 0 0;">1 second</li>
+          <li class="time__option" id="30">30 seconds</li>
 
-                <li class="time__option" id="5" onclick="active(event)"
-                >5 seconds</li>
-    
-                <li class="time__option is-active" id="15" onclick="active(event)"
-                >15 seconds</li>
-    
-                <li class="time__option" id="30" onclick="active(event)"
-                >30 seconds</li>
-    
-                <li class="time__option" id="45" onclick="active(event)"
-                >45 seconds</li>
-    
-                <li class="time__option" id="60" onclick="active(event)"
-                style="border-radius: 0 0 12px 12px;">60 seconds</li>
+          <li class="time__option" id="45">45 seconds</li>
 
-            </ul>
-
-        </div>
-
+          <li class="time__option" id="60" style="border-radius: 0 0 12px 12px">
+            60 seconds
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section id="click">
-        
-        <button type="button"
-            class="click__button"
-            id="cps"
-            onclick="getCPS() ; timer()">Click Here <br> To Begin</button>
+      <button type="button" class="click__button" id="cpsButton">
+        Click Here <br />
+        To Begin
+      </button>
 
-        <div class="l-click__stats">
-            <p>Time Left : <span id="timeLeft"></span></p>
-            <p>Clicks : <span id="totalClicks"></span></p>
-        </div>
-
+      <div class="l-click__stats">
+        <p>Time Left : <span id="timeLeft"></span></p>
+        <p>Clicks : <span id="totalClicks"></span></p>
+      </div>
     </section>
-
-</body>
+  </body>
+  <script src="scripts.js" defer></script>
+  <script src="./scripts/activeClassHandling.js" defer></script>
+  <script src="./scripts/createRipple.js"></script>
+  <script src="./scripts/handleTimeSelection.js" defer></script>
 </html>
