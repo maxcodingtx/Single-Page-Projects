@@ -15,6 +15,11 @@
     />
   </head>
   <body>
+
+
+    
+    
+
     <header>
       <h1>CPS Test</h1>
       <p>
@@ -23,27 +28,15 @@
         ↓ how fast you can click/tap ↓
       </p>
     </header>
-
+    
     <section id="time">
       <div class="time__container">
         <h1>Select Time</h1>
-
-        <ul class="l-time__selection">
-          <li class="time__option" id="1" style="border-radius: 12px 12px 0 0">
-            1 second
-          </li>
-
-          <li class="time__option" id="5">5 seconds</li>
-
-          <li class="time__option is-active" id="15">15 seconds</li>
-
-          <li class="time__option" id="30">30 seconds</li>
-
-          <li class="time__option" id="45">45 seconds</li>
-
-          <li class="time__option" id="60" style="border-radius: 0 0 12px 12px">
-            60 seconds
-          </li>
+        
+        <ul class="l-time__selection" id="timeOptionsContainer">
+          <template id="timeOptionTemplate">
+            <li class="time__option"></li>
+          </template>
         </ul>
       </div>
     </section>
@@ -64,4 +57,5 @@
   <script src="./scripts/activeClassHandling.js" defer></script>
   <script src="./scripts/createRipple.js"></script>
   <script src="./scripts/handleTimeSelection.js" defer></script>
+  <script src="./scripts/timeOptionTemplate.js" defer></script>
 </html>
