@@ -2,6 +2,10 @@ var numClicks = 0;
 var started = false;
 
 // cps = clicks per second
+
+
+
+
 function getCPS() {
   numClicks += 1;
   const totalClicksElement = document.getElementById("totalClicks");
@@ -11,8 +15,15 @@ function getCPS() {
   }
   window.started = true;
 
-  const timeSelected = document.getElementsByClassName("is-active")[0].id;
-  const timeSelectedFixed = Number(timeSelected.slice(0, -1));
+  const activeElement = document.getElementsByClassName("is-active")[0]
+
+  if (!activeElement) {
+    alert("Please select a time duration");
+    window.location.reload()
+  }
+
+  const timeSelectedId = document.getElementsByClassName("is-active")[0].id;
+  const timeSelectedFixed = Number(timeSelectedId.slice(0, -1));
 
   if (numClicks === 1) {
     setTimeout(() => {
@@ -27,9 +38,16 @@ function getCPS() {
 }
 
 function timer() {
-  const timeSelected = document.getElementsByClassName("is-active")[0].id
-  const timeSelectedFixed = Number(timeSelected.slice(0, -1))
-  
+  const activeElement = document.getElementsByClassName("is-active")[0]
+
+  if (!activeElement) {
+    alert("Please select a time duration");
+    window.location.reload();
+  }
+  const timeSelectedId = document.getElementsByClassName("is-active")[0].id
+  const timeSelectedFixed = Number(timeSelectedId.slice(0, -1))
+
+
 
   // on the first click, countdown timer will start,
   // due to drift different timers have different delays.
