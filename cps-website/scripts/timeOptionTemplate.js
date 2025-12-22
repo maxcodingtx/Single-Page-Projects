@@ -2,7 +2,6 @@
 const template = document.getElementById("timeOptionTemplate")
 const timeOptionsContainer = document.getElementById("timeOptionsContainer")
 
-// data for buttons (1s, 5s, 15s, 30s, 45s, 60s)
 const timeOptionData = [
   { title: "1 Second", id: "1s" },
   { title: "5 Seconds", id: "5s" },
@@ -14,9 +13,7 @@ const timeOptionData = [
 
 function createTimeOptions(data) {
   const clone = template.content.cloneNode(true)
-
   const timeOptionTitle = clone.querySelector(".time__option")
-
 
   timeOptionTitle.textContent = data.title 
   timeOptionTitle.id = data.id
@@ -25,5 +22,3 @@ function createTimeOptions(data) {
 }
 
 timeOptionData.forEach(createTimeOptions)
-
-// handle active class handling
