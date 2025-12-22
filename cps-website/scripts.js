@@ -11,32 +11,33 @@ function getCPS() {
   }
   window.started = true;
 
-  let timeSelected = document.getElementsByClassName("is-active")[0].id;
-  timeSelected *= 1;
+  const timeSelected = document.getElementsByClassName("is-active")[0].id;
+  const timeSelectedFixed = Number(timeSelected.slice(0, -1));
 
   if (numClicks === 1) {
     setTimeout(() => {
-      let cps = (numClicks / timeSelected).toFixed(2);
+      let cps = (numClicks / timeSelectedFixed).toFixed(2);
 
       alert("Your cps rate was " + cps);
 
       numClicks = 0;
       window.started = false;
-    }, 1000 * timeSelected);
+    }, 1000 * timeSelectedFixed);
   }
 }
 
 function timer() {
-  var timeSelected = document.getElementsByClassName("is-active")[0].id;
-  timeSelected *= 1;
+  const timeSelected = document.getElementsByClassName("is-active")[0].id
+  const timeSelectedFixed = Number(timeSelected.slice(0, -1))
+  
 
   // on the first click, countdown timer will start,
   // due to drift different timers have different delays.
   if (!window.intervalId) {
     const timeLeftEl = document.getElementById("timeLeft");
     timeLeftEl.innerHTML =
-      timeSelected < 30 ? timeSelected.toFixed(2) : timeSelected.toFixed();
-    window.handleTimeSelection(timeSelected);
+      timeSelectedFixed < 30 ? timeSelectedFixed.toFixed(2) : timeSelectedFixed.toFixed();
+    window.handleTimeSelection(timeSelectedFixed);
   }
 }
 
