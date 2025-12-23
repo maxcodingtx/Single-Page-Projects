@@ -1,6 +1,6 @@
 
-const template = document.getElementById("timeOptionTemplate")
-const timeOptionsContainer = document.getElementById("timeOptionsContainer")
+const template = document.getElementById("time-option-template")
+const timeOptionsContainer = document.getElementById("time-options-list")
 
 const timeOptionData = [
   { title: "1 Second", id: "1s" },

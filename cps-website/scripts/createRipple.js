@@ -17,5 +17,5 @@ function createRipple(event) {
   button.appendChild(circle);
 }
 
-window.cpsButton = document.getElementById("cpsButton");
+window.cpsButton = document.getElementById("click-test-button");
 cpsButton.addEventListener("click", createRipple);

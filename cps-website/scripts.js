@@ -8,7 +8,7 @@ var started = false;
 
 function getCPS() {
   numClicks += 1;
-  const totalClicksElement = document.getElementById("totalClicks");
+  const totalClicksElement = document.getElementById("total-clicks");
   totalClicksElement.innerHTML = numClicks;
   if (window.started) {
     return;
@@ -52,14 +52,14 @@ function timer() {
   // on the first click, countdown timer will start,
   // due to drift different timers have different delays.
   if (!window.intervalId) {
-    const timeLeftEl = document.getElementById("timeLeft");
+    const timeLeftEl = document.getElementById("time-remaining");
     timeLeftEl.innerHTML =
       timeSelectedFixed < 30 ? timeSelectedFixed.toFixed(2) : timeSelectedFixed.toFixed();
     window.handleTimeSelection(timeSelectedFixed);
   }
 }
 
-const cpsButton = document.getElementById("cpsButton");
+const cpsButton = document.getElementById("click-test-button");
 cpsButton.addEventListener("click", () => {
   getCPS();
   timer();

@@ -9,12 +9,12 @@ var handleTimeSelection = function (timeSelected) {
     case 1:
       window.intervalId = setInterval(() => {
         timeSelected -= 0.1;
-        document.getElementById("timeLeft").innerHTML = timeSelected.toFixed(2);
+        document.getElementById("time-remaining").innerHTML = timeSelected.toFixed(2);
 
         if (timeSelected <= 0) {
           clearInterval(window.intervalId);
           window.intervalId = null;
-          document.getElementById("timeLeft").innerHTML = 0;
+          document.getElementById("time-remaining").innerHTML = 0;
           window.started = false;
         }
       }, 90);
@@ -23,12 +23,12 @@ var handleTimeSelection = function (timeSelected) {
     case 5:
       window.intervalId = setInterval(() => {
         timeSelected -= 0.1;
-        document.getElementById("timeLeft").innerHTML = timeSelected.toFixed(2);
+        document.getElementById("time-remaining").innerHTML = timeSelected.toFixed(2);
 
         if (timeSelected <= 0) {
           clearInterval(window.intervalId);
           window.intervalId = null;
-          document.getElementById("timeLeft").innerHTML = 0;
+          document.getElementById("time-remaining").innerHTML = 0;
           window.started = false;
         }
       }, 92);
@@ -37,12 +37,12 @@ var handleTimeSelection = function (timeSelected) {
     case 15:
       window.intervalId = setInterval(() => {
         timeSelected -= 0.1;
-        document.getElementById("timeLeft").innerHTML = timeSelected.toFixed(2);
+        document.getElementById("time-remaining").innerHTML = timeSelected.toFixed(2);
 
         if (timeSelected <= 0) {
           clearInterval(window.intervalId);
           window.intervalId = null;
-          document.getElementById("timeLeft").innerHTML = 0;
+          document.getElementById("time-remaining").innerHTML = 0;
           window.started = false;
         }
       }, 92);
@@ -51,12 +51,12 @@ var handleTimeSelection = function (timeSelected) {
     case 30:
       window.intervalId = setInterval(() => {
         timeSelected -= 1;
-        document.getElementById("timeLeft").innerHTML = timeSelected.toFixed();
+        document.getElementById("time-remaining").innerHTML = timeSelected.toFixed();
 
         if (timeSelected <= 0) {
           clearInterval(window.intervalId);
           window.intervalId = null;
-          document.getElementById("timeLeft").innerHTML = 0;
+          document.getElementById("time-remaining").innerHTML = 0;
           window.started = false;
         }
       }, 1000);
@@ -65,12 +65,12 @@ var handleTimeSelection = function (timeSelected) {
     case 45:
       window.intervalId = setInterval(() => {
         timeSelected -= 1;
-        document.getElementById("timeLeft").innerHTML = timeSelected.toFixed();
+        document.getElementById("time-remaining").innerHTML = timeSelected.toFixed();
 
         if (timeSelected <= 0) {
           clearInterval(window.intervalId);
           window.intervalId = null;
-          document.getElementById("timeLeft").innerHTML = 0;
+          document.getElementById("time-remaining").innerHTML = 0;
           window.started = false;
         }
       }, 1000);
@@ -79,12 +79,12 @@ var handleTimeSelection = function (timeSelected) {
     case 60:
       window.intervalId = setInterval(() => {
         timeSelected -= 1;
-        document.getElementById("timeLeft").innerHTML = timeSelected.toFixed();
+        document.getElementById("time-remaining").innerHTML = timeSelected.toFixed();
 
         if (timeSelected <= 0) {
           clearInterval(window.intervalId);
           window.intervalId = null;
-          document.getElementById("timeLeft").innerHTML = 0;
+          document.getElementById("time-remaining").innerHTML = 0;
           window.started = false;
         }
       }, 1000);
