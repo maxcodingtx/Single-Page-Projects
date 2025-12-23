@@ -8,9 +8,9 @@ function createRipple(event) {
   circle.style.width = circle.style.height = `${diameter}px`;
   circle.style.left = `${event.clientX - bounds.left - radius}px`;
   circle.style.top = `${event.clientY - bounds.top - radius}px`;
-  circle.classList.add("ripple");
+  circle.classList.add("click__ripple");
 
-  const ripple = button.getElementsByClassName("ripple")[0];
+  const ripple = button.getElementsByClassName("click__ripple")[0];
   if (ripple) {
     ripple.remove();
   }

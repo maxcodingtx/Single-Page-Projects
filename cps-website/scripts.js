@@ -15,14 +15,14 @@ function getCPS() {
   }
   window.started = true;
 
-  const activeElement = document.getElementsByClassName("is-active")[0]
+  const activeElement = document.getElementsByClassName("time__option--active")[0]
 
   if (!activeElement) {
     alert("Please select a time duration");
     window.location.reload()
   }
 
-  const timeSelectedId = document.getElementsByClassName("is-active")[0].id;
+  const timeSelectedId = document.getElementsByClassName("time__option--active")[0].id;
   const timeSelectedFixed = Number(timeSelectedId.slice(0, -1));
 
   if (numClicks === 1) {
@@ -38,13 +38,13 @@ function getCPS() {
 }
 
 function timer() {
-  const activeElement = document.getElementsByClassName("is-active")[0]
+  const activeElement = document.getElementsByClassName("time__option--active")[0]
 
   if (!activeElement) {
     alert("Please select a time duration");
     window.location.reload();
   }
-  const timeSelectedId = document.getElementsByClassName("is-active")[0].id
+  const timeSelectedId = document.getElementsByClassName("time__option--active")[0].id
   const timeSelectedFixed = Number(timeSelectedId.slice(0, -1))
 
 

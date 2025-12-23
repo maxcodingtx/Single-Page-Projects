@@ -8,10 +8,10 @@ function activeClassHandling(event) {
   if (window.started) {
     return;
   }
-  var active = document.getElementsByClassName("is-active");
+  var active = document.getElementsByClassName("time__option--active");
 
   if (active.length > 0) {
-    active[0].className = active[0].className.replace(" is-active", "");
+    active[0].className = active[0].className.replace(" time__option--active", "");
   }
-  event.target.className += " is-active";
+  event.target.className += " time__option--active";
 }
