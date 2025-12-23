@@ -116,7 +116,7 @@ header p {
   text-align: center;
 }
 
-.l-time__selection {
+.time__selection {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-2);
@@ -127,7 +127,7 @@ header p {
 }
 
 @media (max-width: 640px) {
-  .l-time__selection {
+  .time__selection {
     grid-template-columns: 1fr;
   }
 }
@@ -154,7 +154,7 @@ header p {
   transform: translateY(-1px);
 }
 
-.time__option.is-active {
+.time__option--active {
   border-color: var(--primary-500);
   background: var(--primary-500);
   color: white;
@@ -206,11 +206,11 @@ header p {
 }
 
 /* Ripple Effect */
-.ripple {
+.click__ripple {
   position: absolute;
   border-radius: 50%;
   transform: scale(0);
-  animation: ripple 600ms ease-out;
+  animation: click__ripple-animation 600ms ease-out;
   background: radial-gradient(
     circle,
     rgba(59, 130, 246, 0.3) 0%,
@@ -219,7 +219,7 @@ header p {
   pointer-events: none;
 }
 
-@keyframes ripple {
+@keyframes click__ripple-animation {
   0% {
     transform: scale(0);
     opacity: 1;
@@ -231,7 +231,7 @@ header p {
 }
 
 /* Stats Section */
-.l-click__stats {
+.click__stats {
   display: flex;
   justify-content: space-between;
   gap: var(--space-4);
@@ -244,21 +244,21 @@ header p {
 }
 
 @media (max-width: 640px) {
-  .l-click__stats {
+  .click__stats {
     flex-direction: column;
     text-align: center;
     gap: var(--space-2);
   }
 }
 
-.l-click__stats p {
+.click__stats p {
   margin: 0;
   font-size: var(--font-size-lg);
   font-weight: 500;
   color: var(--gray-600);
 }
 
-.l-click__stats span {
+.click__stats span {
   font-weight: 700;
   color: var(--primary-600);
 }
