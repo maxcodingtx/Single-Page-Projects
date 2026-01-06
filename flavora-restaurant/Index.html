@@ -85,52 +85,68 @@
     </section>
 
     <section class="gallery">
-      <img
-        src="Images/Gallery-Images/Gallery-Image1-Default.jpeg"
-        alt="Food-Image1"
-        srcset="
-          Images/Gallery-Images/Gallery-Image1-800w.jpeg     800w,
-          Images/Gallery-Images/Gallery-Image1-Default.jpeg 1500w
-        "
-        loading="lazy"
-      />
+      <div class="gallery__container">
+        <figure class="gallery__figure">
+          <picture class="gallery__image">
+            <source
+              srcset="Images/Gallery-Images/Gallery-Image1-800w.jpeg"
+              media="(max-width: 800px)"
+            />
+            <source
+              srcset="Images/Gallery-Images/Gallery-Image1-Default.jpeg"
+              media="(min-width: 801px)"
+            />
+            <img
+              src="Images/Gallery-Images/Gallery-Image1-Default.jpeg"
+              alt="traditional Italian food dish"
+              loading="lazy"
+            />
+          </picture>
+        </figure>
 
-      <img
-        src="Images/Gallery-Images/Gallery-Image2-Default.jpg"
-        alt="Food Image 2"
-        srcset="
-          Images/Gallery-Images/Gallery-Image2-800w.jpg     800w,
-          Images/Gallery-Images/Gallery-Image2-Default.jpg 1500w
-        "
-        class="gallery__image2"
-        loading="lazy"
-      />
+        <div class="gallery__card gallery__card--hours">
+          <h2 class="gallery__card-title">Hours</h2>
+          <dl class="gallery__hours-list">
+            <div class="gallery__hours-item">
+              <dt>Monday - Friday</dt>
+              <dd>8:00 AM - 10:00 PM</dd>
+            </div>
+            <div class="gallery__hours-item">
+              <dt>Saturday - Sunday</dt>
+              <dd>6:00 AM - 12:00 PM</dd>
+            </div>
+          </dl>
+        </div>
 
-      <div class="gallery__hours">
-        <h1>Hours</h1>
-        <p>
-          Monday 8AM - 10PM
-          <br />
-          Tuesday 8AM - 10PM
-          <br />
-          Wednesday 8AM - 10PM
-          <br />
-          Thursday 8AM - 10PM
-          <br />
-          Friday 8AM - 10PM
-          <br />
-          Saturday 6AM - 12PM
-          <br />
-          Sunday 6AM - 12PM
-        </p>
-      </div>
+        <figure class="gallery__figure gallery__figure--second">
+          <picture class="gallery__image">
+            <source
+              srcset="Images/Gallery-Images/Gallery-Image2-800w.jpg"
+              media="(max-width: 800px)"
+            />
+            <source
+              srcset="Images/Gallery-Images/Gallery-Image2-Default.jpg"
+              media="(min-width: 801px)"
+            />
+            <img
+              src="Images/Gallery-Images/Gallery-Image2-Default.jpg"
+              alt="gourmet Italian cuisine presentation"
+              loading="lazy"
+            />
+          </picture>
+        </figure>
 
-      <div class="gallery__extra">
-        <h1>Phone</h1>
-        <p>999-888-7777</p>
+        <div class="gallery__card gallery__card--contact">
+          <div class="gallery__contact-group">
+            <h2 class="gallery__card-title">Phone</h2>
+            <p class="gallery__contact-info">999-888-7777</p>
+          </div>
 
-        <h1>Location</h1>
-        <p>1900 Georgia AVE, Floor 30</p>
+          <div class="gallery__contact-group">
+            <h2 class="gallery__card-title">Location</h2>
+            <p class="gallery__contact-info">1900 Georgia AVE<br />Floor 30</p>
+          </div>
+        </div>
       </div>
     </section>
 
