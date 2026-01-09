@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  font-family: var(--font-family-base);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+
+  background: linear-gradient(
+      135deg,
+      #0a0e27 0%,
+      #0d1117 25%,
+      #000000 50%,
+      #0d1117 75%,
+      #0f1419 100%
+    )
+    fixed;
+
+  /* overlay (for texture) */
+  background-image: linear-gradient(
+      135deg,
+      rgba(10, 14, 39, 0.95) 0%,
+      rgba(13, 17, 23, 0.98) 25%,
+      rgba(0, 0, 0, 1) 50%,
+      rgba(13, 17, 23, 0.98) 75%,
+      rgba(15, 20, 25, 0.95) 100%
+    ),
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(0, 100, 150, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(93, 0, 255, 0.05) 0%,
+      transparent 50%
+    );
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  color: var(--color-text-primary);
+}
+
+p {
+  margin: 0;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  min-height: 44px;
+
+  font-family: var(--font-family-base);
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+  line-height: 1.2;
+
+  border: var(--border);
+  border-radius: 1rem;
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+
+  cursor: pointer;
+  user-select: none;
+  transition: transform var(--transition-fast),
+    background-color var(--transition-base), border-color var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.button:hover {
+  background-color: var(--color-bg-tertiary);
+  border-color: var(--color-primary-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.button:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(93, 0, 255, 0.4);
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.button--primary {
+  min-width: 60px;
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  border-width: 3px;
+}
+
+.button--control {
+  flex: 1;
+  min-width: 100px;
+  font-size: 0.875rem;
+}
+
+.button--danger {
+  border-color: var(--color-danger);
+  background-color: var(--color-bg-secondary);
+}
+
+.button--danger:hover {
+  background-color: var(--color-danger);
+  border-color: var(--color-danger-dark);
+  box-shadow: var(--shadow-md);
+}
