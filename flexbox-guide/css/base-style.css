@@ -45,6 +45,41 @@ body {
     );
 }
 
+:root {
+  --color-primary: #5d00ff;
+  --color-primary-light: #7a2bff;
+  --color-primary-dark: #4600cc;
+  --color-danger: #ff3b5c;
+  --color-danger-dark: #cc0022;
+
+  --color-bg-primary: #000000;
+  --color-bg-secondary: #171717;
+  --color-bg-tertiary: #252525;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b8b8b8;
+
+  --font-family-base: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --border-width: 2px;
+  --border-color: var(--color-primary);
+  --border: var(--border-width) solid var(--border-color);
+
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 250ms ease-in-out;
+  --transition-slow: 350ms ease-in-out;
+
+  --shadow-sm: 0 2px 8px rgba(93, 0, 255, 0.1);
+  --shadow-md: 0 4px 16px rgba(93, 0, 255, 0.2);
+  --shadow-lg: 0 8px 32px rgba(93, 0, 255, 0.3);
+
+  --pattern-size: 80px;
+  --pattern-dot-size: 2px;
+}
+
 img {
   max-width: 100%;
   height: auto;

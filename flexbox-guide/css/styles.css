@@ -1,0 +1,221 @@
+/* ============================================
+   FLEX PLAYGROUND SECTION 
+   ============================================ */
+
+.flex-playground {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 3rem 1.5rem;
+  min-height: 100vh;
+}
+
+.flex-playground__container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.flex-playground__title {
+  margin-bottom: 3rem;
+
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-light),
+    var(--color-primary)
+  );
+
+  font-size: 2.5rem;
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.flex-playground__demo-box {
+  display: flex;
+  overflow: auto;
+
+  margin: 0 auto 2rem;
+  height: 280px;
+  width: 100%;
+  max-width: 320px;
+
+  border: var(--border);
+  border-radius: 1.5rem;
+  background-color: var(--color-bg-secondary);
+  box-shadow: var(--shadow-md);
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-bg-tertiary);
+}
+
+.flex-playground__demo-box::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.flex-playground__demo-box::-webkit-scrollbar-track {
+  border-radius: 0.5rem;
+
+  background: var(--color-bg-tertiary);
+}
+
+.flex-playground__demo-box::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+
+  background: var(--color-primary);
+}
+
+.flex-playground__demo-box::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-light);
+}
+
+.flex-playground__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  padding: 1rem;
+  border: var(--border);
+  border-radius: 1rem;
+
+  background-color: var(--color-bg-tertiary);
+
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+
+  transition: background-color var(--transition-base);
+}
+
+.flex-playground__counter {
+  margin: 0 auto 1.5rem;
+  padding: 1rem 1.5rem;
+  width: fit-content;
+  min-width: 80px;
+
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+
+  border: var(--border);
+  border-radius: 1rem;
+  background-color: var(--color-bg-secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.flex-playground__controls {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+
+  margin-bottom: 4rem;
+}
+
+.flex-playground__status-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 4rem 0 1.5rem;
+
+  color: var(--color-primary-light);
+}
+
+.flex-playground__status {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+
+  border: var(--border);
+  border-radius: 1rem;
+  background-color: var(--color-bg-secondary);
+}
+
+.flex-playground__status-item {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+
+  font-family: "Courier New", monospace;
+  font-size: 0.875rem;
+  text-align: center;
+
+  color: var(--color-text-secondary);
+
+  background-color: var(--color-bg-tertiary);
+}
+
+/* ============================================
+   FLEX CONTROLS SECTION 
+   ============================================ */
+
+.flex-controls {
+  padding: 4rem 1.5rem;
+}
+
+.flex-controls__container {
+  display: grid;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.flex-controls__section {
+  border: var(--border);
+  border-radius: 1.5rem;
+  padding: 2rem;
+
+  background-color: rgba(23, 23, 23, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-md);
+}
+
+.flex-controls__title {
+  margin-bottom: 1.5rem;
+
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--color-primary-light);
+}
+
+.flex-controls__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.flex-controls__reset {
+  display: block;
+
+  margin: 3rem auto;
+  padding: 1.5rem 3rem;
+
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-bold);
+}
+
+/* ============================================
+   MEDIA QUERIES
+   ============================================ */
+
+@media (min-width: 768px) {
+  .flex-playground__demo-box {
+    max-width: 400px;
+    height: 320px;
+  }
+
+  .flex-controls__buttons {
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .flex-controls__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .flex-controls__buttons {
+    flex-wrap: wrap;
+  }
+}
