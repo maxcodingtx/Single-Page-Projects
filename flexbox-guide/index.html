@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="./css/base-style.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/flexbox-utility.css" />
+    <link rel="stylesheet" href="./css/mermaid.css" />
+    <script type="module" src="scripts/mermaid.js"></script>
     <script src="scripts/display-modifiers.js"></script>
     <script src="scripts/flex-directions.js"></script>
     <script src="scripts/add-remove-item.js"></script>
+    <script src="scripts/learn-more.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -63,7 +66,120 @@
         </div>
       </div>
     </section>
+    <!-- learn more Section -->
+    <section class="learn-more">
+      <div class="learn-more__container">
+        <button
+          class="learn-more__toggle button button--control"
+          onclick="toggleLearnMore()"
+          aria-expanded="false"
+          aria-controls="learnMoreContent"
+        >
+          <span>📚 Learn How Flexbox Works</span>
+          <span class="learn-more__icon" id="toggleIcon">▼</span>
+        </button>
 
+        <div class="learn-more__content" id="learnMoreContent">
+          <div class="learn-more__grid">
+            <!-- main & cross axis -->
+            <div class="learn-more__diagram">
+              <h3 class="learn-more__title">Main & Cross Axis</h3>
+              <!-- prettier-ignore -->
+              <div class="mermaid">
+graph LR
+    A[Container]
+    B[Main Axis]
+    C[Cross Axis]
+    A --> B
+    A --> C
+    
+    style A fill:#252525,stroke:#5d00ff,stroke-width:2px,color:#fff
+    style B fill:#171717,stroke:#7a2bff,stroke-width:1px,color:#fff
+    style C fill:#171717,stroke:#7a2bff,stroke-width:1px,color:#fff
+              </div>
+            </div>
+
+            <!-- flex direction -->
+            <div class="learn-more__diagram">
+              <h3 class="learn-more__title">Flex Direction</h3>
+              <!-- prettier-ignore -->
+              <div class="mermaid">
+graph TD
+    A[flex-direction]
+    B[row]
+    C[column]
+    D[row-reverse]
+    E[column-reverse]
+    A --> B
+    A --> C
+    A --> D
+    A --> E
+    
+    style A fill:#252525,stroke:#5d00ff,stroke-width:2px,color:#fff
+    style B fill:#171717,stroke:#7a2bff,stroke-width:1px,color:#fff
+    style C fill:#171717,stroke:#7a2bff,stroke-width:1px,color:#fff
+    style D fill:#171717,stroke:#7a2bff,stroke-width:1px,color:#fff
+    style E fill:#171717,stroke:#7a2bff,stroke-width:1px,color:#fff
+              </div>
+            </div>
+
+            <!-- justify content -->
+            <div class="learn-more__diagram">
+              <h3 class="learn-more__title">Justify Content</h3>
+              <!-- prettier-ignore -->
+              <div class="mermaid">
+graph TD
+    A[justify-content]
+    B[flex-start]
+    C[center]
+    D[flex-end]
+    E[space-between]
+    F[space-around]
+    G[space-evenly]
+    A --> B
+    A --> C
+    A --> D
+    A --> E
+    A --> F
+    A --> G
+    
+    style A fill:#252525,stroke:#5d00ff,stroke-width:2px,color:#fff
+    style B fill:#171717,stroke:#7a2bff,stroke-width:1px,color:#fff
+    style C fill:#171717,stroke:#7a2bff,stroke-width:1px,color:#fff
+    style D fill:#171717,stroke:#7a2bff,stroke-width:1px,color:#fff
+    style E fill:#171717,stroke:#7a2bff,stroke-width:1px,color:#fff
+    style F fill:#171717,stroke:#7a2bff,stroke-width:1px,color:#fff
+    style G fill:#171717,stroke:#7a2bff,stroke-width:1px,color:#fff
+              </div>
+            </div>
+
+            <!-- align items -->
+            <div class="learn-more__diagram">
+              <h3 class="learn-more__title">Align Items</h3>
+              <!-- prettier-ignore -->
+              <div class="mermaid">
+graph TD
+    A[align-items]
+    B[flex-start]
+    C[center]
+    D[flex-end]
+    E[stretch]
+    A --> B
+    A --> C
+    A --> D
+    A --> E
+    
+    style A fill:#252525,stroke:#5d00ff,stroke-width:2px,color:#fff
+    style B fill:#171717,stroke:#7a2bff,stroke-width:1px,color:#fff
+    style C fill:#171717,stroke:#7a2bff,stroke-width:1px,color:#fff
+    style D fill:#171717,stroke:#7a2bff,stroke-width:1px,color:#fff
+    style E fill:#171717,stroke:#7a2bff,stroke-width:1px,color:#fff
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- flex controls -->
     <section class="flex-controls">
       <div class="flex-controls__container">
