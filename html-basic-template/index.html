@@ -1,63 +1,148 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="themes.css">
-    <script src="scripts.js"></script>
-    
-    <!-- font lined below -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=SUSE&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- primary meta tags - CUSTOMIZE THESE -->
+    <title>Your Page Title - Replace This</title>
+    <meta
+      name="description"
+      content="A brief description of your website (150-160 characters recommended)"
+    />
+    <meta name="keywords" content="use keywords relevant to your site" />
+    <meta name="author" content="Your Name" />
+
+    <!-- Canonical URL - Replace with your actual URL -->
+    <link rel="canonical" href="<!-- Replace with your actual URL -->" />
+
+    <!-- open graph / facebook meta tags - CUSTOMIZE THESE -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<!-- Replace with your actual URL -->" />
+    <meta property="og:title" content="Your Page Title - Replace This" />
+    <meta
+      property="og:description"
+      content="A brief description of your website for social media sharing"
+    />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- twitter card meta tags - CUSTOMIZE THESE -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="<!-- Replace with your actual URL -->"
+    />
+    <meta property="twitter:title" content="Your Page Title - Replace This" />
+    <meta
+      property="twitter:description"
+      content="A brief description of your website for social media sharing"
+    />
+    <meta property="twitter:image" content="og-image.png" />
+
+    <!-- favicon links -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    <!-- Theme color and manifest for PWA -->
+    <meta name="theme-color" content="#53a8b6" />
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="themes.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=SUSE&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Scripts -->
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
     <header id="header">
+      <!-- Main site heading - CUSTOMIZE THIS -->
+      <h1><!-- Your site name here, replace the following text. -->website</h1>
 
-        <!-- main header of website -->
-        <h1>NAME GOES HERE</h1>
-
-        <nav class="l-nav">
-            <!-- Tabs which display the main content of website -->
-            <!-- if you want to change the tab names appropriately, read the README file -->
-            <button class="tabLink" id="homeLink" onclick="openTab(event, 'Home')">Home</button>
-            <button class="tabLink" onclick="openTab(event, 'About')">About</button>
-            <button class="tabLink" onclick="openTab(event, 'Contact')">Contact</button>
-        </nav>
-
+      <nav class="l-nav" aria-label="Main navigation">
+        <!-- Navigation tabs - customize button labels and corresponding content sections -->
+        <button
+          class="tabLink"
+          id="homeLink"
+          onclick="openTab(event, 'Home')"
+          aria-controls="Home"
+        >
+          Home
+        </button>
+        <button
+          class="tabLink"
+          onclick="openTab(event, 'About')"
+          aria-controls="About"
+        >
+          About
+        </button>
+        <button
+          class="tabLink"
+          onclick="openTab(event, 'Contact')"
+          aria-controls="Contact"
+        >
+          Contact
+        </button>
+      </nav>
     </header>
-    
-    <!-- Below are the containers to the main content of website -->
-    <!-- 
-    You may edit the text within the 'h1' and 'p' tags
-    If you want to change anything else, refer to the README
-    -->
-    <main>
-        <div id="Home" class="tabContent">
-            <h1>Home</h1>
-            <hr>
-            <p>HOME CONTENT GOES HERE</p>
-        </div>
 
-        <div id="About" class="tabContent">
-            <h1>About</h1>
-            <hr>
-            <p>HOME CONTENT GOES HERE</p>
-        </div>
+    <!-- Main content sections - CUSTOMIZE THESE -->
+    <!-- Each section corresponds to a tab button above -->
+    <main role="main">
+      <!-- home section -->
+      <section
+        id="Home"
+        class="tabContent"
+        role="tabpanel"
+        aria-labelledby="homeLink"
+      >
+        <h1>Home</h1>
+        <hr />
+        <p><!-- Add your home page content here --></p>
+      </section>
 
-        <div id="Contact" class="tabContent">
-            <h1>Contact</h1>
-            <hr>
-            <p>HOME CONTENT GOES HERE</p>
-        </div>
+      <!-- about section -->
+      <section
+        id="About"
+        class="tabContent"
+        role="tabpanel"
+        aria-labelledby="aboutLink"
+      >
+        <h1>About</h1>
+        <hr />
+        <p><!-- add content here --></p>
+      </section>
+
+      <!-- contact section -->
+      <section
+        id="Contact"
+        class="tabContent"
+        role="tabpanel"
+        aria-labelledby="contactLink"
+      >
+        <h1>Contact</h1>
+        <hr />
+        <p><!-- add content here --></p>
+      </section>
     </main>
 
-    <footer>
-        <p>Template made by Maxcodingtx@gmail.com</p>
+    <footer id="footer">
+      <p>
+        <!-- Footer content - customize as needed -->
+        &copy; 2026 Your Name. All rights reserved.
+      </p>
     </footer>
-    
-</body>
+  </body>
 </html>
