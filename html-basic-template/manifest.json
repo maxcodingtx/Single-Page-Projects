@@ -1,0 +1,24 @@
+{
+  "name": "Your App Name - Replace This",
+  "short_name": "App Name",
+  "description": "A brief description of your application",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ecf0f1",
+  "theme_color": "#53a8b6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
