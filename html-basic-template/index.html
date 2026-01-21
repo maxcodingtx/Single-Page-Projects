@@ -67,14 +67,16 @@
     <script src="scripts.js" defer></script>
   </head>
   <body>
-    <header id="header">
+    <header class="header">
       <!-- Main site heading - CUSTOMIZE THIS -->
-      <h1><!-- Your site name here, replace the following text. -->website</h1>
+      <h1 class="header__title">
+        <!-- Your site name here, replace the following text. -->website
+      </h1>
 
-      <nav class="l-nav" aria-label="Main navigation">
+      <nav class="header__nav" aria-label="Main navigation">
         <!-- Navigation tabs - customize button labels and corresponding content sections -->
         <button
-          class="tabLink"
+          class="header__nav-tab"
           id="homeLink"
           onclick="openTab(event, 'Home')"
           aria-controls="Home"
@@ -82,14 +84,14 @@
           Home
         </button>
         <button
-          class="tabLink"
+          class="header__nav-tab"
           onclick="openTab(event, 'About')"
           aria-controls="About"
         >
           About
         </button>
         <button
-          class="tabLink"
+          class="header__nav-tab"
           onclick="openTab(event, 'Contact')"
           aria-controls="Contact"
         >
@@ -100,46 +102,48 @@
 
     <!-- Main content sections - CUSTOMIZE THESE -->
     <!-- Each section corresponds to a tab button above -->
-    <main role="main">
+    <main class="main" role="main">
       <!-- home section -->
       <section
         id="Home"
-        class="tabContent"
+        class="tab-panel"
         role="tabpanel"
         aria-labelledby="homeLink"
       >
-        <h1>Home</h1>
-        <hr />
-        <p><!-- Add your home page content here --></p>
+        <h1 class="tab-panel__title">Home</h1>
+        <hr class="tab-panel__divider" />
+        <p class="tab-panel__content">
+          <!-- Add your home page content here -->
+        </p>
       </section>
 
       <!-- about section -->
       <section
         id="About"
-        class="tabContent"
+        class="tab-panel"
         role="tabpanel"
         aria-labelledby="aboutLink"
       >
-        <h1>About</h1>
-        <hr />
-        <p><!-- add content here --></p>
+        <h1 class="tab-panel__title">About</h1>
+        <hr class="tab-panel__divider" />
+        <p class="tab-panel__content"><!-- add content here --></p>
       </section>
 
       <!-- contact section -->
       <section
         id="Contact"
-        class="tabContent"
+        class="tab-panel"
         role="tabpanel"
         aria-labelledby="contactLink"
       >
-        <h1>Contact</h1>
-        <hr />
-        <p><!-- add content here --></p>
+        <h1 class="tab-panel__title">Contact</h1>
+        <hr class="tab-panel__divider" />
+        <p class="tab-panel__content"><!-- add content here --></p>
       </section>
     </main>
 
-    <footer id="footer">
-      <p>
+    <footer class="footer">
+      <p class="footer__text">
         <!-- Footer content - customize as needed -->
         &copy; 2026 Your Name. All rights reserved.
       </p>
