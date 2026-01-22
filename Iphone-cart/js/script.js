@@ -1,31 +1,143 @@
-//setting total to equal default phone price ($899)
-calculateTotal()
+const CartModule = (function () {
+  const storageKey = "iphoneCart";
+  const basePrice = 899;
 
-// changes image based on what color user decides
-function displayPhone(color) {
-    if (color == 'black') {
-        document.getElementById('phone-image').src="img/iphone-16-plus-black.jpg"
-    } else {document.getElementById('phone-image').src="img/iphone-16-plus-white.jpg"}
-}
+  let state = {
+    basePrice: basePrice,
+    selectedColor: "black",
+    selectedStorage: 100, // 128GB price
+    selectedDelivery: 0,
+  };
 
+  let elements = {};
 
-function getStoragePrice(storagePrice) {
-    // setting selected storage price in table
-    document.getElementById('storagePrice').innerText = `$${storagePrice}`
-    calculateTotal()
-}
+  function cacheElements() {
+    elements = {
+      phoneImage: document.getElementById("phone-image"),
+      storagePrice: document.getElementById("storagePrice"),
+      deliveryPrice: document.getElementById("deliveryPrice"),
+      totalPrice: document.getElementById("totalPrice"),
+      colorButtons: document.querySelectorAll("[data-color]"),
+      storageButtons: document.querySelectorAll("[data-storage]"),
+      deliveryButtons: document.querySelectorAll("[data-delivery]"),
+    };
+  }
 
-function getDeliveryPrice(deliveryPrice) {
-    // setting selected delivery price in table
-    document.getElementById('deliveryPrice').innerText = `$${deliveryPrice}`
-    calculateTotal()
-}
+  function calculateTotal() {
+    return state.basePrice + state.selectedStorage + state.selectedDelivery;
+  }
 
-function calculateTotal() {
-    var deliveryPrice = document.getElementById('deliveryPrice').innerText;
-    var storagePrice = document.getElementById('storagePrice').innerText;
-    // removing $ signs from the elements innerText, then implicitly coercing innerText into integers.
-    var totalPrice = deliveryPrice.replace('$', '')*1 + storagePrice.replace('$', '')*1 + 899
-    // showing total amount in totalPrice element (bottom of screen)
-    document.getElementById('totalPrice').innerHTML = `Total - $${totalPrice}`
-};
+  function updateUI() {
+    elements.phoneImage.src = `img/iphone-16-plus-${state.selectedColor}.jpg`;
+    elements.phoneImage.alt = `iPhone 16 Plus in ${state.selectedColor}`;
+
+    elements.storagePrice.innerText = `$${state.selectedStorage}`;
+    elements.deliveryPrice.innerText = `$${state.selectedDelivery}`;
+    elements.totalPrice.innerHTML = `Total - $${calculateTotal()}`;
+
+    updateButtonAria();
+  }
+
+  function updateButtonAria() {
+    elements.colorButtons.forEach((button) => {
+      const isPressed = button.dataset.color === state.selectedColor;
+      button.setAttribute("aria-pressed", isPressed);
+    });
+
+    elements.storageButtons.forEach((button) => {
+      const isPressed =
+        parseInt(button.dataset.storage) === state.selectedStorage;
+      button.setAttribute("aria-pressed", isPressed);
+    });
+    elements.deliveryButtons.forEach((button) => {
+      const isPressed =
+        parseInt(button.dataset.delivery) === state.selectedDelivery;
+      button.setAttribute("aria-pressed", isPressed);
+    });
+  }
+
+  function saveState() {
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(state));
+    } catch (e) {
+      console.warn("localStorage not available:", e);
+    }
+  }
+
+  function loadState() {
+    try {
+      const saved = localStorage.getItem(storageKey);
+      if (saved) {
+        const savedState = JSON.parse(saved);
+        state = { ...state, ...savedState };
+      }
+    } catch (e) {
+      console.warn("Could not load saved cart:", e);
+    }
+  }
+
+  function attachEventListeners() {
+    elements.colorButtons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        const color = e.currentTarget.dataset.color;
+        stateInterface.updateColor(color);
+      });
+    });
+    elements.storageButtons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        const price = parseInt(e.currentTarget.dataset.storage);
+        stateInterface.updateStorage(price);
+      });
+    });
+
+    elements.deliveryButtons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        const price = parseInt(e.currentTarget.dataset.delivery);
+        stateInterface.updateDelivery(price);
+      });
+    });
+  }
+
+  function init() {
+    cacheElements();
+    loadState();
+    updateUI();
+    attachEventListeners();
+  }
+
+  const stateInterface = {
+    updateColor(color) {
+      state.selectedColor = color;
+      updateUI();
+      saveState();
+    },
+
+    updateStorage(price) {
+      state.selectedStorage = price;
+      updateUI();
+      saveState();
+    },
+
+    updateDelivery(price) {
+      state.selectedDelivery = price;
+      updateUI();
+      saveState();
+    },
+
+    getTotal() {
+      return calculateTotal();
+    },
+
+    getCartState() {
+      return { ...state };
+    },
+
+    init,
+  };
+
+  return stateInterface;
+})();
+
+document.addEventListener("DOMContentLoaded", () => {
+  CartModule.init();
+});
