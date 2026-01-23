@@ -25,8 +25,9 @@
     />
   </head>
   <body>
+    <a href="#totalPrice" class="skip-link">Skip to total</a>
     <main>
-      <div class="l-product">
+      <div class="l-product" role="region" aria-label="iPhone overview">
         <img
           src="img/iphone-16-plus-black.jpg"
           alt="iPhone 16 Plus in black"
@@ -48,8 +49,8 @@
         </div>
       </div>
 
-      <div class="product__color">
-        <h2 class="theme-montserrat">Color</h2>
+      <div class="product__color" role="group" aria-labelledby="colorHeading">
+        <h2 id="colorHeading" class="theme-montserrat">Color</h2>
 
         <button
           data-color="black"
@@ -67,8 +68,12 @@
         </button>
       </div>
 
-      <div class="product__storage">
-        <h2 class="theme-montserrat">Storage</h2>
+      <div
+        class="product__storage"
+        role="group"
+        aria-labelledby="storageHeading"
+      >
+        <h2 id="storageHeading" class="theme-montserrat">Storage</h2>
         <button
           data-storage="100"
           aria-pressed="false"
@@ -94,8 +99,12 @@
         </button>
       </div>
 
-      <div class="product__delivery">
-        <h2 class="theme-montserrat">Delivery</h2>
+      <div
+        class="product__delivery"
+        role="group"
+        aria-labelledby="deliveryHeading"
+      >
+        <h2 id="deliveryHeading" class="theme-montserrat">Delivery</h2>
         <button
           data-delivery="0"
           aria-pressed="false"
@@ -118,19 +127,20 @@
 
       <div class="product__table theme-montserrat">
         <h1>Total Price</h1>
-        <table>
+        <table aria-label="Price breakdown">
+          <caption class="visually-hidden">
+            Price breakdown
+          </caption>
           <tbody>
             <tr>
               <td>Default Price</td>
               <td>$899</td>
             </tr>
             <tr>
-              <!-- price will change according to what user selected -->
               <td>Storage Price</td>
               <td id="storagePrice">$0</td>
             </tr>
             <tr>
-              <!-- price will change according to what user selected -->
               <td>Delivery Fee</td>
               <td id="deliveryPrice">$0</td>
             </tr>
@@ -139,7 +149,7 @@
       </div>
 
       <div class="total theme-montserrat">
-        <h2 id="totalPrice">Total -</h2>
+        <h2 id="totalPrice" role="status" aria-live="polite">Total -</h2>
       </div>
     </main>
     <script src="js/script.js"></script>
