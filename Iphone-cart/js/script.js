@@ -13,7 +13,9 @@ const CartModule = (function () {
 
   function cacheElements() {
     elements = {
+      phonePicture: document.getElementById("phone-picture"),
       phoneImage: document.getElementById("phone-image"),
+      phoneSource: document.querySelector("#phone-picture source"),
       storagePrice: document.getElementById("storagePrice"),
       deliveryPrice: document.getElementById("deliveryPrice"),
       totalPrice: document.getElementById("totalPrice"),
@@ -28,8 +30,23 @@ const CartModule = (function () {
   }
 
   function updateUI() {
-    elements.phoneImage.src = `img/iphone-16-plus-${state.selectedColor}.jpg`;
-    elements.phoneImage.alt = `iPhone 16 Plus in ${state.selectedColor}`;
+    const color = state.selectedColor;
+
+    // Update WebP source srcset
+    elements.phoneSource.srcset = `
+      img/iphone-16-plus-${color}_320.webp 320w,
+      img/iphone-16-plus-${color}_640.webp 640w,
+      img/iphone-16-plus-${color}_1024.webp 1024w
+    `;
+
+    // Update JPEG img srcset and src
+    elements.phoneImage.srcset = `
+      img/iphone-16-plus-${color}_320.jpg 320w,
+      img/iphone-16-plus-${color}_640.jpg 640w,
+      img/iphone-16-plus-${color}_1024.jpg 1024w
+    `;
+    elements.phoneImage.src = `img/iphone-16-plus-${color}.jpg`;
+    elements.phoneImage.alt = `iPhone 16 Plus in ${color}`;
 
     elements.storagePrice.innerText = `$${state.selectedStorage}`;
     elements.deliveryPrice.innerText = `$${state.selectedDelivery}`;
