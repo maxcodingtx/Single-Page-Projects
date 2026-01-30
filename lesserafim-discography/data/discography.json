@@ -1,0 +1,98 @@
+{
+  "albums": [
+    {
+      "id": "unforgiven",
+      "title": "Unforgiven",
+      "type": "album",
+      "releaseDate": "2023-05-01",
+      "image": "img/album-unforgiven.png",
+      "tracklist": [
+        "The World Is My Oyster",
+        "Fearless",
+        "Blue Flame",
+        "The Hydra",
+        "Antifragile",
+        "Impurities",
+        "Burn the Bridge",
+        "Unforgiven",
+        "No-Return",
+        "Eve, Psyche & the Bluebeard's Wife",
+        "Fearnot",
+        "Flash Foward",
+        "Fire in the Belly"
+      ]
+    }
+  ],
+  "eps": [
+    {
+      "id": "fearless",
+      "title": "Fearless",
+      "type": "ep",
+      "releaseDate": "2022-05-02",
+      "imageClass": "ep__image",
+      "tracklist": [
+        "The World Is My Oyster",
+        "Fearless",
+        "Blue Flame",
+        "The Great Mermaid",
+        "Sour Grapes"
+      ]
+    },
+    {
+      "id": "antifragile",
+      "title": "Antifragile",
+      "type": "ep",
+      "releaseDate": "2022-10-17",
+      "imageClass": "ep__image ep__image--2",
+      "tracklist": [
+        "The Hydra",
+        "Antifragile",
+        "Impurities",
+        "No Celestial",
+        "Good Parts"
+      ]
+    },
+    {
+      "id": "easy",
+      "title": "Easy",
+      "type": "ep",
+      "releaseDate": "2024-02-19",
+      "imageClass": "ep__image ep__image--3",
+      "tracklist": [
+        "Good Bones",
+        "Easy",
+        "Swan Song",
+        "Smart",
+        "We Got So Much"
+      ]
+    },
+    {
+      "id": "crazy",
+      "title": "Crazy",
+      "type": "ep",
+      "releaseDate": "2024-08-30",
+      "imageClass": "ep__image ep__image--4",
+      "tracklist": [
+        "Chasing Lightning",
+        "Crazy",
+        "Pierrot",
+        "1-800-Hot-N-Fun",
+        "Crazier"
+      ]
+    }
+  ],
+  "singles": {
+    "korean": [
+      "Fearless",
+      "Antifragile",
+      "Unforgiven (ft Nile Rodgers)",
+      "Eve Psyche & the Bluebeard's Wife",
+      "Easy",
+      "Smart",
+      "Crazy"
+    ],
+    "japanese": ["Fearless", "Unforgiven (ft Nile Rodgers and Ado)", "Crazy"],
+    "english": ["Perfect Night"],
+    "promotional": ["Choices", "Guardian", "Jewelry", "Dresscode", "Star Signs"]
+  }
+}
