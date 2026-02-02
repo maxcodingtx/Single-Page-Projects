@@ -31,6 +31,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap"
       rel="stylesheet"
     />
+
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js"></script>
   </head>
   <body>
     <header>
@@ -44,6 +46,28 @@
         </div>
       </div>
     </header>
+
+    <section class="search-filter-bar">
+      <div class="container">
+        <div class="search-container">
+          <label for="search-input" class="sr-only">Search discography</label>
+          <input
+            type="search"
+            id="search-input"
+            placeholder="Search albums, EPs, singles, or songs..."
+            aria-label="Search discography"
+          />
+        </div>
+
+        <div class="filter-container">
+          <span class="filter-label">Filter by:</span>
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="albums">Albums</button>
+          <button class="filter-btn" data-filter="eps">EPs</button>
+          <button class="filter-btn" data-filter="singles">Singles</button>
+        </div>
+      </div>
+    </section>
 
     <main>
       <div class="container l-main">
