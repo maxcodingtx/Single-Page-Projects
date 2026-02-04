@@ -25,18 +25,19 @@ class TracklistToggle {
   }
 }
 
-// Load discography data and initialize
 async function initDiscography() {
   try {
     const response = await fetch("data/discography.json");
     const data = await response.json();
 
-    // Render all content
     const renderer = new DiscographyRenderer(data);
     renderer.renderAll();
 
-    // Initialize tracklist toggles
     const tracklistToggle = new TracklistToggle(".button");
+
+    const search = new DiscographySearch(data);
+
+    const filter = new DiscographyFilter();
 
     console.log("Discography loaded successfully");
   } catch (error) {
@@ -44,5 +45,4 @@ async function initDiscography() {
   }
 }
 
-// Initialize on page load
 document.addEventListener("DOMContentLoaded", initDiscography);
