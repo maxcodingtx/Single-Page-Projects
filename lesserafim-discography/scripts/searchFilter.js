@@ -104,6 +104,7 @@ class DiscographyFilter {
   constructor() {
     this.activeFilter = "all";
     this.initUI();
+    this.initKeyboardNav();
   }
 
   initUI() {
@@ -118,8 +119,11 @@ class DiscographyFilter {
   handleFilter(filterType) {
     this.activeFilter = filterType;
 
+    // Update active button state and ARIA
     this.filterButtons.forEach((btn) => {
-      btn.classList.toggle("active", btn.dataset.filter === filterType);
+      const isActive = btn.dataset.filter === filterType;
+      btn.classList.toggle("active", isActive);
+      btn.setAttribute("aria-checked", isActive ? "true" : "false");
     });
 
     if (filterType === "all") {
@@ -161,5 +165,24 @@ class DiscographyFilter {
     if (singlesContainer) {
       singlesContainer.style.display = "";
     }
+  }
+
+  initKeyboardNav() {
+    this.filterButtons.forEach((btn, index) => {
+      btn.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight") {
+          e.preventDefault();
+          const nextBtn =
+            this.filterButtons[index + 1] || this.filterButtons[0];
+          nextBtn.focus();
+        } else if (e.key === "ArrowLeft") {
+          e.preventDefault();
+          const prevBtn =
+            this.filterButtons[index - 1] ||
+            this.filterButtons[this.filterButtons.length - 1];
+          prevBtn.focus();
+        }
+      });
+    });
   }
 }
