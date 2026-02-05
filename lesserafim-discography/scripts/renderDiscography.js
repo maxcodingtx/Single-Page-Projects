@@ -17,7 +17,7 @@ class DiscographyRenderer {
       .map(
         (album) => `
       <div class="discography__album-info" data-type="album" data-id="${album.id}">
-        <img src="${album.image}" alt="${album.title}" class="box-shadow-theme">
+        <img src="${album.image}" alt="${album.title} album cover" class="box-shadow-theme" loading="lazy" width="300" height="300">
         <h3>${album.title}</h3>
         <p>Released: ${this.formatDate(album.releaseDate)}</p>
         <div class="discography__tracklist-container">
