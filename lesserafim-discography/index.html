@@ -1,127 +1,132 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Discography</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/media-queries.css" />
-    <link rel="stylesheet" href="css/themes.css" />
-    <link rel="stylesheet" href="css/animations.css" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      href="favicons/favicon-96x96.png"
-      sizes="96x96"
-    />
-    <link rel="icon" type="image/svg+xml" href="favicons/favicon.svg" />
-    <link rel="shortcut icon" href="favicons/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="favicons/apple-touch-icon.png"
-    />
-    <meta name="apple-mobile-web-app-title" content="Discography" />
-    <link rel="manifest" href="favicons/site.webmanifest" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discography</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+  <link rel="preload" href="css/styles.css" as="style" />
+  <link rel="preload" href="data/discography.json" as="fetch" crossorigin />
 
-    <script src="https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js"></script>
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <div class="header__heading">
-          <h1>Lesserafim</h1>
-          <p>
-            The Lesserafim discography consists of 1 album, 4 extended plays
-            (EPs), eleven singles, and 5 promotional singles
-          </p>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/media-queries.css" />
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/accessibility.css" />
+
+  <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicons/favicon.svg" />
+  <link rel="shortcut icon" href="favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Discography" />
+  <link rel="manifest" href="favicons/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js"></script>
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="container">
+      <div class="header__heading">
+        <h1>Lesserafim</h1>
+        <p>
+          The Lesserafim discography consists of 1 album, 4 extended plays
+          (EPs), eleven singles, and 5 promotional singles
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <section class="search-filter-bar" role="search" aria-label="Discography search and filters">
+    <div class="container">
+      <div class="search-container">
+        <label for="search-input" class="sr-only">Search discography</label>
+        <input type="search" id="search-input" placeholder="Search albums, EPs, singles, or songs..."
+          aria-label="Search discography including tracklists" aria-describedby="search-help" />
+        <span id="search-help" class="sr-only">
+          Type to search through albums, EPs, singles, and song titles
+        </span>
+      </div>
+
+      <div class="filter-container" role="group" aria-label="Filter discography by type">
+        <span class="filter-label" id="filter-label">Filter by:</span>
+        <div role="radiogroup" aria-labelledby="filter-label">
+          <button class="filter-btn active" data-filter="all" role="radio" aria-checked="true">
+            All
+          </button>
+          <button class="filter-btn" data-filter="albums" role="radio" aria-checked="false">
+            Albums
+          </button>
+          <button class="filter-btn" data-filter="eps" role="radio" aria-checked="false">
+            EPs
+          </button>
+          <button class="filter-btn" data-filter="singles" role="radio" aria-checked="false">
+            Singles
+          </button>
         </div>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <section class="search-filter-bar">
-      <div class="container">
-        <div class="search-container">
-          <label for="search-input" class="sr-only">Search discography</label>
-          <input
-            type="search"
-            id="search-input"
-            placeholder="Search albums, EPs, singles, or songs..."
-            aria-label="Search discography"
-          />
+  <main id="main-content">
+    <div class="container l-main">
+      <section class="discography">
+        <!-- Album here -->
+        <div class="discography__album">
+          <h2>Albums</h2>
+          <hr />
+          <!-- Albums will be dynamically rendered here -->
         </div>
 
-        <div class="filter-container">
-          <span class="filter-label">Filter by:</span>
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="albums">Albums</button>
-          <button class="filter-btn" data-filter="eps">EPs</button>
-          <button class="filter-btn" data-filter="singles">Singles</button>
-        </div>
-      </div>
-    </section>
-
-    <main>
-      <div class="container l-main">
-        <section class="discography">
-          <!-- Album here -->
-          <div class="discography__album">
-            <h2>Albums</h2>
-            <hr />
-            <!-- Albums will be dynamically rendered here -->
-          </div>
-
-          <!-- Extended Plays here -->
-          <section class="EPs">
-            <h2>Extended Plays</h2>
-            <hr />
-            <!-- EPs will be dynamically rendered here -->
-          </section>
-
-          <!-- Singles here -->
-          <div class="singles-container">
-            <h2>Singles</h2>
-            <hr />
-            <!-- Singles will be dynamically rendered here -->
-          </div>
+        <!-- Extended Plays here -->
+        <section class="EPs">
+          <h2>Extended Plays</h2>
+          <hr />
+          <!-- EPs will be dynamically rendered here -->
         </section>
 
-        <aside class="Similar">
-          <h2>Similar Artist</h2>
+        <!-- Singles here -->
+        <div class="singles-container">
+          <h2>Singles</h2>
           <hr />
+          <!-- Singles will be dynamically rendered here -->
+        </div>
+      </section>
 
-          <div class="artist-container l-artist-container">
-            <div class="artist l-artist">
-              <div class="artist__image box-shadow-theme"></div>
-              <h3><a href="" class="artist__link">IVE</a></h3>
-            </div>
-            <div class="artist l-artist">
-              <div
-                class="artist__image artist__image--2 box-shadow-theme"
-              ></div>
-              <h3><a href="" class="artist__link">ILLIT</a></h3>
-            </div>
-            <div class="artist l-artist">
-              <div
-                class="artist__image artist__image--3 box-shadow-theme"
-              ></div>
-              <h3><a href="" class="artist__link">NewJeans</a></h3>
-            </div>
+      <aside class="Similar">
+        <h2>Similar Artist</h2>
+        <hr />
+
+        <div class="artist-container l-artist-container">
+          <div class="artist l-artist">
+            <div class="artist__image box-shadow-theme"></div>
+            <h3><a href="" class="artist__link">IVE</a></h3>
           </div>
-        </aside>
-      </div>
-    </main>
+          <div class="artist l-artist">
+            <div class="artist__image artist__image--2 box-shadow-theme"></div>
+            <h3><a href="" class="artist__link">ILLIT</a></h3>
+          </div>
+          <div class="artist l-artist">
+            <div class="artist__image artist__image--3 box-shadow-theme"></div>
+            <h3><a href="" class="artist__link">NewJeans</a></h3>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
 
-    <script src="scripts/renderDiscography.js"></script>
-    <script src="scripts/searchFilter.js"></script>
-    <script src="scripts/main.js"></script>
-  </body>
+  <script src="scripts/renderDiscography.js"></script>
+  <script src="scripts/searchFilter.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
 </html>
