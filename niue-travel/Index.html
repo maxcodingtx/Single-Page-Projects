@@ -4,330 +4,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description"
+        content="Discover Niue - a hidden tropical paradise with pristine beaches, crystal clear waters, and untouched natural beauty. Plan your perfect island escape.">
+    <title>Niue - Your Hidden Tropical Paradise</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="preload" as="image" href="Images/Section1/niue-section1-image.jpg">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-
-    <!-- 
-        section 1 will consist of a 100vh tall graphic welcoming
-        users to website. Graphic will consist of an image (of niue)
-        with text featuring the name and pronounciation of niue.
-     -->
-
-    <section id="section1">
-        <div class="section1__container">
-            <div class="section1__text">
-
-                <h1 class="section1__header section1__header--fade-in">Niue</h1>
-
-                <p onclick="play()"
-                    class="section1__subheader section1__subheader--interactive section1__subheader--fade-in">
-                    nēˈo͞o
-                </p>
-                <audio id="audio" src="Audio/Niue-pronounce.mp3"></audio>
-
-                <p class="section1__footer section1__footer--fade-in">
-                    a hidden tropical paradise
-                    <br><br>
-                    ↓find out more↓
-                </p>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- 
-        section 2 will feature a header and a
-        block of text, this block of text will
-        attempt to entice the reader into visiting niue
-    -->
-
-    <section id="section2">
-
-        <div class="section2__container">
-
-            <h1 class="section2__header">Why Visit Niue?</h1>
-
-
-            <p>
-                Have you ever wanted to see natural beauty without
-                <br>
-                having to deal with the ruckus that comes from heavy tourism?
-
-                <br><br>
-                Well then Niue is the place for you!
-                <br><br>
-
-                Niue is host to some of the cleanest coral beaches which
-                all host vibrant and visible marine life.
-
-                <br>
-
-                Niue is also host to beautiful shallow caverns in which sunlight
-                travels through.
-
-                <br><br>
-
-                All of this with a population of just 1500!
-                Niue is a quiet tropical paradise!
+    <!-- Hero Section -->
+    <section class="hero section" id="hero">
+        <div class="hero__content">
+            <h1 class="hero__title">Niue</h1>
+            <p onclick="play()" class="hero__subtitle">
+                nēˈo͞o
             </p>
-            <hr>
-
+            <audio id="audio" src="Audio/Niue-pronounce.mp3"></audio>
+            <p class="hero__description">
+                A hidden tropical paradise waiting to be discovered
+            </p>
+            <div class="hero__scroll-indicator">
+                ↓ Explore below ↓
+            </div>
         </div>
-
     </section>
 
-    <!-- 
-        section 3 will feature a heading and cards.
-        these cards will contain:
-        - an image of niue.
-        - heading.
-        - paragraph, related to heading.
-        - a "learn more" button, changes when hovered over.
-     -->
-
-    <section id="section3">
-
-        <div class="section3__container">
-            <div class="section3__cards">
-
-                <div class="card">
-
-                    <img src="Images\section3\card1-img.webp" class="card__image" alt="">
-
-                    <h1 class="card__title">
-                        Things to do in Niue
-                    </h1>
-
-
-                    <hr class="card__line">
-
-
-                    <p class="card__info">
-                        Niue is host to wonderful beaches, caverns, caves, reefs and cultural
-                        sites.
-                        In Niue you could visit each one you desire since everything
-                        is close together!
-                    </p>
-
-
-                    <button class="card__button">
-                        Learn More
-                    </button>
-
-                </div>
-
-                <div class="card">
-
-                    <img src="Images\section3\card2-img.jpg" class="card__image" alt="">
-
-                    <h1 class="card__title">
-                        Niue towns
-                    </h1>
-
-
-                    <hr class="card__line">
-
-
-                    <p class="card__info">
-                        Although Niue is small there are still several villages
-                        and towns such as Alofi, Avetele and other that are scattered
-                        throughout Niue. All are visitable by tourists
-                        <br><br><br>
-                    </p>
-
-
-                    <button class="card__button">
-                        Learn More
-                    </button>
-
-                </div>
-
-                <div class="card">
-
-                    <img src="Images\section3\card3-img.jpg" class="card__image" alt="">
-
-                    <h1 class="card__title">
-                        Climate
-                    </h1>
-
-
-                    <hr class="card__line">
-
-
-                    <p class="card__info">
-                        Here in Niue, we have a tropical rainforest type Climate.
-                        <br>
-                        *We have high temperatures & rainfall all year round.
-                        <br>
-                        *We do not have wet or dry seasons.
-                        <br><br><br>
-                    </p>
-
-
-                    <button class="card__button">
-                        Learn More
-                    </button>
-
-                </div>
-
-                <div class="card">
-
-                    <img src="Images/section3/card4-img.jpg" class="card__image" alt="">
-
-
-                    <h1 class="card__title">
-                        Resorts in Niue
-                    </h1>
-
-
-                    <hr class="card__line">
-
-
-                    <p class="card__info">
-                        Our island features many resorts,
-                        we have hotels, villas, motels, and even houses available.
-                    </p>
-
-
-                    <button class="card__button">
-                        Learn More
-                    </button>
-
-                </div>
-
-                <div class="card">
-
-                    <img src="Images/section3/card5-img.jpg" class="card__image" alt="">
-
-                    <h1 class="card__title">
-                        How to get to Niue
-                    </h1>
-
-
-                    <hr class="card__line">
-
-
-                    <p class="card__info">
-                        There are only 2 ways to get to Niue, by plane and by cruise.
-                        <br>
-                        -Travelling by plane may require two seperate tickets
-                        <br>
-                        -Travelling by cruise can be done by only 2 cruise companies
-                        <br><br><br>
-
-
-                    </p>
-
-
-                    <button class="card__button">
-                        Learn More
-                    </button>
-
-                </div>
-
-                <div class="card">
-
-                    <img src="Images/section3/card6-img.jpg" class="card__image" alt="">
-
-
-                    <h1 class="card__title">
-                        Get to know our culture
-                    </h1>
-
-
-                    <hr class="card__line">
-
-
-                    <p class="card__info">
-                        Our society has its own cultural norms and practices
-                        <br>
-                        Learning these would be useful since you most likely
-                        will interact with the locals here.
-                    </p>
-
-
-                    <button class="card__button">
-                        Learn More
-                    </button>
-
-                </div>
-
-
+    <!-- Introduction  Section -->
+    <section class="intro section" id="intro">
+        <div class="container container--lg">
+            <div class="intro__header">
+                <h2 class="intro__title">Why Visit Niue?</h2>
+            </div>
+            <div class="intro__content">
+                <p>
+                    Have you ever wanted to see natural beauty without having to deal with the crowds
+                    that come from heavy tourism? Well then, Niue is the place for you!
+                </p>
+                <p>
+                    Niue is host to some of the cleanest coral beaches, all showcasing vibrant and
+                    visible marine life. The island also features beautiful shallow caverns where
+                    sunlight streams through, creating magical underwater light shows.
+                </p>
+                <p>
+                    All of this with a population of just 1,500! Niue is a quiet tropical paradise
+                    where you can truly escape and reconnect with nature.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore Section - What to Discover -->
+    <section class="explore section" id="explore">
+        <div class="container container--2xl">
+            <div class="explore__header">
+                <h2 class="explore__title">Explore Niue</h2>
+                <p class="explore__subtitle">Discover what makes our island special</p>
             </div>
 
-        </div>
+            <div class="explore__grid grid grid--3 grid--gap-lg">
 
-    </section>
-
-
-    <!--
-         section 4 will contain a title and content
-         content will contain:
-         - 2 different contact details which allows user to contact us
-            if they are having difficulties on planning their trip.
-         - several bullet points each explaining what to expect from
-            contacting us.
-     -->
-
-    <section id="section4">
-        <div class="section4__container">
-
-            <h1 class="section4__heading">
-                Ready to begin your trip?
-            </h1>
-            <hr>
-
-
-            <div class="section4__content">
-
-                <div class="section4__group section4__group--contact">
-
-                    <h2>Need help?</h2>
-                    <div class="section4__details">
-
-                        <div class="section4__contact section4__contact--phone">
-
-                            <img src="Images/Section4/section4-icon-phone.webp" class="section4__icon" alt="">
-
-
-                            1-800-999-1000
-
-                        </div>
-                        <div class="section4__contact section4__contact--email">
-
-                            <br>
-
-
-                            <img src="Images/Section4/section4-icon-mail.png" class="section4__icon" alt="">
-                            OfficialNiue@Niue.com
-
+                <article class="card">
+                    <img src="Images/section3/card1-img.webp" alt="Beautiful beach activities in Niue"
+                        class="card__image" loading="lazy">
+                    <div class="card__content">
+                        <h3 class="card__title">Things to Do in Niue</h3>
+                        <p class="card__description">
+                            Niue is host to wonderful beaches, caverns, caves, reefs, and cultural sites.
+                            Everything is close together, so you can visit each destination you desire!
+                        </p>
+                        <div class="card__footer">
+                            <button class="btn btn--primary btn--full">Learn More</button>
                         </div>
                     </div>
+                </article>
 
+                <article class="card">
+                    <img src="Images/section3/card2-img.jpg" alt="Niue villages and towns" class="card__image"
+                        loading="lazy">
+                    <div class="card__content">
+                        <h3 class="card__title">Niue Towns</h3>
+                        <p class="card__description">
+                            Although Niue is small, there are still several villages and towns such as
+                            Alofi, Avatele, and others scattered throughout the island. All are visitable
+                            by tourists.
+                        </p>
+                        <div class="card__footer">
+                            <button class="btn btn--primary btn--full">Learn More</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="Images/section3/card3-img.jpg" alt="Tropical climate of Niue" class="card__image"
+                        loading="lazy">
+                    <div class="card__content">
+                        <h3 class="card__title">Climate</h3>
+                        <p class="card__description">
+                            Niue has a tropical rainforest climate with high temperatures and rainfall
+                            all year round. There are no distinct wet or dry seasons, making it a
+                            year-round destination.
+                        </p>
+                        <div class="card__footer">
+                            <button class="btn btn--primary btn--full">Learn More</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="Images/section3/card4-img.jpg" alt="Accommodation options in Niue" class="card__image"
+                        loading="lazy">
+                    <div class="card__content">
+                        <h3 class="card__title">Resorts in Niue</h3>
+                        <p class="card__description">
+                            Our island features many accommodation options including hotels, villas,
+                            motels, and even private houses available for rent.
+                        </p>
+                        <div class="card__footer">
+                            <button class="btn btn--primary btn--full">Learn More</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="Images/section3/card5-img.jpg" alt="Travel to Niue" class="card__image" loading="lazy">
+                    <div class="card__content">
+                        <h3 class="card__title">How to Get to Niue</h3>
+                        <p class="card__description">
+                            There are two ways to reach Niue: by plane or by cruise. Air travel may
+                            require connecting flights, while cruise access is available through select
+                            cruise companies.
+                        </p>
+                        <div class="card__footer">
+                            <button class="btn btn--primary btn--full">Learn More</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="Images/section3/card6-img.jpg" alt="Niuean culture and traditions" class="card__image"
+                        loading="lazy">
+                    <div class="card__content">
+                        <h3 class="card__title">Get to Know Our Culture</h3>
+                        <p class="card__description">
+                            Our society has its own cultural norms and practices. Learning about them
+                            is valuable since you'll likely interact with the friendly locals during
+                            your visit.
+                        </p>
+                        <div class="card__footer">
+                            <button class="btn btn--primary btn--full">Learn More</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / CTA Section -->
+    <section class="contact section" id="contact">
+        <div class="container container--lg">
+            <div class="contact__header">
+                <h2 class="contact__title">Ready to Begin Your Trip?</h2>
+                <p class="contact__subtitle">
+                    We're here to help you plan the perfect Niue adventure
+                </p>
+            </div>
+
+            <div class="contact__content">
+
+                <!-- Contact Information -->
+                <div class="contact__group">
+                    <h3 class="contact__group-title">Need Help?</h3>
+                    <div class="contact__details">
+                        <div class="contact__item">
+                            <img src="Images/Section4/section4-icon-phone.webp" alt="Phone" class="contact__icon">
+                            <span>1-800-999-1000</span>
+                        </div>
+                        <div class="contact__item">
+                            <img src="Images/Section4/section4-icon-mail.png" alt="Email" class="contact__icon">
+                            <span>OfficialNiue@Niue.com</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="section4__group section4__group--services">
-
-                    <h2>We offer:</h2>
-
-
-                    <ul class="section4__list">
-
-                        <li class="section4__list-item">expert advise</li>
-                        <li class="section4__list-item">exact details of our trips</li>
-                        <li class="section4__list-item">sufficient help at every step</li>
-
+                <!-- Services Offered -->
+                <div class="contact__group">
+                    <h3 class="contact__group-title">We Offer:</h3>
+                    <ul class="contact__list">
+                        <li class="contact__list-item">Expert advice</li>
+                        <li class="contact__list-item">Exact details of our trips</li>
+                        <li class="contact__list-item">Sufficient help at every step</li>
                     </ul>
-
                 </div>
+
             </div>
         </div>
     </section>
