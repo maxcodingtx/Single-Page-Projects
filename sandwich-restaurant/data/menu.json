@@ -1,0 +1,230 @@
+{
+  "categories": [
+    {
+      "id": "classics",
+      "name": "Classic Sandwiches",
+      "description": "Our timeless favorites made with fresh ingredients daily",
+      "items": [
+        {
+          "id": "grilled-cheese",
+          "name": "Grilled Cheese Sandwich",
+          "description": "Golden-toasted bread with melted cheddar and Swiss cheese blend",
+          "price": 6.99,
+          "image": "img/menu/sandwich1.jpg",
+          "ingredients": [
+            "Sourdough bread",
+            "Cheddar cheese",
+            "Swiss cheese",
+            "Butter"
+          ],
+          "dietary": ["vegetarian"],
+          "popular": true
+        },
+        {
+          "id": "turkey-club",
+          "name": "Turkey Club Sandwich",
+          "description": "Sliced turkey breast with crisp lettuce, tomato, and bacon",
+          "price": 8.99,
+          "image": "img/menu/sandwich3.jpg",
+          "ingredients": [
+            "Whole wheat bread",
+            "Turkey breast",
+            "Bacon",
+            "Lettuce",
+            "Tomato",
+            "Mayo"
+          ],
+          "dietary": [],
+          "popular": true
+        },
+        {
+          "id": "ham-swiss",
+          "name": "Ham & Swiss Sandwich",
+          "description": "Premium honey ham with melted Swiss cheese and honey mustard",
+          "price": 7.99,
+          "image": "img/menu/sandwich4.jpg",
+          "ingredients": [
+            "Rye bread",
+            "Honey ham",
+            "Swiss cheese",
+            "Honey mustard",
+            "Pickles"
+          ],
+          "dietary": [],
+          "popular": false
+        }
+      ]
+    },
+    {
+      "id": "specialty",
+      "name": "Specialty & Gourmet",
+      "description": "Chef's special creations with premium ingredients",
+      "items": [
+        {
+          "id": "roast-beef-deluxe",
+          "name": "Roast Beef Deluxe",
+          "description": "Slow-roasted beef with caramelized onions, horseradish aioli, and arugula",
+          "price": 9.99,
+          "image": "img/menu/sandwich2.jpg",
+          "ingredients": [
+            "French roll",
+            "Roast beef",
+            "Caramelized onions",
+            "Horseradish aioli",
+            "Arugula"
+          ],
+          "dietary": [],
+          "popular": true
+        },
+        {
+          "id": "italian-sub",
+          "name": "Italian Sub",
+          "description": "Salami, pepperoni, ham, and provolone with Italian dressing",
+          "price": 8.49,
+          "image": "img/menu/sandwich5.jpg",
+          "ingredients": [
+            "Italian bread",
+            "Salami",
+            "Pepperoni",
+            "Ham",
+            "Provolone",
+            "Lettuce",
+            "Tomato",
+            "Italian dressing"
+          ],
+          "dietary": [],
+          "popular": false
+        },
+        {
+          "id": "chicken-ranch",
+          "name": "Chicken Ranch",
+          "description": "Grilled chicken breast with crispy bacon and ranch dressing",
+          "price": 8.99,
+          "image": "img/menu/sandwich6.jpg",
+          "ingredients": [
+            "Ciabatta bread",
+            "Grilled chicken",
+            "Bacon",
+            "Ranch dressing",
+            "Lettuce",
+            "Tomato"
+          ],
+          "dietary": [],
+          "popular": true
+        }
+      ]
+    },
+    {
+      "id": "vegetarian",
+      "name": "Vegetarian & Vegan",
+      "description": "Delicious plant-based sandwiches packed with flavor",
+      "items": [
+        {
+          "id": "veggie-supreme",
+          "name": "Veggie Supreme",
+          "description": "Fresh vegetables with hummus spread on whole grain bread",
+          "price": 7.49,
+          "image": "img/menu/sandwich7.jpg",
+          "ingredients": [
+            "Whole grain bread",
+            "Hummus",
+            "Cucumber",
+            "Tomato",
+            "Avocado",
+            "Sprouts",
+            "Red onion"
+          ],
+          "dietary": ["vegetarian", "vegan"],
+          "popular": false
+        },
+        {
+          "id": "caprese",
+          "name": "Caprese Sandwich",
+          "description": "Fresh mozzarella, tomatoes, basil, and balsamic glaze",
+          "price": 8.49,
+          "image": "img/menu/sandwich8.jpg",
+          "ingredients": [
+            "Focaccia bread",
+            "Fresh mozzarella",
+            "Tomatoes",
+            "Basil",
+            "Balsamic glaze",
+            "Olive oil"
+          ],
+          "dietary": ["vegetarian"],
+          "popular": true
+        },
+        {
+          "id": "falafel-wrap",
+          "name": "Falafel Pita",
+          "description": "Crispy falafel with tahini sauce, lettuce, and pickled vegetables",
+          "price": 7.99,
+          "image": "img/menu/sandwich9.jpg",
+          "ingredients": [
+            "Pita bread",
+            "Falafel",
+            "Tahini sauce",
+            "Lettuce",
+            "Cucumber",
+            "Pickled vegetables"
+          ],
+          "dietary": ["vegetarian", "vegan"],
+          "popular": false
+        }
+      ]
+    },
+    {
+      "id": "breakfast",
+      "name": "Breakfast Sandwiches",
+      "description": "Start your day right with our hearty breakfast options",
+      "items": [
+        {
+          "id": "bacon-egg-cheese",
+          "name": "Bacon, Egg & Cheese",
+          "description": "Crispy bacon, fried egg, and melted cheese on a toasted English muffin",
+          "price": 6.49,
+          "image": "img/menu/sandwich10.jpg",
+          "ingredients": [
+            "English muffin",
+            "Bacon",
+            "Fried egg",
+            "American cheese"
+          ],
+          "dietary": [],
+          "popular": true
+        },
+        {
+          "id": "veggie-breakfast",
+          "name": "Veggie Breakfast Sandwich",
+          "description": "Scrambled eggs with sautéed peppers, onions, and spinach",
+          "price": 6.99,
+          "image": "img/menu/sandwich11.jpg",
+          "ingredients": [
+            "Bagel",
+            "Scrambled eggs",
+            "Bell peppers",
+            "Onions",
+            "Spinach",
+            "Cream cheese"
+          ],
+          "dietary": ["vegetarian"],
+          "popular": false
+        },
+        {
+          "id": "sausage-biscuit",
+          "name": "Sausage & Gravy Biscuit",
+          "description": "Savory sausage patty with creamy sausage gravy on a buttermilk biscuit",
+          "price": 6.99,
+          "image": "img/menu/sandwich12.jpg",
+          "ingredients": [
+            "Buttermilk biscuit",
+            "Sausage patty",
+            "Sausage gravy"
+          ],
+          "dietary": [],
+          "popular": true
+        }
+      ]
+    }
+  ]
+}
