@@ -1,22 +1,25 @@
-
 :root {
-    --red: #fc3a52;
-    --yellow: #f9b248;
-    --tan: #e8d5b7;
+  --red: #fc3a52;
+  --red-dark: #cc3333;
+  --yellow: #f9b248;
+  --tan: #e8d5b7;
+
+  --text-primary: #333;
+  --text-secondary: #666;
 }
 
 .text--red {
-    color: var(--red);
+  color: var(--red);
 }
 
 .text--yellow {
-    color: var(--yellow);
+  color: var(--yellow);
 }
 
 .fontsize--1 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .fontsize--2 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
