@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sandwich Restaurant</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="theme.css">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <header>
@@ -33,8 +35,8 @@
             <div class="intro__text">
                 <h1>Get the best out of a <span class="text--red">Sandwich</span></h1>
                 <p>
-                    Sandwiches are an item of food consisting 
-                    of two pieces of bread with meat, cheese, 
+                    Sandwiches are an item of food consisting
+                    of two pieces of bread with meat, cheese,
                     or other filling between them, eaten as a light meal
                 </p>
 
@@ -92,46 +94,12 @@
                     Here you can take a quick glance at just a few things our menu has to offer!
                 </p>
             </div>
-            <div class="l-menu-cards">
-                <div class="menu__card fontsize--1">
-                    <img src="img/menu/sandwich1.jpg" 
-                    alt="Grilled Cheese Sandwich"
-                    loading="lazy"> 
-                    <p>Grilled Cheese Sandwich</p>
-                    <a href="">Order Now!</a>
-                </div>
-
-                <hr class="menu__card-border">
-
-                <div class="menu__card fontsize--1">
-                    <img src="img/menu/sandwich2.jpg" 
-                    alt="Beef Sandwich"
-                    loading="lazy">
-                    <p>Beef Sandwich</p>
-                    <a href="">Order Now!</a>
-                </div>
-
-                <hr class="menu__card-border">
-
-                <div class="menu__card fontsize--1">
-                    <img src="img/menu/sandwich3.jpg" 
-                    alt="Turkey Sandwich" 
-                    loading="lazy">
-                    <p>Turkey Sandwich</p>
-                    <a href="">Order Now!</a>
-                </div>
-
-                <hr class="menu__card-border">
-                
-                <div class="menu__card fontsize--1">
-                    <img src="img/menu/sandwich4.jpg" 
-                    alt="Ham Sandwich" 
-                    loading="lazy">
-                    <p>Ham Sandwich</p>
-                    <a href="">Order Now!</a>
-                </div>
-
-                <hr class="menu__card-border">
+            <div class="menu-container" id="menu-container">
+                <noscript>
+                    <p class="text--red">
+                        Please enable JavaScript to view our menu!
+                    </p>
+                </noscript>
             </div>
         </div>
     </section>
@@ -183,6 +151,9 @@
         </div>
 
     </footer>
-    
+
+    <script src="./scripts/renderMenu.js" defer></script>
+
 </body>
+
 </html>
