@@ -40,10 +40,10 @@ function createCategorySection(category) {
   section.innerHTML = `
       <button 
         class="menu__category-toggle" 
-        aria-expanded="true"
+        aria-expanded="false"
         aria-controls="items-${category.id}">
         <h2 class="menu__category-title">${category.name}</h2>
-        <span class="menu__category-icon" >−</span>
+        <span class="menu__category-icon" >+</span>
       </button>
       <p class="menu__category-description">${category.description}</p>
       <div class="menu__category-items l-menu-cards" id="items-${category.id}">
@@ -68,14 +68,15 @@ function addToggleListeners() {
   const toggles = document.querySelectorAll(".menu__category-toggle");
   toggles.forEach((toggle) => {
     toggle.addEventListener("click", () => {
-      const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+      const isExpanded = toggle.getAttribute("aria-expanded") === "false";
       const targetId = toggle.getAttribute("aria-controls");
       const targetSection = document.getElementById(targetId);
       const icon = toggle.querySelector(".menu__category-icon");
 
-      toggle.setAttribute("aria-expanded", !isExpanded);
-      targetSection.style.display = isExpanded ? "none" : "block";
-      icon.textContent = isExpanded ? "+" : "−";
+      toggle.setAttribute("aria-expanded", isExpanded);
+      console.log(isExpanded);
+      targetSection.style.display = isExpanded ? "flex" : "none";
+      icon.textContent = isExpanded ? "-" : "+";
     });
   });
 }
