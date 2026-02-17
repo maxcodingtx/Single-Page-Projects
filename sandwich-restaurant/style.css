@@ -2,26 +2,28 @@
 
 /*Base Styles start here*/
 
-*,*::before,*::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: "Outfit", serif;
+  margin: 0;
+  font-family: "Outfit", serif;
 }
 
 button {
-    font-family: "Outfit", serif;
+  font-family: "Outfit", serif;
 }
 
 button:active {
-    transform: scale(.96);
+  transform: scale(0.96);
 }
 
 .container {
-    width: 90%;
-    margin: auto;
+  width: 90%;
+  margin: auto;
 }
 
 /* 
@@ -30,39 +32,39 @@ Header styles start here.
 */
 
 header {
-    background-color: var(--tan);
+  background-color: var(--tan);
 }
 
 .l-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-img {
-    width: 150px;
+  width: 150px;
 }
 
 .header-nav {
-    width: 200px;
+  width: 200px;
 }
 
 .header-nav ul {
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
 
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .nav__link {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .nav__link:hover {
-    text-decoration: underline;
-    color: var(--red);
+  text-decoration: underline;
+  color: var(--red);
 }
 
 /* 
@@ -71,66 +73,69 @@ Intro section styles start here.
 */
 
 .l-intro {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20%;
 }
 
 .intro-section {
-    padding: 3rem 0 4rem;
+  padding: 3rem 0 4rem;
 
-    background: linear-gradient(180deg, var(--tan) 0%, var(--red) 100%); 
+  background: linear-gradient(180deg, var(--tan) 0%, var(--red) 100%);
 }
 
 .intro__text {
-    width: 40%;
+  width: 40%;
 
-    font-size: 2.5vw;
+  font-size: 2.5vw;
 }
 
 .intro__text button {
-    border: 0;
-    padding: 16px;
-    border-radius: 12px;
-    
-    background: rgb(232,213,183);
-    background: linear-gradient(90deg, rgba(232,213,183,1) 0%, rgba(252,58,82,1) 100%); 
+  border: 0;
+  padding: 16px;
+  border-radius: 12px;
 
-    font-size: 24px;
+  background: rgb(232, 213, 183);
+  background: linear-gradient(
+    90deg,
+    rgba(232, 213, 183, 1) 0%,
+    rgba(252, 58, 82, 1) 100%
+  );
+
+  font-size: 24px;
 }
 
 .intro__img {
-    width: 35vw;
+  width: 35vw;
 }
-
 
 .info-section {
-    padding: 2rem 0 2rem;
+  padding: 2rem 0 2rem;
 
-    background: linear-gradient(180deg, var(--red)0%, var(--yellow) 100%); 
+  background: linear-gradient(180deg, var(--red) 0%, var(--yellow) 100%);
 }
 
-.info__header{
-    text-align: center;
+.info__header {
+  text-align: center;
 }
 
 @media (min-width: 1200px) {
-    .l-info-cards {
-        display: flex;
-        justify-content: space-between;
-    }
+  .l-info-cards {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    .info__card {
-        width: 30%;
+  .info__card {
+    width: 30%;
 
-        border: 4px solid var(--tan);
-        border-radius: 16px;
+    border: 4px solid var(--tan);
+    border-radius: 16px;
 
-        background: linear-gradient(180deg, var(--red)0%, var(--yellow) 100%); 
+    background: linear-gradient(180deg, var(--red) 0%, var(--yellow) 100%);
 
-        text-align: center;
-    }
+    text-align: center;
+  }
 }
 
 /* 
@@ -139,49 +144,219 @@ Menu section styles start here.
 */
 
 .menu-section {
-    padding: 1rem 0 1rem;
-    
-    background: rgb(249,178,72);
-    background: linear-gradient(180deg, rgba(249,178,72,1) 0%, rgba(232,213,183,1) 100%); 
+  padding: 1rem 0;
+
+  background: rgb(249, 178, 72);
+  background: linear-gradient(
+    180deg,
+    rgb(249, 178, 72) 0%,
+    rgb(232, 213, 183) 100%
+  );
 }
 
 .menu__header {
-    text-align: center;
+  text-align: center;
 }
 
-@media (min-width: 1000px) {
-    .l-menu-cards {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
+.menu__category {
+  margin: 2rem auto;
 
-    .menu__card-border {
-        display: none;
-    }
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+
+  overflow: hidden;
 }
 
+.menu__category-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.5rem;
+
+  width: 100%;
+
+  border: none;
+
+  background: linear-gradient(135deg, #f8f8f8 0%, #efefef 100%);
+
+  cursor: pointer;
+}
+
+.menu__category-toggle:hover {
+  background: linear-gradient(135deg, #efefef 0%, #e6e6e6 100%);
+}
+
+.menu__category-toggle:focus {
+  outline: 2px solid var(--red);
+  outline-offset: -2px;
+}
+
+.menu__category-title {
+  margin: 0;
+
+  color: var(--text-primary, #333);
+  text-align: left;
+}
+
+.menu__category-icon {
+  color: var(--red);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu__category-description {
+  padding: 0 1.5rem 1rem;
+  margin: 0;
+
+  color: var(--text-secondary, #666);
+  font-style: italic;
+}
+
+.menu__category-items {
+  display: none;
+  padding: 1rem;
+}
+
+/* Menu Card Styles */
 .menu__card {
-    margin: 25px auto;
-    padding: 25px 0;
+  position: relative;
+  height: 31.25rem;
 
-    width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
 
-    text-align: center;
+  text-align: center;
 }
 
-.menu__card-border {
-    border: 3px solid var(--red);
+.menu__card-image-wrapper {
+  position: relative;
+
+  margin-bottom: 1rem;
+
+  width: 100%;
+  height: 200px;
+
+  border-radius: 8px;
+
+  background: #f0f0f0;
+
+  overflow: hidden;
 }
 
-.menu__card img {
-    max-width: 80%;
+.menu__card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
 
-    border-radius: 16px;
-    margin: auto auto;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
 }
 
-.menu__card a {
-    color: var(--red);
+.menu__card-title {
+  margin: 1rem 0 0.5rem;
+
+  color: var(--text-primary, #333);
+  font-size: 1.25rem;
+}
+
+.menu__card-description {
+  margin: 0.5rem 0;
+
+  color: var(--text-secondary, #666);
+  font-size: 0.9rem;
+}
+
+.menu__card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0.75rem 0;
+}
+
+.menu__card-price {
+  margin: 0;
+
+  color: var(--red);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.menu__card-popular {
+  padding: 0.25rem 0.75rem;
+
+  border-radius: 12px;
+
+  background: var(--yellow, #ffd700);
+
+  color: #333;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.menu__card-order {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1r em;
+  padding: 0.75rem;
+
+  width: 90%;
+
+  border: none;
+  border-radius: 6px;
+
+  background: var(--red);
+
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.menu__card-order:hover {
+  background: var(--red-dark, #cc3333);
+}
+
+.menu__card-order:focus {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
+}
+
+.menu__card-order:active {
+  transform: scale(0.98);
+}
+
+.menu__item-separator {
+  border: 0;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+
+  background: transparent;
+}
+
+@media (max-width: 700px) {
+  .menu__card {
+    margin-block: 1.25rem;
+    height: auto;
+  }
+
+  .menu__category-items {
+    flex-direction: column;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .menu__card-order {
+    transition: none;
+  }
 }
 
 /* 
@@ -190,40 +365,44 @@ Location section styles start here.
 */
 
 .location-section {
-    background: linear-gradient(180deg, var(--tan) 0%, rgba(255,255,255,1) 100%);
-    padding: 1rem 0;
+  background: linear-gradient(
+    180deg,
+    var(--tan) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  padding: 1rem 0;
 }
 
 .location__header {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 
-    text-align: center;
+  text-align: center;
 }
 
 .location__map {
-    position: relative;
-    height: 41vw;
+  position: relative;
+  height: 41vw;
 }
 
-.location__map >* {
-    position: absolute;
+.location__map > * {
+  position: absolute;
 }
 
 .location__map img {
-    width: 80%;
+  width: 80%;
 }
 
 .location__map button {
-    padding: 3% 5%;
-    border: 4px solid var(--yellow);
+  padding: 3% 5%;
+  border: 4px solid var(--yellow);
 
-    left: 65%;
-    top: 55%;
+  left: 65%;
+  top: 55%;
 
-    background: white;
+  background: white;
 
-    font-size: 1rem;
-    color: var(--yellow);
+  font-size: 1rem;
+  color: var(--yellow);
 }
 
 /* 
@@ -232,61 +411,63 @@ Footer styles start here.
 */
 
 footer {
-    margin-top: 50px;
-    padding: 2rem 0;
+  margin-top: 50px;
+  padding: 2rem 0;
 }
 
 .footer__header {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .footer__header img {
-    width: 150px;
+  width: 150px;
 }
 
 .footer__header p {
-    text-align: right;
+  text-align: right;
 }
 
 .footer__social__logo {
-    height: 64px;
-    width: 64px;
-    border-radius: 24%;
+  height: 64px;
+  width: 64px;
+  border-radius: 24%;
 
-    background-image: url(img/footer-sprite.jpg);
-    background-size: cover;
+  background-image: url(img/footer-sprite.jpg);
+  background-size: cover;
 }
 
-.footer__social__logo:hover{
-    transform: scale(1.08);
+.footer__social__logo:hover {
+  transform: scale(1.08);
 }
 
 @media (min-width: 800px) {
-    .l-footer__social {
-        display: flex;
-        justify-content: space-around;
-    }
-    .footer__social {
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px 5px;
-        padding: 2rem 0;
-        border-radius: 8px;
-    }
+  .l-footer__social {
+    display: flex;
+    justify-content: space-around;
+  }
+  .footer__social {
+    box-shadow:
+      rgba(0, 0, 0, 0.3) 0px 4px 6px -1px,
+      rgba(0, 0, 0, 0.06) 0px 2px 4px 5px;
+    padding: 2rem 0;
+    border-radius: 8px;
+  }
 }
 
 .footer__social__stat {
-    width: 75px;
+  width: 75px;
 
-    word-break: keep-all;
+  word-break: keep-all;
 }
 
 .footer__social__logo2 {
-    background-position-y: 50%;
+  background-position-y: 50%;
 }
 
 .footer__social__logo3 {
-    background-position-y: 100%;
+  background-position-y: 100%;
 }
