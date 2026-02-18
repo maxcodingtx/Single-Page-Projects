@@ -11,6 +11,7 @@
           "description": "Golden-toasted bread with melted cheddar and Swiss cheese blend",
           "price": 6.99,
           "image": "img/menu/sandwich1.jpg",
+          "thumbnail": "img/menu/sandwich1-thumb.jpg",
           "ingredients": [
             "Sourdough bread",
             "Cheddar cheese",
@@ -26,6 +27,7 @@
           "description": "Sliced turkey breast with crisp lettuce, tomato, and bacon",
           "price": 8.99,
           "image": "img/menu/sandwich3.jpg",
+          "thumbnail": "img/menu/sandwich3-thumb.jpg",
           "ingredients": [
             "Whole wheat bread",
             "Turkey breast",
@@ -43,6 +45,7 @@
           "description": "Premium honey ham with melted Swiss cheese and honey mustard",
           "price": 7.99,
           "image": "img/menu/sandwich4.jpg",
+          "thumbnail": "img/menu/sandwich4-thumb.jpg",
           "ingredients": [
             "Rye bread",
             "Honey ham",
@@ -66,6 +69,7 @@
           "description": "Slow-roasted beef with caramelized onions, horseradish aioli, and arugula",
           "price": 9.99,
           "image": "img/menu/sandwich2.jpg",
+          "thumbnail": "img/menu/sandwich2-thumb.jpg",
           "ingredients": [
             "French roll",
             "Roast beef",
@@ -82,6 +86,7 @@
           "description": "Salami, pepperoni, ham, and provolone with Italian dressing",
           "price": 8.49,
           "image": "img/menu/sandwich5.jpg",
+          "thumbnail": "img/menu/sandwich5-thumb.jpg",
           "ingredients": [
             "Italian bread",
             "Salami",
@@ -101,6 +106,7 @@
           "description": "Grilled chicken breast with crispy bacon and ranch dressing",
           "price": 8.99,
           "image": "img/menu/sandwich6.jpg",
+          "thumbnail": "img/menu/sandwich6-thumb.jpg",
           "ingredients": [
             "Ciabatta bread",
             "Grilled chicken",
@@ -125,6 +131,7 @@
           "description": "Fresh vegetables with hummus spread on whole grain bread",
           "price": 7.49,
           "image": "img/menu/sandwich7.jpg",
+          "thumbnail": "img/menu/sandwich7-thumb.jpg",
           "ingredients": [
             "Whole grain bread",
             "Hummus",
@@ -143,6 +150,7 @@
           "description": "Fresh mozzarella, tomatoes, basil, and balsamic glaze",
           "price": 8.49,
           "image": "img/menu/sandwich8.jpg",
+          "thumbnail": "img/menu/sandwich8-thumb.jpg",
           "ingredients": [
             "Focaccia bread",
             "Fresh mozzarella",
@@ -160,6 +168,7 @@
           "description": "Crispy falafel with tahini sauce, lettuce, and pickled vegetables",
           "price": 7.99,
           "image": "img/menu/sandwich9.jpg",
+          "thumbnail": "img/menu/sandwich9-thumb.jpg",
           "ingredients": [
             "Pita bread",
             "Falafel",
@@ -184,6 +193,7 @@
           "description": "Crispy bacon, fried egg, and melted cheese on a toasted English muffin",
           "price": 6.49,
           "image": "img/menu/sandwich10.jpg",
+          "thumbnail": "img/menu/sandwich10-thumb.jpg",
           "ingredients": [
             "English muffin",
             "Bacon",
@@ -199,6 +209,7 @@
           "description": "Scrambled eggs with sautéed peppers, onions, and spinach",
           "price": 6.99,
           "image": "img/menu/sandwich11.jpg",
+          "thumbnail": "img/menu/sandwich11-thumb.jpg",
           "ingredients": [
             "Bagel",
             "Scrambled eggs",
@@ -216,6 +227,7 @@
           "description": "Savory sausage patty with creamy sausage gravy on a buttermilk biscuit",
           "price": 6.99,
           "image": "img/menu/sandwich12.jpg",
+          "thumbnail": "img/menu/sandwich12-thumb.jpg",
           "ingredients": [
             "Buttermilk biscuit",
             "Sausage patty",
