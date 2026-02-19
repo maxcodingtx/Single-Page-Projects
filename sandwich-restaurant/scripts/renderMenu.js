@@ -19,7 +19,12 @@ function createMenuItem(item) {
 
   card.innerHTML = `
   <div class="menu__card-image-wrapper">
-    <img src="${item.image}" alt="${item.name}" class="menu__card-image" loading="lazy">
+    <img 
+      src="${item.thumbnail}" 
+      data-src="${item.image}"
+      alt="${item.name}" 
+      class="menu__card-image lqip" 
+      loading="lazy">
   </div>
   <h3 class="menu__card-title">${item.name}</h3>
   <p class="menu__card-description">${item.description}</p>
