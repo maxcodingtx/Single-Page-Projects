@@ -1,0 +1,301 @@
+{
+  "players": [
+    {
+      "id": "guglielmo-vicario",
+      "name": "Guglielmo Vicario",
+      "number": 1,
+      "positionGroup": "Goalkeepers",
+      "positionRole": "GK",
+      "country": "Italy",
+      "image": "img/Goalkeeper/Vicario.png",
+      "flag": "img/Flags/ITALY.png",
+      "alt": "Image of Goalkeeper Vicario"
+    },
+    {
+      "id": "fraser-forster",
+      "name": "Fraser Forster",
+      "number": 20,
+      "positionGroup": "Goalkeepers",
+      "positionRole": "GK",
+      "country": "England",
+      "image": "img/Goalkeeper/Forster.png",
+      "flag": "img/Flags/England.png",
+      "alt": "Image of goalkeeper Forster"
+    },
+    {
+      "id": "brandon-austin",
+      "name": "Brandon Austin",
+      "number": 40,
+      "positionGroup": "Goalkeepers",
+      "positionRole": "GK",
+      "country": "England",
+      "image": "img/Goalkeeper/Austin.png",
+      "flag": "img/Flags/England.png",
+      "alt": "Image of goalkeeper Austin"
+    },
+    {
+      "id": "alfie-whiteman",
+      "name": "Alfie Whiteman",
+      "number": 41,
+      "positionGroup": "Goalkeepers",
+      "positionRole": "GK",
+      "country": "England",
+      "image": "img/Goalkeeper/Whiteman.png",
+      "flag": "img/Flags/England.png",
+      "alt": "Image of goalkeeper Whiteman"
+    },
+    {
+      "id": "cristian-romero",
+      "name": "Cristian Romero",
+      "number": 17,
+      "positionGroup": "Defenders",
+      "positionRole": "CB",
+      "country": "Argentina",
+      "image": "img/Defender/Romero.png",
+      "flag": "img/Flags/Argentina.png",
+      "alt": "Image of defender Romero"
+    },
+    {
+      "id": "pedro-porro",
+      "name": "Pedro Porro",
+      "number": 23,
+      "positionGroup": "Defenders",
+      "positionRole": "RB",
+      "country": "Spain",
+      "image": "img/Defender/Porro.png",
+      "flag": "img/Flags/Spain.png",
+      "alt": "Image of defender Porro"
+    },
+    {
+      "id": "djed-spence",
+      "name": "Djed Spence",
+      "number": 24,
+      "positionGroup": "Defenders",
+      "positionRole": "RB",
+      "country": "England",
+      "image": "img/Defender/Spence.png",
+      "flag": "img/Flags/England.png",
+      "alt": "Image of defender Spence"
+    },
+    {
+      "id": "ben-davies",
+      "name": "Ben Davies",
+      "number": 33,
+      "positionGroup": "Defenders",
+      "positionRole": "CB",
+      "country": "Wales",
+      "image": "img/Defender/Davies.png",
+      "flag": "img/Flags/Wales.png",
+      "alt": "Image of defender Davies"
+    },
+    {
+      "id": "micky-van-de-ven",
+      "name": "Micky Van De Ven",
+      "number": 37,
+      "positionGroup": "Defenders",
+      "positionRole": "CB",
+      "country": "Netherlands",
+      "image": "img/Defender/Ven.png",
+      "flag": "img/Flags/Netherlands.png",
+      "alt": "Image of defender Ven"
+    },
+    {
+      "id": "destiny-udogie",
+      "name": "Destiny Udogie",
+      "number": 13,
+      "positionGroup": "Defenders",
+      "positionRole": "LB",
+      "country": "Italy",
+      "image": "img/Defender/Udogie.png",
+      "flag": "img/Flags/ITALY.png",
+      "alt": "Image of defender Udogie"
+    },
+    {
+      "id": "radu-dragusin",
+      "name": "Radu Dragusin",
+      "number": 6,
+      "positionGroup": "Defenders",
+      "positionRole": "CB/RB",
+      "country": "Romania",
+      "image": "img/Defender/Dragusin.png",
+      "flag": "img/Flags/Romania.png",
+      "alt": "Image of defender Dragusin"
+    },
+    {
+      "id": "alfie-dorrington",
+      "name": "Alfie Dorrington",
+      "number": 48,
+      "positionGroup": "Defenders",
+      "positionRole": "CB",
+      "country": "England",
+      "image": "img/Defender/Dorrington.png",
+      "flag": "img/Flags/England.png",
+      "alt": "Image of defender Dorrington"
+    },
+    {
+      "id": "yves-bissouma",
+      "name": "Yves Bissouma",
+      "number": 8,
+      "positionGroup": "Midfielders",
+      "positionRole": "CM/DM",
+      "country": "Mali",
+      "image": "img/Midfielder/Bissouma.png",
+      "flag": "img/Flags/Mali.png",
+      "alt": "Image of midfielder Bissouma"
+    },
+    {
+      "id": "dejan-kulusevski",
+      "name": "Dejan Kulusevski",
+      "number": 21,
+      "positionGroup": "Midfielders",
+      "positionRole": "AM/RM",
+      "country": "Sweden",
+      "image": "img/Midfielder/Kulusevski.png",
+      "flag": "img/Flags/Sweden.png",
+      "alt": "Image of midfielder Kulusevski"
+    },
+    {
+      "id": "pape-sarr",
+      "name": "Pape Sarr",
+      "number": 29,
+      "positionGroup": "Midfielders",
+      "positionRole": "CM/DM",
+      "country": "Senegal",
+      "image": "img/Midfielder/Sarr.png",
+      "flag": "img/Flags/Senegal.png",
+      "alt": "Image of midfielder Sarr"
+    },
+    {
+      "id": "rodrigo-bentancur",
+      "name": "Rodrigo Bentancur",
+      "number": 30,
+      "positionGroup": "Midfielders",
+      "positionRole": "CM/DM",
+      "country": "Uruguay",
+      "image": "img/Midfielder/Bentancur.png",
+      "flag": "img/Flags/Uruguay.png",
+      "alt": "Image of midfielder Bentancur"
+    },
+    {
+      "id": "james-maddison",
+      "name": "James Maddison",
+      "number": 10,
+      "positionGroup": "Midfielders",
+      "positionRole": "AM/CM",
+      "country": "England",
+      "image": "img/Midfielder/Maddison.png",
+      "flag": "img/Flags/England.png",
+      "alt": "Image of midfielder Maddison"
+    },
+    {
+      "id": "lucas-bergvall",
+      "name": "Lucas Bergvall",
+      "number": 15,
+      "positionGroup": "Midfielders",
+      "positionRole": "CM/AM",
+      "country": "Sweden",
+      "image": "img/Midfielder/Bergvall.png",
+      "flag": "img/Flags/Sweden.png",
+      "alt": "Image of midfielder Bergvall"
+    },
+    {
+      "id": "archie-gray",
+      "name": "Archie Gray",
+      "number": 14,
+      "positionGroup": "Midfielders",
+      "positionRole": "CM/RB",
+      "country": "England",
+      "image": "img/Midfielder/Gray.png",
+      "flag": "img/Flags/England.png",
+      "alt": "Image of midfielder Gray"
+    },
+    {
+      "id": "son-heung-min",
+      "name": "Son Heung-Min",
+      "number": 7,
+      "positionGroup": "Forwards",
+      "positionRole": "LW",
+      "country": "Korea",
+      "image": "img/Foward/Son.png",
+      "flag": "img/Flags/Korea.png",
+      "alt": "Image of foward Son"
+    },
+    {
+      "id": "richarlison",
+      "name": "Richarlison",
+      "number": 9,
+      "positionGroup": "Forwards",
+      "positionRole": "ST",
+      "country": "Brazil",
+      "image": "img/Foward/Richarlison.png",
+      "flag": "img/Flags/Brazil.png",
+      "alt": "Image of foward Richarlison"
+    },
+    {
+      "id": "timo-werner",
+      "name": "Timo Werner",
+      "number": 16,
+      "positionGroup": "Forwards",
+      "positionRole": "ST",
+      "country": "Germany",
+      "image": "img/Foward/Werner.png",
+      "flag": "img/Flags/Germany.png",
+      "alt": "Image of foward Werner"
+    },
+    {
+      "id": "brennan-johnson",
+      "name": "Brennan Johnson",
+      "number": 22,
+      "positionGroup": "Forwards",
+      "positionRole": "RW",
+      "country": "Wales",
+      "image": "img/Foward/Johnson.png",
+      "flag": "img/Flags/Wales.png",
+      "alt": "Image of foward Johnson"
+    },
+    {
+      "id": "will-lankshear",
+      "name": "Will Lankshear",
+      "number": 42,
+      "positionGroup": "Forwards",
+      "positionRole": "ST",
+      "country": "England",
+      "image": "img/Foward/Lankshear.png",
+      "flag": "img/Flags/England.png",
+      "alt": "Image of foward Lankshear"
+    },
+    {
+      "id": "dominic-solanke",
+      "name": "Dominic Solanke",
+      "number": 19,
+      "positionGroup": "Forwards",
+      "positionRole": "ST",
+      "country": "England",
+      "image": "img/Foward/Solanke.png",
+      "flag": "img/Flags/England.png",
+      "alt": "Image of foward Solanke"
+    },
+    {
+      "id": "dominic-odobert",
+      "name": "Dominic Odobert",
+      "number": 28,
+      "positionGroup": "Forwards",
+      "positionRole": "RW",
+      "country": "France",
+      "image": "img/Foward/Odobert.png",
+      "flag": "img/Flags/France.png",
+      "alt": "Image of foward Odobert"
+    },
+    {
+      "id": "mikey-moore",
+      "name": "Mikey Moore",
+      "number": 47,
+      "positionGroup": "Forwards",
+      "positionRole": "RW",
+      "country": "England",
+      "image": "img/Foward/Moore.png",
+      "flag": "img/Flags/England.png",
+      "alt": "Image of foward Moore"
+    }
+  ]
+}
