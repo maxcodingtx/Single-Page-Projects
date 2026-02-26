@@ -18,14 +18,41 @@ BUTTONS_LEFT.forEach((button) => {
   });
 });
 
-// new code
+function showLoading() {
+  const loadingContainer = document.getElementById("loadingContainer");
+  const playerContainer = document.getElementById("playerContainer");
+  const loadingElement = document.createElement("div");
+  loadingElement.classList.add("loading");
+  loadingElement.textContent = "Loading...";
+  loadingElement.style.display = "block";
+  playerContainer.style.display = "none";
+
+  loadingContainer.appendChild(loadingElement);
+}
+
+function hideLoading() {
+  const loadingElement = document.querySelector(".loading");
+  const playerContainer = document.getElementById("playerContainer");
+  if (loadingElement) {
+    loadingElement.style.display = "none";
+    playerContainer.style.display = "block";
+  }
+}
 async function fetchData() {
+  showLoading();
   try {
     const response = await fetch("./data/roster.json");
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error("Error fetching data:", error);
+    throw new Error("Failed to fetch data: " + error.message);
+  } finally {
+    // artificial delay to show loading state
+    await new Promise((resolve) => setTimeout(resolve, 250));
+    hideLoading();
   }
 }
 
@@ -61,6 +88,7 @@ function groupPlayersByPosition(players) {
 
 async function renderGroups() {
   const data = await fetchData();
+
   const groupedPlayers = groupPlayersByPosition(data.players);
   const [goalkeepers, defenders, midfielders, forwards] =
     Object.values(groupedPlayers);
