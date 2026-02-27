@@ -35,8 +35,28 @@ function hideLoading() {
   const playerContainer = document.getElementById("playerContainer");
   if (loadingElement) {
     loadingElement.style.display = "none";
-    playerContainer.style.display = "block";
+    const errorElement = document.querySelector(".error");
+
+    playerContainer.style.display = errorElement ? "none" : "block";
   }
+}
+
+function showError(message) {
+  const loadingContainer = document.getElementById("loadingContainer");
+  const playerContainer = document.getElementById("playerContainer");
+  const errorElement = document.createElement("div");
+  const tryAgainButton = document.createElement("button");
+  errorElement.classList.add("error");
+  errorElement.textContent = message;
+  errorElement.style.display = "block";
+  playerContainer.style.display = "none";
+  loadingContainer.appendChild(errorElement);
+  tryAgainButton.classList.add("try-again-button");
+  tryAgainButton.textContent = "Try Again?";
+  tryAgainButton.addEventListener("click", () => {
+    // add logic to retry fetching data
+  });
+  loadingContainer.appendChild(tryAgainButton);
 }
 async function fetchData() {
   showLoading();
@@ -48,7 +68,9 @@ async function fetchData() {
     const data = await response.json();
     return data;
   } catch (error) {
-    throw new Error("Failed to fetch data: " + error.message);
+    showError("Failed to fetch data: " + error.message);
+    hideLoading();
+    throw error;
   } finally {
     // artificial delay to show loading state
     await new Promise((resolve) => setTimeout(resolve, 250));
