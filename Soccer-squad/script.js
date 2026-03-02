@@ -54,7 +54,10 @@ function showError(message) {
   tryAgainButton.classList.add("try-again-button");
   tryAgainButton.textContent = "Try Again?";
   tryAgainButton.addEventListener("click", () => {
-    // add logic to retry fetching data
+    errorElement.innerHTML = "Refreshing!";
+    setTimeout(() => {
+      window.location.reload();
+    }, 300);
   });
   loadingContainer.appendChild(tryAgainButton);
 }
