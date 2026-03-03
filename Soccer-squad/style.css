@@ -1,7 +1,14 @@
 :root {
-  --color-bg-dark: #000;
+  --color-bg-dark: #2b2f33;
   --color-text-light: #fff;
   --color-border: #000;
+  --color-page-bg: #f3f4f6;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f8f8f8;
+  --color-text-dark: #121212;
+  --color-text-muted: #3b3b3b;
+  --color-line: #d7d9dd;
+  --color-shadow: rgba(0, 0, 0, 0.14);
   --font-display: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   --font-body: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --space-xs: 6px;
@@ -9,7 +16,11 @@
   --space-md: 18px;
   --space-lg: 20px;
   --space-xl: 50px;
+  --space-2xl: 64px;
+  --space-3xl: 84px;
   --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
   --card-image-width: 256px;
   --button-size: 75px;
   --heading-gap: 3%;
@@ -23,103 +34,196 @@
 
 body {
   margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-page-bg);
+  color: var(--color-text-dark);
 }
 
 header {
+  padding: var(--space-md) var(--space-lg);
+  gap: var(--space-md);
+  border-bottom: 3px solid var(--color-text-light);
   background-color: var(--color-bg-dark);
   color: var(--color-text-light);
 }
 
-header img {
-  width: 15%;
+.header__logo {
+  width: clamp(72px, 11vw, 120px);
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-text-light);
 }
 
 header h1 {
+  margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 5vw);
+  font-size: clamp(1.8rem, 4vw, 3.6rem);
+}
+
+.header__branding {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-xs);
+}
+
+.header__subtitle {
+  margin: 0;
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  text-transform: uppercase;
 }
 
 .margin-container {
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-2xl);
 }
 
-main div h1 {
+main {
+  padding: var(--space-xl) clamp(12px, 2.5vw, 28px) var(--space-2xl);
+}
+
+#playerContainer {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.player__card-heading h1 {
+  margin: 0;
   margin-left: var(--space-md);
 
-  font-size: clamp(2rem, 5vw, 3rem);
-}
-
-.l-player__card-container {
-  display: flex;
-
-  overflow: auto;
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 3.4vw, 2.2rem);
+  letter-spacing: 0.01em;
 }
 
 .player__card-container {
-  padding-bottom: var(--space-lg);
+  display: flex;
+  gap: var(--space-lg);
+
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  padding: var(--space-sm) var(--space-md) var(--space-lg);
 
   scroll-behavior: smooth;
 
-  mask: linear-gradient(90deg, #0000, #000 10% 90%, #0000);
+  mask: linear-gradient(90deg, #0000, #000 6% 94%, #0000);
 }
 
-.l-player__card-heading {
+.player__card-heading {
+  justify-content: space-between;
+  padding: 0 var(--space-md);
   gap: var(--heading-gap);
 }
 
-.l-player__card-heading button {
+.player__card-heading button {
   height: var(--button-size);
   width: var(--button-size);
-  font-size: 2rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-surface);
+  color: var(--color-text-dark);
+  box-shadow: 0 6px 16px var(--color-shadow);
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
+}
+
+.player__card-heading button:hover {
+  background-color: var(--color-surface-soft);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px var(--color-shadow);
+}
+
+.player__card-heading button:focus-visible {
+  outline: 3px solid #8b8f95;
+  outline-offset: 2px;
 }
 
 @media (min-width: 1200px) {
-  .l-player__card-heading button {
+  .player__card-heading button {
     display: none;
   }
 }
 
 .player__card {
-  margin: 0 var(--space-lg);
-  border: 2px solid var(--color-border);
+  margin: 0;
+  min-width: var(--card-image-width);
+  border: 1px solid var(--color-line);
   border-radius: var(--radius-md);
+  scroll-snap-align: start;
+  overflow: hidden;
+  background: var(--color-surface);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
 
-  background: linear-gradient(
-    135deg,
-    rgba(128, 128, 128, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
+.player__card:hover {
+  transform: translateY(-4px);
+  border-color: #9ea3aa;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.14);
 }
 
 .player__card img {
+  display: block;
+  width: 100%;
   width: var(--card-image-width);
+  background-color: #eceff2;
 }
 
 .info-player__card {
   font-family: var(--font-body);
-  margin-left: var(--space-md);
+  margin-left: 0;
+  padding: var(--space-md);
+  max-width: var(--card-image-width);
 }
 
 .info-player__card-name {
-  margin-bottom: 0;
+  margin: 0 0 var(--space-xs);
 
-  font-size: 1.5rem;
+  font-size: clamp(1.24rem, 2.2vw, 1.45rem);
   font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .info-player__card-number {
-  margin: 0;
+  margin: 0 0 var(--space-sm);
 
-  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  font-size: clamp(1.02rem, 1.65vw, 1.16rem);
+  overflow-wrap: anywhere;
 }
 
 .info-player__card-country {
+  display: flex;
+  align-items: center;
   gap: var(--space-xs);
 }
 
 .info-player__card-country img {
   width: 30px;
   height: 20px;
+  border: 1px solid #c7c9cc;
+  border-radius: 3px;
+}
+
+.goalkeeper-container,
+.defender-container,
+.midfielder-container,
+.forward-container {
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) 0 var(--space-sm);
 }
 
 .u-flex {
@@ -138,5 +242,22 @@ main div h1 {
   :root {
     --card-image-width: 220px;
     --button-size: 60px;
+  }
+
+  header {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  main {
+    padding-top: var(--space-lg);
+  }
+
+  .player__card-heading {
+    padding: 0 var(--space-sm);
+  }
+
+  .player__card-container {
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
   }
 }
