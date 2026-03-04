@@ -1,20 +1,31 @@
-// temporarily not working, will fix later
-const BUTTONS_RIGHT = document.querySelectorAll(".scroll-button-right");
-BUTTONS_RIGHT.forEach((button) => {
-  button.addEventListener("click", (evt) => {
-    var buttonId = evt.target.id;
-    var buttonNumber = buttonId.slice(-1) * 1;
-    var container = document.getElementById(`card-container${buttonNumber}`);
-    container.scrollLeft += 250;
+const scrollContainerIds = {
+  1: "goalkeeperContainer",
+  2: "defenderContainer",
+  3: "midfielderContainer",
+  4: "forwardContainer",
+};
+
+function scrollGroupByButton(event, direction /* 1 for right, -1 for left */) {
+  const buttonId = event.currentTarget.id;
+  const buttonNumber = Number(buttonId.slice(-1));
+  const containerId = scrollContainerIds[buttonNumber];
+  const container = document.getElementById(containerId);
+
+  if (!container) return;
+
+  container.scrollLeft += 250 * direction;
+}
+
+const rightButtons = document.querySelectorAll(".scroll-button-right");
+rightButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    scrollGroupByButton(event, 1);
   });
 });
-const BUTTONS_LEFT = document.querySelectorAll(".scroll-button-left");
-BUTTONS_LEFT.forEach((button) => {
-  button.addEventListener("click", (evt) => {
-    var buttonId = evt.target.id;
-    var buttonNumber = buttonId.slice(-1) * 1;
-    var container = document.getElementById(`card-container${buttonNumber}`);
-    container.scrollLeft -= 250;
+const leftButtons = document.querySelectorAll(".scroll-button-left");
+leftButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    scrollGroupByButton(event, -1);
   });
 });
 
